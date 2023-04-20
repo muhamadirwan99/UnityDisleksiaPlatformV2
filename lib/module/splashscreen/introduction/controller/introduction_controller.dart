@@ -32,6 +32,22 @@ class IntroductionController extends State<IntroductionView>
     });
   }
 
+  nextSlide() {
+    setState(() {
+      pageController.animateToPage((index.toInt() + 1),
+          duration: const Duration(milliseconds: 350), curve: Curves.easeIn);
+    });
+    print(index);
+  }
+
+  previousSlide() {
+    setState(() {
+      print(index);
+      pageController.animateToPage((index.toInt() - 1) as int,
+          duration: const Duration(milliseconds: 350), curve: Curves.easeIn);
+    });
+  }
+
   @override
   void dispose() => super.dispose();
 

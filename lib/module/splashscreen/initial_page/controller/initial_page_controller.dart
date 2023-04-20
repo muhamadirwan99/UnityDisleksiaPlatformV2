@@ -10,8 +10,8 @@ class InitialPageController extends State<InitialPageView>
   @override
   void initState() {
     instance = this;
-    Timer(Duration(seconds: 3), () {
-      Get.offAll(IntroductionView());
+    Timer(const Duration(seconds: 3), () {
+      Get.offAll(const IntroductionView());
     });
     super.initState();
   }

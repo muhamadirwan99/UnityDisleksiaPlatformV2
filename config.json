@@ -2,6 +2,7 @@
     "openai_key": "",
     "modules": [
         "splashscreen/initial_page",
-        "splashscreen/introduction"
+        "splashscreen/introduction",
+        "beranda"
     ]
 }

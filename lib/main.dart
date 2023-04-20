@@ -1,6 +1,4 @@
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/state_util.dart';
-import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());

@@ -21,9 +21,14 @@ class IntroductionView extends StatefulWidget {
               children: [
                 Align(
                   alignment: Alignment.centerRight,
-                  child: Text(
-                    "Lewati",
-                    style: titleMedium.copyWith(color: gray500),
+                  child: InkWell(
+                    onTap: () {
+                      Get.offAll(BerandaView());
+                    },
+                    child: Text(
+                      "Lewati",
+                      style: titleMedium.copyWith(color: gray500),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -53,15 +58,20 @@ class IntroductionView extends StatefulWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     controller.index <= 0.99
-                        ? SizedBox(
+                        ? const SizedBox(
                             width: 80,
                           )
-                        : SizedBox(
-                            width: 80,
-                            child: Text(
-                              "Kembali",
-                              style: titleMedium.copyWith(color: blue600),
-                              textAlign: TextAlign.left,
+                        : InkWell(
+                            onTap: () {
+                              controller.previousSlide();
+                            },
+                            child: SizedBox(
+                              width: 80,
+                              child: Text(
+                                "Kembali",
+                                style: titleMedium.copyWith(color: blue600),
+                                textAlign: TextAlign.left,
+                              ),
                             ),
                           ),
                     DotsIndicator(
@@ -78,10 +88,19 @@ class IntroductionView extends StatefulWidget {
                     ),
                     SizedBox(
                       width: 80,
-                      child: Text(
-                        "Lanjut",
-                        style: titleMedium.copyWith(color: blue600),
-                        textAlign: TextAlign.right,
+                      child: InkWell(
+                        onTap: controller.index == 2
+                            ? () {
+                                Get.offAll(BerandaView());
+                              }
+                            : () {
+                                controller.nextSlide();
+                              },
+                        child: Text(
+                          controller.index == 2 ? "MULAI" : "Lanjut",
+                          style: titleMedium.copyWith(color: blue600),
+                          textAlign: TextAlign.right,
+                        ),
                       ),
                     ),
                   ],
