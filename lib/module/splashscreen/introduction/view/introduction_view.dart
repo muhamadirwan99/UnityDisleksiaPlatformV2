@@ -23,7 +23,7 @@ class IntroductionView extends StatefulWidget {
                   alignment: Alignment.centerRight,
                   child: InkWell(
                     onTap: () {
-                      Get.offAll(BerandaView());
+                      Get.offAll(const BerandaView());
                     },
                     child: Text(
                       "Lewati",

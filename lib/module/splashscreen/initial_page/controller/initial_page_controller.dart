@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:flutter/material.dart';
 import 'package:udp_v2/core.dart';
 
 class InitialPageController extends State<InitialPageView>

@@ -1,8 +1,10 @@
 {
     "openai_key": "",
     "modules": [
+        "beranda",
+        "bookmark",
+        "search",
         "splashscreen/initial_page",
-        "splashscreen/introduction",
-        "beranda"
+        "splashscreen/introduction"
     ]
 }

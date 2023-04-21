@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:udp_v2/common/style.dart';
 import 'package:udp_v2/core.dart';
-import '../controller/initial_page_controller.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class InitialPageView extends StatefulWidget {

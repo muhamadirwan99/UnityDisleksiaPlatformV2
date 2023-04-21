@@ -1,21 +1,11 @@
 import 'package:get/get.dart';
-import '../view/beranda_view.dart';
+import 'package:udp_v2/core.dart';
 
 class BerandaController extends GetxController {
   BerandaView? view;
-
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
+  final List<String> imageAssets = [
+    'assets/images/carousel_one.svg',
+    'assets/images/carousel_two.svg',
+    'assets/images/carousel_three.svg',
+  ];
 }
