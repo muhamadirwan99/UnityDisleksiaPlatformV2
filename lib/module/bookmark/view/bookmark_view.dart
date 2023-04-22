@@ -1,8 +1,10 @@
 import 'dart:io';
-import 'dart:math';
-
 import 'package:udp_v2/core.dart';
 import 'package:get/get.dart';
+import 'package:udp_v2/module/bookmark/widget/card_informasi_widget.dart';
+import 'package:udp_v2/module/bookmark/widget/card_pelajaran_widget.dart';
+import 'package:udp_v2/module/bookmark/widget/content_informasi_kosong_widget.dart';
+import 'package:udp_v2/module/bookmark/widget/content_pelajaran_kosong_widget.dart';
 
 class BookmarkView extends StatefulWidget {
   const BookmarkView({Key? key}) : super(key: key);
@@ -19,7 +21,7 @@ class _BookmarkViewState extends State<BookmarkView>
       length: 2,
       vsync: this,
     );
-    final List<String> _tabs = <String>["Pelajaran", "Informasi"];
+    final List<String> _tabs = <String>["Pelajaran", "Informasi", "A", "B"];
     return GetBuilder<BookmarkController>(
       init: BookmarkController(),
       builder: (controller) {
@@ -66,10 +68,28 @@ class _BookmarkViewState extends State<BookmarkView>
                   ),
                 ];
               },
-              body: const TabBarView(
+              body: TabBarView(
                 children: [
-                  Icon(Icons.directions_car),
-                  Icon(Icons.directions_transit),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height,
+                    child: const ContentPelajaranKosongWidget(),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height,
+                    child: const ContentInformasiKosongWidget(),
+                  ),
+                  Column(
+                    children: [
+                      const CardPelajaranWidget(),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const CardInformasiWidget(),
+                    ],
+                  )
                 ],
               ),
             ),
