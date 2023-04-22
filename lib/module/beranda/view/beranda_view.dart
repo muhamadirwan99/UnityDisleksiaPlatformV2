@@ -1,11 +1,9 @@
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
-import 'package:get/get.dart';
 import 'package:udp_v2/module/beranda/widget/container_Informasi_lainnya_widget.dart';
 import 'package:udp_v2/module/beranda/widget/container_kurikulum_widget.dart';
 import 'package:udp_v2/module/beranda/widget/container_materi_pelajaran_widget.dart';
-import 'package:udp_v2/module/beranda/widget/image_slide_widget.dart';
-import 'package:udp_v2/module/beranda/widget/row_kelas_widget.dart';
 
 class BerandaView extends StatefulWidget {
   const BerandaView({Key? key}) : super(key: key);
@@ -58,17 +56,27 @@ class _BerandaViewState extends State<BerandaView> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
                 child: Row(
-                  children: const [
-                    Icon(
-                      Icons.search,
-                      size: 24.0,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Get.to(const SearchView());
+                      },
+                      child: const Icon(
+                        Icons.search,
+                        size: 24.0,
+                      ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
-                    Icon(
-                      Icons.bookmark_add_outlined,
-                      size: 24.0,
+                    InkWell(
+                      onTap: () {
+                        Get.to(const BookmarkView());
+                      },
+                      child: const Icon(
+                        Icons.bookmark_add_outlined,
+                        size: 24.0,
+                      ),
                     ),
                   ],
                 ),
