@@ -48,17 +48,15 @@ class SearchView extends StatelessWidget {
                       ),
                       SizedBox(
                         width: 240,
-                        child: Expanded(
-                          child: TextFormField(
-                            initialValue: null,
-                            decoration: const InputDecoration.collapsed(
-                              filled: true,
-                              fillColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              hintText: "Search",
-                            ),
-                            onFieldSubmitted: (value) {},
+                        child: TextFormField(
+                          initialValue: null,
+                          decoration: const InputDecoration.collapsed(
+                            filled: true,
+                            fillColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            hintText: "Search",
                           ),
+                          onFieldSubmitted: (value) {},
                         ),
                       ),
                     ],
