@@ -1,9 +1,6 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/beranda/widget/container_Informasi_lainnya_widget.dart';
-import 'package:udp_v2/module/beranda/widget/container_kurikulum_widget.dart';
-import 'package:udp_v2/module/beranda/widget/container_materi_pelajaran_widget.dart';
 
 class BerandaView extends StatefulWidget {
   const BerandaView({Key? key}) : super(key: key);
@@ -113,22 +110,27 @@ class _BerandaViewState extends State<BerandaView> {
                   const SizedBox(
                     height: 16,
                   ),
-                  Container(
-                    height: 40,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: blue600,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15, vertical: 9.0),
-                      child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "Panduan aplikasi disini ya...",
-                            style: titleSmall.copyWith(color: gray100),
-                          )),
+                  InkWell(
+                    onTap: () {
+                      Get.to(const PanduanAplikasiView());
+                    },
+                    child: Container(
+                      height: 40,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: blue600,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 9.0),
+                        child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Panduan aplikasi disini ya...",
+                              style: titleSmall.copyWith(color: gray100),
+                            )),
+                      ),
                     ),
                   ),
                   const SizedBox(
