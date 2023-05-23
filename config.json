@@ -6,6 +6,10 @@
         "search",
         "splashscreen/initial_page",
         "splashscreen/introduction",
-        "panduan_aplikasi"
+        "panduan_aplikasi",
+        "kurikulum_pembelajaran",
+        "content_pembelajaran",
+        "latihan_menulis",
+        "informasi_menarik"
     ]
 }

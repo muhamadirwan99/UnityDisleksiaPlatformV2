@@ -24,14 +24,11 @@ class PanduanParagrafPertamaWidget extends StatelessWidget {
             const SizedBox(
               width: 20,
             ),
-            SizedBox(
-              width: 290,
-              child: Expanded(
-                child: Text("Logo untuk mengarahkan Anda pada halaman beranda",
-                    textAlign: TextAlign.start,
-                    style: bodyMedium.copyWith(
-                        color: const Color(0xff0A0A0A), height: 1.5)),
-              ),
+            Expanded(
+              child: Text("Logo untuk mengarahkan Anda pada halaman beranda",
+                  textAlign: TextAlign.start,
+                  style: bodyMedium.copyWith(
+                      color: const Color(0xff0A0A0A), height: 1.5)),
             ),
           ],
         ),

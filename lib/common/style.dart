@@ -117,6 +117,9 @@ const Color gray700 = Color(0xff575757);
 const Color gray800 = Color(0xff393939);
 const Color gray900 = Color(0xff1B1B1B);
 
+const Color neutralBlack = Color(0xff000000);
+const Color neutralWhite = Color(0xffFFFFFF);
+
 class dimension {
   static double thumbWebinarSize = 110;
   static double thumbVideoWidth = 166;

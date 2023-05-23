@@ -1,4 +1,3 @@
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:udp_v2/core.dart';
 
 class CardInformasiWidget extends StatefulWidget {

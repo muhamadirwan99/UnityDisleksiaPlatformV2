@@ -1,8 +1,5 @@
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:udp_v2/core.dart';
 import 'package:get/get.dart';
-import 'package:udp_v2/module/panduan_aplikasi/widget/panduan_paragraf_kedua_widget%20.dart';
-import 'package:udp_v2/module/panduan_aplikasi/widget/panduan_paragraf_pertama_widget.dart';
 
 class PanduanAplikasiView extends StatelessWidget {
   const PanduanAplikasiView({Key? key}) : super(key: key);
@@ -36,7 +33,15 @@ class PanduanAplikasiView extends StatelessWidget {
                   const SizedBox(
                     height: 8,
                   ),
-                  const PanduanParagrafKeduaWidget()
+                  const PanduanParagrafKeduaWidget(),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  const PanduanParagrafKetigaWidget(),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  const PanduanParagrafKeempatWidget()
                 ],
               ),
             ),

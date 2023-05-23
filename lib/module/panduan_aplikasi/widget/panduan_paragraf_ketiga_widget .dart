@@ -1,14 +1,14 @@
 import 'package:udp_v2/core.dart';
 
-class PanduanParagrafKeduaWidget extends StatelessWidget {
-  const PanduanParagrafKeduaWidget({super.key});
+class PanduanParagrafKetigaWidget extends StatelessWidget {
+  const PanduanParagrafKetigaWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Image.asset(
-          "assets/images/images_panduan_aplikasi_2.jpg",
+          "assets/images/images_panduan_aplikasi_3.jpg",
           fit: BoxFit.fill,
           width: MediaQuery.of(context).size.width,
         ),
@@ -18,7 +18,7 @@ class PanduanParagrafKeduaWidget extends StatelessWidget {
         Flex(direction: Axis.horizontal, children: [
           Expanded(
             child: Text(
-                "Kategori Kurikulum Pembelajaran dikkhususkan untuk guru dan orangtua. ",
+                "Kategori Materi Pembelajaran dikkhususkan untuk siswa. Ada pun alur penggunaanya sebagai berikut:",
                 textAlign: TextAlign.start,
                 style: bodyMedium.copyWith(
                     color: const Color(0xff0A0A0A), height: 1.5)),
@@ -35,8 +35,7 @@ class PanduanParagrafKeduaWidget extends StatelessWidget {
                       color: const Color(0xff0A0A0A), height: 1.5)),
             ),
             Expanded(
-              child: Text(
-                  "Kurikulum untuk mengetahui informasi terkini terbitan dari pemerintahan",
+              child: Text("Memilik kelas yang akan diakses",
                   textAlign: TextAlign.start,
                   style: bodyMedium.copyWith(
                       color: const Color(0xff0A0A0A), height: 1.5)),
@@ -55,7 +54,7 @@ class PanduanParagrafKeduaWidget extends StatelessWidget {
             ),
             Expanded(
               child: Text(
-                  "Silabus pembelajaran untuk mengetahui hal apa saya yang akan dipelajari oleh siswa selama 2 semester",
+                  "Anda akan mendapati 5 pilihan menu, yaitu materi pelajaran, video pelajaran, praktek berhitung, praktek menulis, dan praktek membaca. Silakan pilih menu yang Anda inginkan.",
                   textAlign: TextAlign.start,
                   style: bodyMedium.copyWith(
                       color: const Color(0xff0A0A0A), height: 1.5)),
@@ -74,7 +73,7 @@ class PanduanParagrafKeduaWidget extends StatelessWidget {
             ),
             Expanded(
               child: Text(
-                  "RPP adalah kegiatan yang dilakukan guru dan siswa selama pembelaran di sekolah berlangsung",
+                  "Anda sudah bisa mendapatkan pembelajaran dari mata pelajaran dan praktek yang Anda inginkan",
                   textAlign: TextAlign.start,
                   style: bodyMedium.copyWith(
                       color: const Color(0xff0A0A0A), height: 1.5)),

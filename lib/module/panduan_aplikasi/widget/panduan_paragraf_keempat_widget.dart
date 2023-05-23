@@ -1,14 +1,14 @@
 import 'package:udp_v2/core.dart';
 
-class PanduanParagrafKeduaWidget extends StatelessWidget {
-  const PanduanParagrafKeduaWidget({super.key});
+class PanduanParagrafKeempatWidget extends StatelessWidget {
+  const PanduanParagrafKeempatWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Image.asset(
-          "assets/images/images_panduan_aplikasi_2.jpg",
+          "assets/images/images_panduan_aplikasi_4.jpg",
           fit: BoxFit.fill,
           width: MediaQuery.of(context).size.width,
         ),
@@ -18,7 +18,7 @@ class PanduanParagrafKeduaWidget extends StatelessWidget {
         Flex(direction: Axis.horizontal, children: [
           Expanded(
             child: Text(
-                "Kategori Kurikulum Pembelajaran dikkhususkan untuk guru dan orangtua. ",
+                "Kategori Informasi Menarik dikkhususkan untuk guru dan orangtua. Ada pun alur penggunaanya sebagai berikut:",
                 textAlign: TextAlign.start,
                 style: bodyMedium.copyWith(
                     color: const Color(0xff0A0A0A), height: 1.5)),
@@ -35,8 +35,7 @@ class PanduanParagrafKeduaWidget extends StatelessWidget {
                       color: const Color(0xff0A0A0A), height: 1.5)),
             ),
             Expanded(
-              child: Text(
-                  "Kurikulum untuk mengetahui informasi terkini terbitan dari pemerintahan",
+              child: Text("Memilik informasi yang akan diakses",
                   textAlign: TextAlign.start,
                   style: bodyMedium.copyWith(
                       color: const Color(0xff0A0A0A), height: 1.5)),
@@ -54,8 +53,7 @@ class PanduanParagrafKeduaWidget extends StatelessWidget {
                       color: const Color(0xff0A0A0A), height: 1.5)),
             ),
             Expanded(
-              child: Text(
-                  "Silabus pembelajaran untuk mengetahui hal apa saya yang akan dipelajari oleh siswa selama 2 semester",
+              child: Text("Anda bisa membaca informasi tersebut.",
                   textAlign: TextAlign.start,
                   style: bodyMedium.copyWith(
                       color: const Color(0xff0A0A0A), height: 1.5)),
@@ -74,7 +72,7 @@ class PanduanParagrafKeduaWidget extends StatelessWidget {
             ),
             Expanded(
               child: Text(
-                  "RPP adalah kegiatan yang dilakukan guru dan siswa selama pembelaran di sekolah berlangsung",
+                  "Anda bisa menambahkan informasi ke dalam daftar favorit Anda dengan mengklik bookmark.",
                   textAlign: TextAlign.start,
                   style: bodyMedium.copyWith(
                       color: const Color(0xff0A0A0A), height: 1.5)),

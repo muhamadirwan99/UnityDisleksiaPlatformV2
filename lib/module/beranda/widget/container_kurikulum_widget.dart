@@ -1,6 +1,5 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/beranda/widget/row_kelas_widget.dart';
 
 class ContainerKurikulumWidget extends StatefulWidget {
   const ContainerKurikulumWidget({Key? key}) : super(key: key);
@@ -35,32 +34,56 @@ class _ContainerKurikulumWidgetState extends State<ContainerKurikulumWidget> {
             const SizedBox(
               height: 12,
             ),
-            RowKelasWidget(
-              circleIcon: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: SvgPicture.asset("assets/images/books.svg")),
-              title: "Kurikulum",
-              subtitle: "Kurikulum pemerintah terkini",
+            InkWell(
+              onTap: () {
+                Get.to(KurikulumPembelajaranView(
+                  title: "Kurikulum",
+                  indexContent: 1,
+                ));
+              },
+              child: RowKelasWidget(
+                circleIcon: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: SvgPicture.asset("assets/images/books.svg")),
+                title: "Kurikulum",
+                subtitle: "Kurikulum pemerintah terkini",
+              ),
             ),
             const SizedBox(
               height: 12,
             ),
-            RowKelasWidget(
-              circleIcon: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: SvgPicture.asset("assets/images/books2.svg")),
-              title: "Silabus",
-              subtitle: "Silabus pembelajaran dari kurikulum",
+            InkWell(
+              onTap: () {
+                Get.to(KurikulumPembelajaranView(
+                  title: "Silabus",
+                  indexContent: 2,
+                ));
+              },
+              child: RowKelasWidget(
+                circleIcon: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: SvgPicture.asset("assets/images/books2.svg")),
+                title: "Silabus",
+                subtitle: "Silabus pembelajaran dari kurikulum",
+              ),
             ),
             const SizedBox(
               height: 12,
             ),
-            RowKelasWidget(
-              circleIcon: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: SvgPicture.asset("assets/images/books3.svg")),
-              title: "RPP",
-              subtitle: "Rencana pembelajaran guru di kelas",
+            InkWell(
+              onTap: () {
+                Get.to(KurikulumPembelajaranView(
+                  title: "RPP",
+                  indexContent: 3,
+                ));
+              },
+              child: RowKelasWidget(
+                circleIcon: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: SvgPicture.asset("assets/images/books3.svg")),
+                title: "RPP",
+                subtitle: "Rencana pembelajaran guru di kelas",
+              ),
             ),
           ],
         ),
