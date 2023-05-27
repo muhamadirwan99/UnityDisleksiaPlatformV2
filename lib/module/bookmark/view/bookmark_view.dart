@@ -17,13 +17,13 @@ class _BookmarkViewState extends State<BookmarkView>
       length: 2,
       vsync: this,
     );
-    final List<String> _tabs = <String>["Pelajaran", "Informasi", "A", "B"];
+    final List<String> tabs = <String>["Pelajaran", "Informasi"];
     return GetBuilder<BookmarkController>(
       init: BookmarkController(),
       builder: (controller) {
         return Scaffold(
           body: DefaultTabController(
-            length: _tabs.length,
+            length: tabs.length,
             child: NestedScrollView(
               headerSliverBuilder:
                   (BuildContext context, bool innerBoxIsScrolled) {
@@ -47,7 +47,7 @@ class _BookmarkViewState extends State<BookmarkView>
                         forceElevated: innerBoxIsScrolled,
                         bottom: TabBar(
                           indicatorColor: Colors.white,
-                          tabs: _tabs
+                          tabs: tabs
                               .map(
                                 (String name) => Padding(
                                   padding: const EdgeInsets.all(8.0),
@@ -76,16 +76,16 @@ class _BookmarkViewState extends State<BookmarkView>
                     height: MediaQuery.of(context).size.height,
                     child: const ContentInformasiKosongWidget(),
                   ),
-                  Column(
-                    children: [
-                      const CardPelajaranWidget(),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      const CardInformasiWidget(),
-                    ],
-                  )
+                  // Column(
+                  //   children: [
+                  //     const CardPelajaranWidget(),
+                  //   ],
+                  // ),
+                  // Column(
+                  //   children: [
+                  //     const CardInformasiWidget(),
+                  //   ],
+                  // )
                 ],
               ),
             ),

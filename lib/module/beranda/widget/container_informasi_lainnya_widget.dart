@@ -1,6 +1,5 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/beranda/widget/row_kelas_widget.dart';
 
 class ContainerInformasiLainnyaWidget extends StatefulWidget {
   const ContainerInformasiLainnyaWidget({Key? key}) : super(key: key);
@@ -18,65 +17,62 @@ class _ContainerInformasiLainnyaWidgetState
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: blue600,
+        color: gray100,
       ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8.0),
-        child: Column(
-          children: [
-            Align(
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 9.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Informasi Lainnya",
-                style: titleSmall.copyWith(
-                  color: gray100,
+                style: titleMedium.copyWith(
+                  color: gray900,
                 ),
               ),
             ),
-            const SizedBox(
-              height: 12,
-            ),
-            RowKelasWidget(
-              circleIcon: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: SvgPicture.asset("assets/images/computer.svg")),
-              title: "Informasi Webinar",
-              subtitle: "Webinar/seminar terkait disleksia",
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            RowKelasWidget(
-              circleIcon: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: SvgPicture.asset(
-                      "assets/images/icon_membimbing_anak.svg")),
-              title: "Kiat Membimbing Anak",
-              subtitle: "Edukasi perlakuan terhadap anak",
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            RowKelasWidget(
-              circleIcon: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child:
-                      SvgPicture.asset("assets/images/peoples_with_pen.svg")),
-              title: "Informasi Kursus Disleksia",
-              subtitle: "Kursus berbagai hal diskleksia",
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            RowKelasWidget(
-              circleIcon: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: SvgPicture.asset("assets/images/doctor.svg")),
-              title: "Informasi Terapi Disleksia",
-              subtitle: "Terapi berbagai treatment diskleksia",
-            )
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          RowKelasWidget(
+            circleIcon: CircleAvatar(
+                backgroundColor: red100,
+                child: SvgPicture.asset("assets/images/computer.svg")),
+            title: "Informasi Webinar",
+            subtitle: "Webinar/seminar terkait disleksia",
+            onTap: () {},
+          ),
+          RowKelasWidget(
+            circleIcon: CircleAvatar(
+                backgroundColor: red100,
+                child:
+                    SvgPicture.asset("assets/images/icon_membimbing_anak.svg")),
+            title: "Kiat Membimbing Anak",
+            subtitle: "Edukasi perlakuan terhadap anak",
+            onTap: () {},
+          ),
+          RowKelasWidget(
+            circleIcon: CircleAvatar(
+                backgroundColor: red100,
+                child: SvgPicture.asset("assets/images/peoples_with_pen.svg")),
+            title: "Informasi Kursus Disleksia",
+            subtitle: "Kursus berbagai hal diskleksia",
+            onTap: () {},
+          ),
+          RowKelasWidget(
+            circleIcon: CircleAvatar(
+                backgroundColor: red100,
+                child: SvgPicture.asset("assets/images/doctor.svg")),
+            title: "Informasi Terapi Disleksia",
+            subtitle: "Terapi berbagai treatment diskleksia",
+            onTap: () {},
+          )
+        ],
       ),
     );
   }

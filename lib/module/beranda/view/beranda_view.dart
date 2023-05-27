@@ -17,7 +17,7 @@ class _BerandaViewState extends State<BerandaView> {
       builder: (controller) {
         return Scaffold(
           appBar: AppBar(
-            backgroundColor: blue600,
+            backgroundColor: gray100,
             elevation: 0,
             leadingWidth: 300,
             leading: Padding(
@@ -43,43 +43,44 @@ class _BerandaViewState extends State<BerandaView> {
                   ),
                   Text(
                     "Unity Disleksia Platform",
-                    style: titleMedium.copyWith(color: gray100),
+                    style: titleMedium.copyWith(color: gray900),
                   ),
                 ],
               ),
             ),
-            actions: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-                child: Row(
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Get.to(const SearchView());
-                      },
-                      child: const Icon(
-                        Icons.search,
-                        size: 24.0,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 16,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Get.to(const BookmarkView());
-                      },
-                      child: const Icon(
-                        Icons.bookmark_add_outlined,
-                        size: 24.0,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+            // actions: [
+            //   Padding(
+            //     padding:
+            //         const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+            //     child: Row(
+            //       children: [
+            //         InkWell(
+            //           onTap: () {
+            //             Get.to(const SearchView());
+            //           },
+            //           child: const Icon(
+            //             Icons.search,
+            //             size: 24.0,
+            //           ),
+            //         ),
+            //         const SizedBox(
+            //           width: 16,
+            //         ),
+            //         InkWell(
+            //           onTap: () {
+            //             Get.to(const BookmarkView());
+            //           },
+            //           child: const Icon(
+            //             Icons.bookmark_add_outlined,
+            //             size: 24.0,
+            //           ),
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ],
           ),
+          backgroundColor: blue500,
           body: SingleChildScrollView(
             child: Container(
               padding: const EdgeInsets.all(16.0),
@@ -119,7 +120,7 @@ class _BerandaViewState extends State<BerandaView> {
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        color: blue600,
+                        color: gray100,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
@@ -128,7 +129,7 @@ class _BerandaViewState extends State<BerandaView> {
                             alignment: Alignment.centerLeft,
                             child: Text(
                               "Panduan aplikasi disini ya...",
-                              style: titleSmall.copyWith(color: gray100),
+                              style: titleSmall.copyWith(color: gray900),
                             )),
                       ),
                     ),

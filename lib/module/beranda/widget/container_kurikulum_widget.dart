@@ -16,77 +16,68 @@ class _ContainerKurikulumWidgetState extends State<ContainerKurikulumWidget> {
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: blue600,
+        color: gray100,
       ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8.0),
-        child: Column(
-          children: [
-            Align(
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 9.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Kurikulum Pembelajaran",
-                style: titleSmall.copyWith(
-                  color: gray100,
+                style: titleMedium.copyWith(
+                  color: gray900,
                 ),
               ),
             ),
-            const SizedBox(
-              height: 12,
-            ),
-            InkWell(
-              onTap: () {
-                Get.to(KurikulumPembelajaranView(
-                  title: "Kurikulum",
-                  indexContent: 1,
-                ));
-              },
-              child: RowKelasWidget(
-                circleIcon: CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: SvgPicture.asset("assets/images/books.svg")),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          RowKelasWidget(
+            circleIcon: CircleAvatar(
+                backgroundColor: red100,
+                child: SvgPicture.asset("assets/images/books.svg")),
+            title: "Kurikulum",
+            subtitle: "Kurikulum pemerintah terkini",
+            onTap: () {
+              Get.to(KurikulumPembelajaranView(
                 title: "Kurikulum",
-                subtitle: "Kurikulum pemerintah terkini",
-              ),
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            InkWell(
-              onTap: () {
-                Get.to(KurikulumPembelajaranView(
-                  title: "Silabus",
-                  indexContent: 2,
-                ));
-              },
-              child: RowKelasWidget(
-                circleIcon: CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: SvgPicture.asset("assets/images/books2.svg")),
+                indexContent: 1,
+              ));
+            },
+          ),
+          RowKelasWidget(
+            circleIcon: CircleAvatar(
+                backgroundColor: red100,
+                child: SvgPicture.asset("assets/images/books2.svg")),
+            title: "Silabus",
+            subtitle: "Silabus pembelajaran dari kurikulum",
+            onTap: () {
+              Get.to(KurikulumPembelajaranView(
                 title: "Silabus",
-                subtitle: "Silabus pembelajaran dari kurikulum",
-              ),
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            InkWell(
-              onTap: () {
-                Get.to(KurikulumPembelajaranView(
-                  title: "RPP",
-                  indexContent: 3,
-                ));
-              },
-              child: RowKelasWidget(
-                circleIcon: CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: SvgPicture.asset("assets/images/books3.svg")),
+                indexContent: 2,
+              ));
+            },
+          ),
+          RowKelasWidget(
+            circleIcon: CircleAvatar(
+                backgroundColor: red100,
+                child: SvgPicture.asset("assets/images/books3.svg")),
+            title: "RPP",
+            subtitle: "Rencana pembelajaran guru di kelas",
+            onTap: () {
+              Get.to(KurikulumPembelajaranView(
                 title: "RPP",
-                subtitle: "Rencana pembelajaran guru di kelas",
-              ),
-            ),
-          ],
-        ),
+                indexContent: 3,
+              ));
+            },
+          ),
+        ],
       ),
     );
   }
