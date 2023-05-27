@@ -42,6 +42,14 @@ class _ContainerInformasiLainnyaWidgetState
           RowKelasWidget(
             circleIcon: CircleAvatar(
                 backgroundColor: red100,
+                child: SvgPicture.asset("assets/images/umum.svg")),
+            title: "Informasi Umum",
+            subtitle: "Informasi Umum Pendidikan di Indonesia",
+            onTap: () {},
+          ),
+          RowKelasWidget(
+            circleIcon: CircleAvatar(
+                backgroundColor: red100,
                 child: SvgPicture.asset("assets/images/computer.svg")),
             title: "Informasi Webinar",
             subtitle: "Webinar/seminar terkait disleksia",
