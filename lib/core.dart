@@ -22,8 +22,16 @@ export 'package:udp_v2/module/informasi_menarik/controller/informasi_menarik_con
 export 'package:udp_v2/module/informasi_menarik/view/informasi_menarik_view.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/controller/kurikulum_pembelajaran_controller.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/view/kurikulum_pembelajaran_view.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/widget/container_content.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_detail.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_kurikulum.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_silabusrpp.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_silabusrpp_menu.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/widget/pdf_viewer.dart';
 export 'package:udp_v2/module/latihan_menulis/controller/latihan_menulis_controller.dart';
 export 'package:udp_v2/module/latihan_menulis/view/latihan_menulis_view.dart';
+export 'package:udp_v2/module/menu_nav/controller/menu_nav_controller.dart';
+export 'package:udp_v2/module/menu_nav/view/menu_nav_view.dart';
 export 'package:udp_v2/module/panduan_aplikasi/controller/panduan_aplikasi_controller.dart';
 export 'package:udp_v2/module/panduan_aplikasi/view/panduan_aplikasi_view.dart';
 export 'package:udp_v2/module/panduan_aplikasi/widget/panduan_paragraf_kedua_widget .dart';

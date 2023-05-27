@@ -23,7 +23,7 @@ class IntroductionView extends StatefulWidget {
                   alignment: Alignment.centerRight,
                   child: InkWell(
                     onTap: () {
-                      Get.offAll(const BerandaView());
+                      Get.offAll(const MenuNavView());
                     },
                     child: Text(
                       "Lewati",
@@ -91,7 +91,7 @@ class IntroductionView extends StatefulWidget {
                       child: InkWell(
                         onTap: controller.index == 2
                             ? () {
-                                Get.offAll(BerandaView());
+                                Get.offAll(const MenuNavView());
                               }
                             : () {
                                 controller.nextSlide();

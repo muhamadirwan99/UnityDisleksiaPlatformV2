@@ -1,15 +1,16 @@
 {
-    "openai_key": "",
-    "modules": [
-        "beranda",
-        "bookmark",
-        "search",
-        "splashscreen/initial_page",
-        "splashscreen/introduction",
-        "panduan_aplikasi",
-        "kurikulum_pembelajaran",
-        "content_pembelajaran",
-        "latihan_menulis",
-        "informasi_menarik"
-    ]
+  "openai_key": "",
+  "modules": [
+    "beranda",
+    "menu_nav",
+    "bookmark",
+    "search",
+    "splashscreen/initial_page",
+    "splashscreen/introduction",
+    "panduan_aplikasi",
+    "kurikulum_pembelajaran",
+    "content_pembelajaran",
+    "latihan_menulis",
+    "informasi_menarik"
+  ]
 }
