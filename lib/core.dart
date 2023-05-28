@@ -30,6 +30,14 @@ export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_silabusrpp_m
 export 'package:udp_v2/module/kurikulum_pembelajaran/widget/pdf_viewer.dart';
 export 'package:udp_v2/module/latihan_menulis/controller/latihan_menulis_controller.dart';
 export 'package:udp_v2/module/latihan_menulis/view/latihan_menulis_view.dart';
+export 'package:udp_v2/module/materi_pelajaran/bab_pelajaran/controller/bab_pelajaran_controller.dart';
+export 'package:udp_v2/module/materi_pelajaran/bab_pelajaran/view/bab_pelajaran_view.dart';
+export 'package:udp_v2/module/materi_pelajaran/detail_pelajaran/controller/detail_pelajaran_controller.dart';
+export 'package:udp_v2/module/materi_pelajaran/detail_pelajaran/view/detail_pelajaran_view.dart';
+export 'package:udp_v2/module/materi_pelajaran/mata_pelajaran/controller/mata_pelajaran_controller.dart';
+export 'package:udp_v2/module/materi_pelajaran/mata_pelajaran/view/mata_pelajaran_view.dart';
+export 'package:udp_v2/module/materi_pelajaran/pilih_pelajaran/controller/pilih_pelajaran_controller.dart';
+export 'package:udp_v2/module/materi_pelajaran/pilih_pelajaran/view/pilih_pelajaran_view.dart';
 export 'package:udp_v2/module/menu_nav/controller/menu_nav_controller.dart';
 export 'package:udp_v2/module/menu_nav/view/menu_nav_view.dart';
 export 'package:udp_v2/module/panduan_aplikasi/controller/panduan_aplikasi_controller.dart';

@@ -46,7 +46,11 @@ class _ContainerMateriPembelajaranWidgetState
             ),
             title: "Kelas 1",
             subtitle: "Materi pelajaran kelas 1 SD",
-            onTap: () {},
+            onTap: () {
+              Get.to(const PilihPelajaranView(
+                kdKelas: "1",
+              ));
+            },
           ),
           RowKelasWidget(
             circleIcon: CircleAvatar(
@@ -55,7 +59,11 @@ class _ContainerMateriPembelajaranWidgetState
             ),
             title: "Kelas 2",
             subtitle: "Materi pelajaran kelas 2 SD",
-            onTap: () {},
+            onTap: () {
+              Get.to(const PilihPelajaranView(
+                kdKelas: "2",
+              ));
+            },
           ),
           RowKelasWidget(
             circleIcon: CircleAvatar(
@@ -64,7 +72,11 @@ class _ContainerMateriPembelajaranWidgetState
             ),
             title: "Kelas 3",
             subtitle: "Materi pelajaran kelas 3 SD",
-            onTap: () {},
+            onTap: () {
+              Get.to(const PilihPelajaranView(
+                kdKelas: "3",
+              ));
+            },
           )
         ],
       ),
