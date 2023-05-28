@@ -1,10 +1,12 @@
-import 'package:flutter/material.dart';
-import '../controller/bab_pelajaran_controller.dart';
 import 'package:udp_v2/core.dart';
 import 'package:get/get.dart';
 
 class BabPelajaranView extends StatelessWidget {
-  const BabPelajaranView({Key? key}) : super(key: key);
+  final dynamic data;
+  const BabPelajaranView({
+    Key? key,
+    required this.data,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class BabPelajaranView extends StatelessWidget {
 
         return Scaffold(
           appBar: AppBar(
-            title: const Text("BabPelajaran"),
+            title: const Text("Materi Pelajaran"),
           ),
           body: SingleChildScrollView(
             child: Container(
