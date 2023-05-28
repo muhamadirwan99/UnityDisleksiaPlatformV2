@@ -1,7 +1,8 @@
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:get/get.dart';
+import 'package:udp_v2/module/latihan/latihan_page.dart';
 import 'package:udp_v2/utils/widget/green_button.dart';
 
 class PilihPelajaranView extends StatelessWidget {
@@ -79,7 +80,9 @@ class PilihPelajaranView extends StatelessWidget {
                         ),
                         GreenButton(
                           value: "Latihan Menulis",
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(const LatihanPage());
+                          },
                         ),
                         const SizedBox(
                           height: 15.0,

@@ -28,6 +28,12 @@ export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_kurikulum.da
 export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_silabusrpp.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_silabusrpp_menu.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/widget/pdf_viewer.dart';
+export 'package:udp_v2/module/latihan/angka_page.dart';
+export 'package:udp_v2/module/latihan/huruf_page.dart';
+export 'package:udp_v2/module/latihan/instruksi_page.dart';
+export 'package:udp_v2/module/latihan/latihan_angka_page.dart';
+export 'package:udp_v2/module/latihan/latihan_huruf_page.dart';
+export 'package:udp_v2/module/latihan/latihan_page.dart';
 export 'package:udp_v2/module/latihan_menulis/controller/latihan_menulis_controller.dart';
 export 'package:udp_v2/module/latihan_menulis/view/latihan_menulis_view.dart';
 export 'package:udp_v2/module/materi_pelajaran/bab_pelajaran/controller/bab_pelajaran_controller.dart';
