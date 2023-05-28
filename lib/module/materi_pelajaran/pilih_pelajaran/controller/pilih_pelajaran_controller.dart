@@ -4,18 +4,19 @@ import '../view/pilih_pelajaran_view.dart';
 class PilihPelajaranController extends GetxController {
   PilihPelajaranView? view;
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
+  String kelas = "";
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
+  switchKelas(String kdKelas) {
+    switch (kdKelas) {
+      case "1":
+        kelas = "Kelas 1";
+        break;
+      case "2":
+        kelas = "Kelas 2";
+        break;
+      case "3":
+        kelas = "Kelas 3";
+        break;
+    }
   }
 }

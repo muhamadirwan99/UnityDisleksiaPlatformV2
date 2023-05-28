@@ -53,6 +53,5 @@ export 'package:udp_v2/module/splashscreen/initial_page/controller/initial_page_
 export 'package:udp_v2/module/splashscreen/initial_page/view/initial_page_view.dart';
 export 'package:udp_v2/module/splashscreen/introduction/controller/introduction_controller.dart';
 export 'package:udp_v2/module/splashscreen/introduction/view/introduction_view.dart';
+export 'core_package.dart';
 export 'state_util.dart';
-export 'package:udp_v2/common/style.dart';
-export 'package:flutter/material.dart';
