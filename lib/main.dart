@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Unity Disleksia Platform',
       navigatorKey: Get.navigatorKey,
       theme: ThemeData(
         // This is the theme of your application.

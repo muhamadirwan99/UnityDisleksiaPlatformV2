@@ -1,4 +1,4 @@
-package com.example.udp_v2
+package com.udp.app
 
 import io.flutter.embedding.android.FlutterActivity
 
