@@ -8,9 +8,11 @@ import 'package:udp_v2/utils/widget/green_button.dart';
 
 class MataPelajaranView extends StatelessWidget {
   final String kelas;
+  final String kdKelas;
   const MataPelajaranView({
     Key? key,
     required this.kelas,
+    required this.kdKelas,
   }) : super(key: key);
 
   @override
@@ -19,6 +21,7 @@ class MataPelajaranView extends StatelessWidget {
       init: MataPelajaranController(),
       builder: (controller) {
         controller.view = this;
+        controller.switchMateri(kdKelas);
 
         return Scaffold(
           appBar: AppBar(

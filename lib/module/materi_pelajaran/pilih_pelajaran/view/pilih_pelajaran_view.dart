@@ -20,6 +20,64 @@ class PilihPelajaranView extends StatelessWidget {
 
         controller.switchKelas(kdKelas);
 
+        // CollectionReference usersCollection =
+        //     FirebaseFirestore.instance.collection('materi');
+
+        // // Mendapatkan referensi dokumen dengan ID khusus
+        // DocumentReference documentRef = usersCollection.doc('kelas2');
+
+        // // Data yang akan disisipkan
+        // Map<String, dynamic> data = {
+        //   'inggris': {
+        //     "mapel": "Inggris",
+        //     'bab1': {
+        //       'namaBab': "BAB 1",
+        //       'namaMapel': "Test",
+        //       'descMapel': "Test",
+        //       'linkModul':
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
+        //       'linkVideo':
+        //           "https://www.youtube.com/watch?v=whBzFeh26ho&pp=ygUnYmVsYWphciBtZW51bGlzIGFuZ2thIGRhbiBiaWxhbmdhbiBhbmFr",
+        //     },
+        //     'bab2': {
+        //       'namaBab': "BAB 2",
+        //       'namaMapel': "Test",
+        //       'descMapel': "Test",
+        //       'linkModul':
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
+        //       'linkVideo':
+        //           "https://www.youtube.com/watch?v=whBzFeh26ho&pp=ygUnYmVsYWphciBtZW51bGlzIGFuZ2thIGRhbiBiaWxhbmdhbiBhbmFr",
+        //     },
+        //   },
+        //   'jepang': {
+        //     "mapel": "jepang",
+        //     'bab1': {
+        //       'namaBab': "BAB 1",
+        //       'namaMapel': "Test",
+        //       'descMapel': "Test",
+        //       'linkModul':
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
+        //       'linkVideo':
+        //           "https://www.youtube.com/watch?v=whBzFeh26ho&pp=ygUnYmVsYWphciBtZW51bGlzIGFuZ2thIGRhbiBiaWxhbmdhbiBhbmFr",
+        //     },
+        //     'bab2': {
+        //       'namaBab': "BAB 2",
+        //       'namaMapel': "Test",
+        //       'descMapel': "Test",
+        //       'linkModul':
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
+        //       'linkVideo':
+        //           "https://www.youtube.com/watch?v=whBzFeh26ho&pp=ygUnYmVsYWphciBtZW51bGlzIGFuZ2thIGRhbiBiaWxhbmdhbiBhbmFr",
+        //     },
+        //   },
+        // };
+
+        // // Menyisipkan data ke Firestore
+        // documentRef
+        //     .set(data)
+        //     .then((value) => print('Data berhasil disisipkan'))
+        //     .catchError((error) => print('Gagal menyisipkan data: $error'));
+
         return Scaffold(
           appBar: AppBar(
             title: const Text("Materi Pelajaran"),
@@ -76,6 +134,7 @@ class PilihPelajaranView extends StatelessWidget {
                             Get.to(
                               MataPelajaranView(
                                 kelas: controller.kelas,
+                                kdKelas: kdKelas,
                               ),
                             );
                           },
