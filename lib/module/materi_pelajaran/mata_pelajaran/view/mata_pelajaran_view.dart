@@ -111,7 +111,10 @@ class MataPelajaranView extends StatelessWidget {
                                     GreenButton(
                                       value: data["mapel"],
                                       onPressed: () {
-                                        Get.to(BabPelajaranView(data: data));
+                                        Get.to(BabPelajaranView(
+                                          data: data,
+                                          kelas: kelas,
+                                        ));
                                       },
                                     ),
                                     const SizedBox(

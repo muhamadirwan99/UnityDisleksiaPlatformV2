@@ -1,10 +1,12 @@
-import 'package:flutter/material.dart';
-import '../controller/detail_pelajaran_controller.dart';
 import 'package:udp_v2/core.dart';
 import 'package:get/get.dart';
 
 class DetailPelajaranView extends StatelessWidget {
-  const DetailPelajaranView({Key? key}) : super(key: key);
+  final dynamic data;
+  const DetailPelajaranView({
+    Key? key,
+    required this.data,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
