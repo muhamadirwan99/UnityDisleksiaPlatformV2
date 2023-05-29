@@ -17,7 +17,7 @@ class DetailPelajaranView extends StatelessWidget {
 
         return Scaffold(
           appBar: AppBar(
-            title: const Text("DetailPelajaran"),
+            title: Text(data["namaMapel"]),
           ),
           body: SingleChildScrollView(
             child: Container(

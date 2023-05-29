@@ -1,9 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:udp_v2/core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await FlutterDownloader.initialize(debug: true, ignoreSsl: true);
   await Firebase.initializeApp();
 
   runApp(const MyApp());

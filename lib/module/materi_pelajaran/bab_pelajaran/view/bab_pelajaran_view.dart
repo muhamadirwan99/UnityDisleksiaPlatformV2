@@ -96,7 +96,7 @@ class BabPelajaranView extends StatelessWidget {
                                 GreenButton(
                                   value: data["namaBab"],
                                   onPressed: () {
-                                    Get.to(DetailPelajaranView(data: data));
+                                    Get.to(DetailVideoPage(data: data));
                                   },
                                 ),
                                 const SizedBox(

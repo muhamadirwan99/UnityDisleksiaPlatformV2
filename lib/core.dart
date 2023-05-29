@@ -40,6 +40,7 @@ export 'package:udp_v2/module/materi_pelajaran/bab_pelajaran/controller/bab_pela
 export 'package:udp_v2/module/materi_pelajaran/bab_pelajaran/view/bab_pelajaran_view.dart';
 export 'package:udp_v2/module/materi_pelajaran/detail_pelajaran/controller/detail_pelajaran_controller.dart';
 export 'package:udp_v2/module/materi_pelajaran/detail_pelajaran/view/detail_pelajaran_view.dart';
+export 'package:udp_v2/module/materi_pelajaran/detail_pelajaran/view/detail_video_page.dart';
 export 'package:udp_v2/module/materi_pelajaran/mata_pelajaran/controller/mata_pelajaran_controller.dart';
 export 'package:udp_v2/module/materi_pelajaran/mata_pelajaran/view/mata_pelajaran_view.dart';
 export 'package:udp_v2/module/materi_pelajaran/pilih_pelajaran/controller/pilih_pelajaran_controller.dart';
