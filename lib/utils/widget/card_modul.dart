@@ -8,7 +8,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:path_provider/path_provider.dart';
 
 class CardModul extends StatefulWidget {
-  final dynamic data;
+  final Video data;
 
   const CardModul({Key? key, required this.data}) : super(key: key);
 
@@ -71,7 +71,7 @@ class _CardModulState extends State<CardModul> {
         child: Column(
           children: [
             Text(
-              "Modul " + widget.data["namaMapel"],
+              "Modul ${widget.data.namaMapel}",
               style: titleMedium,
             ),
             const SizedBox(
@@ -79,7 +79,7 @@ class _CardModulState extends State<CardModul> {
             ),
             ElevatedButton(
               onPressed: () {
-                download(widget.data["linkModul"]);
+                download(widget.data.linkModul);
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: blue500,

@@ -89,12 +89,12 @@ class BabPelajaranView extends StatelessWidget {
                           physics: const ScrollPhysics(),
                           padding: const EdgeInsets.symmetric(horizontal: 24),
                           itemBuilder: (context, index) {
-                            var data = dataList[index];
+                            Video data = Video.fromJson(dataList[index]);
 
                             return Column(
                               children: [
                                 GreenButton(
-                                  value: data["namaBab"],
+                                  value: data.namaBab,
                                   onPressed: () {
                                     Get.to(DetailVideoPage(data: data));
                                   },
