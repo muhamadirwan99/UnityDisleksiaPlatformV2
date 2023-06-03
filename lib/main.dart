@@ -2,8 +2,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:provider/provider.dart';
 import 'package:udp_v2/core.dart';
+import 'package:udp_v2/db/database_informasi_helper.dart';
 import 'package:udp_v2/db/database_video_helper.dart';
 import 'package:udp_v2/provider/video_database_provider.dart';
+
+import 'provider/informasi_database_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,10 +27,10 @@ class MyApp extends StatelessWidget {
           create: (_) =>
               VideoDatabaseProvider(databaseHelper: DatabaseVideoHelper()),
         ),
-        // ChangeNotifierProvider(
-        //   create: (_) =>
-        //       DatabaseWebinarProvider(databaseHelper: DatabaseWebinarHelper()),
-        // ),
+        ChangeNotifierProvider(
+          create: (_) => InformasiDatabaseProvider(
+              databaseHelper: DatabaseInformasiHelper()),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
