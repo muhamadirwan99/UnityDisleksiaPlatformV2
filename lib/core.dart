@@ -18,6 +18,8 @@ export 'package:udp_v2/module/bookmark/widget/card_informasi_widget.dart';
 export 'package:udp_v2/module/bookmark/widget/card_pelajaran_widget.dart';
 export 'package:udp_v2/module/bookmark/widget/content_informasi_kosong_widget.dart';
 export 'package:udp_v2/module/bookmark/widget/content_pelajaran_kosong_widget.dart';
+export 'package:udp_v2/module/bookmark/widget/tab_informasi.dart';
+export 'package:udp_v2/module/bookmark/widget/tab_pelajaran.dart';
 export 'package:udp_v2/module/content_pembelajaran/controller/content_pembelajaran_controller.dart';
 export 'package:udp_v2/module/content_pembelajaran/view/content_pembelajaran_view.dart';
 export 'package:udp_v2/module/informasi/detail_informasi/controller/detail_informasi_controller.dart';
@@ -52,6 +54,8 @@ export 'package:udp_v2/module/materi_pelajaran/pilih_pelajaran/controller/pilih_
 export 'package:udp_v2/module/materi_pelajaran/pilih_pelajaran/view/pilih_pelajaran_view.dart';
 export 'package:udp_v2/module/menu_nav/controller/menu_nav_controller.dart';
 export 'package:udp_v2/module/menu_nav/view/menu_nav_view.dart';
+export 'package:udp_v2/module/notifikasi/controller/notifikasi_controller.dart';
+export 'package:udp_v2/module/notifikasi/view/notifikasi_view.dart';
 export 'package:udp_v2/module/panduan_aplikasi/controller/panduan_aplikasi_controller.dart';
 export 'package:udp_v2/module/panduan_aplikasi/view/panduan_aplikasi_view.dart';
 export 'package:udp_v2/module/panduan_aplikasi/widget/panduan_paragraf_kedua_widget .dart';

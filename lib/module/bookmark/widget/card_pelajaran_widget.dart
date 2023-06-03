@@ -1,7 +1,14 @@
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:udp_v2/core.dart';
 
 class CardPelajaranWidget extends StatefulWidget {
-  const CardPelajaranWidget({Key? key}) : super(key: key);
+  final Video video;
+  final BookmarkController controller;
+  const CardPelajaranWidget({
+    Key? key,
+    required this.video,
+    required this.controller,
+  }) : super(key: key);
 
   @override
   State<CardPelajaranWidget> createState() => _CardPelajaranWidgetState();
@@ -10,35 +17,35 @@ class CardPelajaranWidget extends StatefulWidget {
 class _CardPelajaranWidgetState extends State<CardPelajaranWidget> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 16.00, left: 16.0, top: 16),
-      child: Card(
-        shape: RoundedRectangleBorder(
-          side: const BorderSide(
-            color: gray300, //<-- SEE HERE
-          ),
-          borderRadius: BorderRadius.circular(8.0),
+    widget.controller.getThumbnail(widget.video.linkVideo);
+    return Card(
+      shape: RoundedRectangleBorder(
+        side: const BorderSide(
+          color: gray300, //<-- SEE HERE
         ),
-        elevation: 0,
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                  height: 108,
-                  width: 190,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset(
-                      "assets/images/images_card_pelajaran.jpg",
-                      fit: BoxFit.cover,
-                    ),
-                  )),
-              const SizedBox(
-                width: 16,
-              ),
-              SizedBox(
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      elevation: 0,
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+                height: 108,
+                width: 190,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: FancyShimmerImage(
+                    imageUrl: widget.controller.image,
+                    boxFit: BoxFit.cover,
+                  ),
+                )),
+            const SizedBox(
+              width: 16,
+            ),
+            Expanded(
+              child: SizedBox(
                 height: 108,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -47,9 +54,9 @@ class _CardPelajaranWidgetState extends State<CardPelajaranWidget> {
                       height: 108 / 2,
                       width: 130,
                       child: Text(
-                        "Lala & Ciko : Belajar Membaca",
+                        widget.video.namaMapel,
                         overflow: TextOverflow.ellipsis,
-                        maxLines: 3,
+                        maxLines: 1,
                         textAlign: TextAlign.start,
                         style: titleMedium.copyWith(
                             color: const Color(0xff231F20)),
@@ -58,18 +65,17 @@ class _CardPelajaranWidgetState extends State<CardPelajaranWidget> {
                     SizedBox(
                       height: 108 / 2,
                       width: 130,
-                      child: Text(
-                          "Dalam video ini lala dan Ciko akan menemani kamu untuk belajar mengenal huruf alfabet dan juga membaca",
+                      child: Text(widget.video.descMapel,
                           overflow: TextOverflow.ellipsis,
-                          maxLines: 3,
+                          maxLines: 2,
                           textAlign: TextAlign.start,
                           style: bodySmall.copyWith(color: gray700)),
                     ),
                   ],
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );

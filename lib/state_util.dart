@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+BuildContext get globalContext {
+  return Get.currentContext;
+}
+
 class Get {
   static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 

@@ -35,7 +35,7 @@ class _BookmarkViewState extends State<BookmarkView>
                       top: false,
                       bottom: Platform.isIOS ? false : true,
                       sliver: SliverAppBar(
-                        backgroundColor: blue600,
+                        backgroundColor: blue500,
                         title: Text(
                           "Bookmark",
                           style: titleMedium,
@@ -66,26 +66,19 @@ class _BookmarkViewState extends State<BookmarkView>
               },
               body: TabBarView(
                 children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height,
-                    child: const ContentPelajaranKosongWidget(),
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height,
-                    child: const ContentInformasiKosongWidget(),
-                  ),
+                  TabPelajaran(controller: controller),
+                  const TabInformasi(),
+                  // SizedBox(
+                  //   child: ContentPelajaranKosongWidget(),
+                  // ),
+                  // const SizedBox(
+                  //   child: ContentInformasiKosongWidget(),
+                  // ),
                   // Column(
                   //   children: [
                   //     const CardPelajaranWidget(),
                   //   ],
                   // ),
-                  // Column(
-                  //   children: [
-                  //     const CardInformasiWidget(),
-                  //   ],
-                  // )
                 ],
               ),
             ),

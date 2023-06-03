@@ -1,6 +1,5 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
 
-import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:udp_v2/core.dart';
 
@@ -30,10 +29,10 @@ class _ContentPelajaranKosongWidgetState
         const SizedBox(
           height: 16,
         ),
-        Text(
-          "Tambahkan Pembelajaran?",
-          style: titleMedium.copyWith(color: blue600),
-        ),
+        // Text(
+        //   "Tambahkan Pembelajaran?",
+        //   style: titleMedium.copyWith(color: blue600),
+        // ),
       ],
     );
   }

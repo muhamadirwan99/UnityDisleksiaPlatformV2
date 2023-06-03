@@ -27,10 +27,10 @@ class _ContentInformasiKosongWidgetState
         const SizedBox(
           height: 16,
         ),
-        Text(
-          "Tambahkan Informasi?",
-          style: titleMedium.copyWith(color: blue600),
-        ),
+        // Text(
+        //   "Tambahkan Informasi?",
+        //   style: titleMedium.copyWith(color: blue600),
+        // ),
       ],
     );
   }
