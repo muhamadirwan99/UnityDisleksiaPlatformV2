@@ -21,54 +21,42 @@ class PilihPelajaranView extends StatelessWidget {
         controller.switchKelas(kdKelas);
 
         // CollectionReference usersCollection =
-        //     FirebaseFirestore.instance.collection('materi');
+        //     FirebaseFirestore.instance.collection('informasi');
 
         // // Mendapatkan referensi dokumen dengan ID khusus
-        // DocumentReference documentRef = usersCollection.doc('kelas2');
+        // DocumentReference documentRef = usersCollection.doc('terapi');
 
         // // Data yang akan disisipkan
         // Map<String, dynamic> data = {
-        //   'inggris': {
-        //     "mapel": "Inggris",
-        //     'bab1': {
-        //       'namaBab': "BAB 1",
-        //       'namaMapel': "Test",
-        //       'descMapel': "Test",
-        //       'linkModul':
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       'linkVideo':
-        //           "https://www.youtube.com/watch?v=whBzFeh26ho&pp=ygUnYmVsYWphciBtZW51bGlzIGFuZ2thIGRhbiBiaWxhbmdhbiBhbmFr",
-        //     },
-        //     'bab2': {
-        //       'namaBab': "BAB 2",
-        //       'namaMapel': "Test",
-        //       'descMapel': "Test",
-        //       'linkModul':
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       'linkVideo':
-        //           "https://www.youtube.com/watch?v=whBzFeh26ho&pp=ygUnYmVsYWphciBtZW51bGlzIGFuZ2thIGRhbiBiaWxhbmdhbiBhbmFr",
-        //     },
+        //   'terapi1': {
+        //     "title": "Temu Kenali Dini Disleksia Bagi Para Guru",
+        //     "desc":
+        //         "Webinar yang diselenggarakan oleh DPSG Indonesia dalam rangka memberikan pengetahua n pada orangtua mengenai bagaimana mendeteksi secara dini anak yang mengalami Dislekia dan berbagai gangguan Penyerta pada anak Disleksia.",
+        //     "date": "20 November 2021",
+        //     "link":
+        //         "https://docs.google.com/forms/d/e/1FAIpQLScD5MOALMFWqclIHmRqrk6rdne8aydzyOHl4v48EcputKNCEA/viewform",
+        //     "image":
+        //         "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Finformasi%2Fdeteksi.png?alt=media&token=d98e1377-9669-42c8-bb23-12c0c5f4f001",
         //   },
-        //   'jepang': {
-        //     "mapel": "jepang",
-        //     'bab1': {
-        //       'namaBab': "BAB 1",
-        //       'namaMapel': "Test",
-        //       'descMapel': "Test",
-        //       'linkModul':
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       'linkVideo':
-        //           "https://www.youtube.com/watch?v=whBzFeh26ho&pp=ygUnYmVsYWphciBtZW51bGlzIGFuZ2thIGRhbiBiaWxhbmdhbiBhbmFr",
-        //     },
-        //     'bab2': {
-        //       'namaBab': "BAB 2",
-        //       'namaMapel': "Test",
-        //       'descMapel': "Test",
-        //       'linkModul':
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       'linkVideo':
-        //           "https://www.youtube.com/watch?v=whBzFeh26ho&pp=ygUnYmVsYWphciBtZW51bGlzIGFuZ2thIGRhbiBiaWxhbmdhbiBhbmFr",
-        //     },
+        //   'terapi2': {
+        //     "title": "Temu Kenali Dini Disleksia Bagi Para Guru",
+        //     "desc":
+        //         "Webinar yang diselenggarakan oleh DPSG Indonesia dalam rangka memberikan pengetahua n pada orangtua mengenai bagaimana mendeteksi secara dini anak yang mengalami Dislekia dan berbagai gangguan Penyerta pada anak Disleksia.",
+        //     "date": "20 November 2021",
+        //     "link":
+        //         "https://docs.google.com/forms/d/e/1FAIpQLScD5MOALMFWqclIHmRqrk6rdne8aydzyOHl4v48EcputKNCEA/viewform",
+        //     "image":
+        //         "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Finformasi%2Fdeteksi.png?alt=media&token=d98e1377-9669-42c8-bb23-12c0c5f4f001",
+        //   },
+        //   'terapi3': {
+        //     "title": "Temu Kenali Dini Disleksia Bagi Para Guru",
+        //     "desc":
+        //         "Webinar yang diselenggarakan oleh DPSG Indonesia dalam rangka memberikan pengetahua n pada orangtua mengenai bagaimana mendeteksi secara dini anak yang mengalami Dislekia dan berbagai gangguan Penyerta pada anak Disleksia.",
+        //     "date": "20 November 2021",
+        //     "link":
+        //         "https://docs.google.com/forms/d/e/1FAIpQLScD5MOALMFWqclIHmRqrk6rdne8aydzyOHl4v48EcputKNCEA/viewform",
+        //     "image":
+        //         "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Finformasi%2Fdeteksi.png?alt=media&token=d98e1377-9669-42c8-bb23-12c0c5f4f001",
         //   },
         // };
 

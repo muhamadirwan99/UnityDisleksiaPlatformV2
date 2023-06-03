@@ -45,7 +45,9 @@ class _ContainerInformasiLainnyaWidgetState
                 child: SvgPicture.asset("assets/images/umum.svg")),
             title: "Informasi Umum",
             subtitle: "Informasi Umum Pendidikan di Indonesia",
-            onTap: () {},
+            onTap: () {
+              Get.to(const ListInformasiView(kdInformasi: "1"));
+            },
           ),
           RowKelasWidget(
             circleIcon: CircleAvatar(
@@ -53,7 +55,9 @@ class _ContainerInformasiLainnyaWidgetState
                 child: SvgPicture.asset("assets/images/computer.svg")),
             title: "Informasi Webinar",
             subtitle: "Webinar/seminar terkait disleksia",
-            onTap: () {},
+            onTap: () {
+              Get.to(const ListInformasiView(kdInformasi: "2"));
+            },
           ),
           RowKelasWidget(
             circleIcon: CircleAvatar(
@@ -62,7 +66,9 @@ class _ContainerInformasiLainnyaWidgetState
                     SvgPicture.asset("assets/images/icon_membimbing_anak.svg")),
             title: "Kiat Membimbing Anak",
             subtitle: "Edukasi perlakuan terhadap anak",
-            onTap: () {},
+            onTap: () {
+              Get.to(const ListInformasiView(kdInformasi: "3"));
+            },
           ),
           RowKelasWidget(
             circleIcon: CircleAvatar(
@@ -70,7 +76,9 @@ class _ContainerInformasiLainnyaWidgetState
                 child: SvgPicture.asset("assets/images/peoples_with_pen.svg")),
             title: "Informasi Kursus Disleksia",
             subtitle: "Kursus berbagai hal diskleksia",
-            onTap: () {},
+            onTap: () {
+              Get.to(const ListInformasiView(kdInformasi: "4"));
+            },
           ),
           RowKelasWidget(
             circleIcon: CircleAvatar(
@@ -78,7 +86,9 @@ class _ContainerInformasiLainnyaWidgetState
                 child: SvgPicture.asset("assets/images/doctor.svg")),
             title: "Informasi Terapi Disleksia",
             subtitle: "Terapi berbagai treatment diskleksia",
-            onTap: () {},
+            onTap: () {
+              Get.to(const ListInformasiView(kdInformasi: "5"));
+            },
           )
         ],
       ),

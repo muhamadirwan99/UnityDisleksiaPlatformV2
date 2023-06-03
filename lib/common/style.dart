@@ -41,7 +41,7 @@ final TextStyle titleMedium = GoogleFonts.roboto(
   fontWeight: FontWeight.w500,
 );
 final TextStyle titleLarge = GoogleFonts.roboto(
-  fontSize: 22,
+  fontSize: 20,
   fontWeight: FontWeight.w500,
 );
 

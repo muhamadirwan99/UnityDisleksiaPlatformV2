@@ -51,6 +51,8 @@ dependencies:
   flutter_downloader: ^1.8.0
   sqflite: ^2.2.8+4
   provider: ^6.0.5
+  fancy_shimmer_image: ^2.0.2
+  url_launcher: ^6.1.11
 
 dev_dependencies:
   flutter_test:

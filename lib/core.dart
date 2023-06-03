@@ -3,6 +3,7 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
+export 'package:udp_v2/model/informasi_model.dart';
 export 'package:udp_v2/model/video_model.dart';
 export 'package:udp_v2/module/beranda/controller/beranda_controller.dart';
 export 'package:udp_v2/module/beranda/view/beranda_view.dart';
@@ -19,8 +20,11 @@ export 'package:udp_v2/module/bookmark/widget/content_informasi_kosong_widget.da
 export 'package:udp_v2/module/bookmark/widget/content_pelajaran_kosong_widget.dart';
 export 'package:udp_v2/module/content_pembelajaran/controller/content_pembelajaran_controller.dart';
 export 'package:udp_v2/module/content_pembelajaran/view/content_pembelajaran_view.dart';
-export 'package:udp_v2/module/informasi_menarik/controller/informasi_menarik_controller.dart';
-export 'package:udp_v2/module/informasi_menarik/view/informasi_menarik_view.dart';
+export 'package:udp_v2/module/informasi/detail_informasi/controller/detail_informasi_controller.dart';
+export 'package:udp_v2/module/informasi/detail_informasi/view/detail_informasi_view.dart';
+export 'package:udp_v2/module/informasi/list_informasi/controller/list_informasi_controller.dart';
+export 'package:udp_v2/module/informasi/list_informasi/view/list_informasi_view.dart';
+export 'package:udp_v2/module/informasi/list_informasi/widget/card_informasi.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/controller/kurikulum_pembelajaran_controller.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/view/kurikulum_pembelajaran_view.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/widget/container_content.dart';
