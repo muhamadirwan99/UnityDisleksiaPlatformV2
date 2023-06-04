@@ -20,14 +20,16 @@ class _ContainerContentState extends State<ContainerContent> {
   Widget build(BuildContext context) {
     return Container(
       height: 58,
-      decoration:
-          BoxDecoration(color: blue600, borderRadius: BorderRadius.circular(5)),
+      decoration: BoxDecoration(
+        color: blue500,
+        borderRadius: BorderRadius.circular(5),
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 9.0, horizontal: 14),
         child: Row(
           children: [
-            SvgPicture.asset(widget.pathSvg),
-            SizedBox(
+            SvgPicture.network(widget.pathSvg),
+            const SizedBox(
               width: 12,
             ),
             Column(
@@ -37,6 +39,9 @@ class _ContainerContentState extends State<ContainerContent> {
                 Text(
                   widget.titleLabel,
                   style: labelLarge.copyWith(color: neutralWhite),
+                ),
+                const SizedBox(
+                  height: 1.0,
                 ),
                 Text(
                   widget.subtitleLabel,

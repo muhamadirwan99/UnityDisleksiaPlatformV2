@@ -4,6 +4,7 @@ If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
 export 'package:udp_v2/model/informasi_model.dart';
+export 'package:udp_v2/model/kurikulum_model.dart';
 export 'package:udp_v2/model/video_model.dart';
 export 'package:udp_v2/module/beranda/controller/beranda_controller.dart';
 export 'package:udp_v2/module/beranda/view/beranda_view.dart';
@@ -27,14 +28,16 @@ export 'package:udp_v2/module/informasi/detail_informasi/view/detail_informasi_v
 export 'package:udp_v2/module/informasi/list_informasi/controller/list_informasi_controller.dart';
 export 'package:udp_v2/module/informasi/list_informasi/view/list_informasi_view.dart';
 export 'package:udp_v2/module/informasi/list_informasi/widget/card_informasi.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/controller/kurikulum_pembelajaran_controller.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/view/kurikulum_pembelajaran_view.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/widget/container_content.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_detail.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_kurikulum.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_silabusrpp.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/widget/content_silabusrpp_menu.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/widget/pdf_viewer.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/detail_pdf/controller/detail_pdf_controller.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/detail_pdf/view/detail_pdf_view.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/detail_silabus/controller/detail_silabus_controller.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/detail_silabus/view/detail_silabus_view.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/kurikulum/controller/kurikulum_controller.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/kurikulum/view/kurikulum_view.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/pilih_kelas/controller/pilih_kelas_controller.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/pilih_kelas/view/pilih_kelas_view.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/pilih_silabus/controller/pilih_silabus_controller.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/pilih_silabus/view/pilih_silabus_view.dart';
 export 'package:udp_v2/module/latihan/angka_page.dart';
 export 'package:udp_v2/module/latihan/huruf_page.dart';
 export 'package:udp_v2/module/latihan/instruksi_page.dart';

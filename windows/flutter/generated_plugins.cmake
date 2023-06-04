@@ -4,8 +4,8 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   firebase_core
+  pdfx
   permission_handler_windows
-  syncfusion_pdfviewer_windows
   url_launcher_windows
 )
 

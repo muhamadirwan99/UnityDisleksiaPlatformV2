@@ -45,10 +45,7 @@ class _ContainerKurikulumWidgetState extends State<ContainerKurikulumWidget> {
             title: "Kurikulum",
             subtitle: "Kurikulum pemerintah terkini",
             onTap: () {
-              Get.to(KurikulumPembelajaranView(
-                title: "Kurikulum",
-                indexContent: 1,
-              ));
+              Get.to(const KurikulumView());
             },
           ),
           RowKelasWidget(
@@ -58,9 +55,8 @@ class _ContainerKurikulumWidgetState extends State<ContainerKurikulumWidget> {
             title: "Silabus",
             subtitle: "Silabus pembelajaran dari kurikulum",
             onTap: () {
-              Get.to(KurikulumPembelajaranView(
-                title: "Silabus",
-                indexContent: 2,
+              Get.to(const PilihKelasView(
+                kdKurikulum: "1",
               ));
             },
           ),
@@ -71,9 +67,8 @@ class _ContainerKurikulumWidgetState extends State<ContainerKurikulumWidget> {
             title: "RPP",
             subtitle: "Rencana pembelajaran guru di kelas",
             onTap: () {
-              Get.to(KurikulumPembelajaranView(
-                title: "RPP",
-                indexContent: 3,
+              Get.to(const PilihKelasView(
+                kdKurikulum: "2",
               ));
             },
           ),
