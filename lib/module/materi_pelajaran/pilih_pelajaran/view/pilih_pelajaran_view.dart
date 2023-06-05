@@ -224,15 +224,19 @@ class PilihPelajaranView extends StatelessWidget {
                           height: 15.0,
                         ),
                         GreenButton(
-                          value: "Materi Berhitung",
-                          onPressed: () {},
+                          value: "Latihan Berhitung",
+                          onPressed: () {
+                            Get.to(const LatihanBerhitungView());
+                          },
                         ),
                         const SizedBox(
                           height: 15.0,
                         ),
                         GreenButton(
-                          value: "Materi Membaca",
-                          onPressed: () {},
+                          value: "Latihan Membaca",
+                          onPressed: () {
+                            Get.to(const LatihanMembacaView());
+                          },
                         ),
                       ],
                     ),

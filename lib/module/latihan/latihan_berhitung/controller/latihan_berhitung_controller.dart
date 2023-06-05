@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import '../view/latihan_menulis_view.dart';
+import '../view/latihan_berhitung_view.dart';
 
-class LatihanMenulisController extends GetxController {
-  LatihanMenulisView? view;
+class LatihanBerhitungController extends GetxController {
+  LatihanBerhitungView? view;
 
   @override
   void onInit() {

@@ -1,19 +1,21 @@
+import 'package:flutter/material.dart';
+import '../controller/latihan_membaca_controller.dart';
 import 'package:udp_v2/core.dart';
 import 'package:get/get.dart';
 
-class LatihanMenulisView extends StatelessWidget {
-  const LatihanMenulisView({Key? key}) : super(key: key);
+class LatihanMembacaView extends StatelessWidget {
+  const LatihanMembacaView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<LatihanMenulisController>(
-      init: LatihanMenulisController(),
+    return GetBuilder<LatihanMembacaController>(
+      init: LatihanMembacaController(),
       builder: (controller) {
         controller.view = this;
 
         return Scaffold(
           appBar: AppBar(
-            title: const Text("LatihanMenulis"),
+            title: const Text("LatihanMembaca"),
           ),
           body: SingleChildScrollView(
             child: Container(
