@@ -94,7 +94,7 @@ class LatihanBerhitungView extends StatelessWidget {
                           subtitle: "Membedakan Huruf yang Mirip",
                         ),
                         const SizedBox(
-                          height: 32,
+                          height: 15,
                         ),
                         LatihanButton(
                           color: const Color(0xffFFAA00),
@@ -104,7 +104,7 @@ class LatihanBerhitungView extends StatelessWidget {
                           subtitle: "Membaca Suku Kata",
                         ),
                         const SizedBox(
-                          height: 32,
+                          height: 15,
                         ),
                         LatihanButton(
                           color: red600,
@@ -114,7 +114,7 @@ class LatihanBerhitungView extends StatelessWidget {
                           subtitle: "Membaca Kata Benda",
                         ),
                         const SizedBox(
-                          height: 32,
+                          height: 15,
                         ),
                         LatihanButton(
                           color: const Color(0xffFFAA00),
@@ -124,7 +124,7 @@ class LatihanBerhitungView extends StatelessWidget {
                           subtitle: "Membaca Kalimat",
                         ),
                         const SizedBox(
-                          height: 32,
+                          height: 15,
                         ),
                         LatihanButton(
                           color: blue400,

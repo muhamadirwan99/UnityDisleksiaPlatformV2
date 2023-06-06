@@ -21,127 +21,30 @@ class PilihPelajaranView extends StatelessWidget {
         controller.switchKelas(kdKelas);
 
         // CollectionReference usersCollection =
-        //     FirebaseFirestore.instance.collection('kurikulum');
+        //     FirebaseFirestore.instance.collection('latihan');
 
         // // Mendapatkan referensi dokumen dengan ID khusus
-        // DocumentReference documentRef = usersCollection.doc('silabus');
+        // DocumentReference documentRef = usersCollection.doc('sukukata');
 
         // // Data yang akan disisipkan
         // Map<String, dynamic> data = {
-        //   'kelas1': {
-        //     "title": "Kelas 1",
-        //     "subtitle": "Silabus Kurtilas Kelas 1 SD",
-        //     "icon":
-        //         "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_kelas1.svg?alt=media&token=5df155ad-3ead-4d37-bc5e-a716bda09d2f",
-        //     "mapel": [
-        //       {
-        //         "title": "Matematika",
-        //         "subtitle": "Silabus matematika kelas 1 SD",
-        //         "icon":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_rpp_menu1.svg?alt=media&token=76d47857-c65c-404e-b7d7-d895726b59a6",
-        //         "desc":
-        //             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
-        //         "linkPdf":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       },
-        //       {
-        //         "title": "Bahasa Indonesia",
-        //         "subtitle": "Silabus bahasa indonesia kelas 1 SD",
-        //         "icon":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_rpp_menu2.svg?alt=media&token=0b5c7012-11ee-4a37-b758-e7ed94db459a",
-        //         "desc":
-        //             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
-        //         "linkPdf":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       },
-        //       {
-        //         "title": "Agama",
-        //         "subtitle": "Silabus agama kelas 1 SD",
-        //         "icon":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_rpp_menu3.svg?alt=media&token=1ede090d-aa8c-46f3-9458-9cf181866b51",
-        //         "desc":
-        //             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
-        //         "linkPdf":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       },
-        //     ],
-        //   },
-        //   'kelas2': {
-        //     "title": "Kelas 2",
-        //     "subtitle": "Silabus Kurtilas Kelas 2 SD",
-        //     "icon":
-        //         "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_kelas2.svg?alt=media&token=f34f719a-f4b9-45b0-9743-bc49c1ec7676",
-        //     "mapel": [
-        //       {
-        //         "title": "Matematika",
-        //         "subtitle": "Silabus matematika kelas 2 SD",
-        //         "icon":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_rpp_menu1.svg?alt=media&token=76d47857-c65c-404e-b7d7-d895726b59a6",
-        //         "desc":
-        //             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
-        //         "linkPdf":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       },
-        //       {
-        //         "title": "Bahasa Indonesia",
-        //         "subtitle": "Silabus bahasa indonesia kelas 2 SD",
-        //         "icon":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_rpp_menu2.svg?alt=media&token=0b5c7012-11ee-4a37-b758-e7ed94db459a",
-        //         "desc":
-        //             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
-        //         "linkPdf":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       },
-        //       {
-        //         "title": "Agama",
-        //         "subtitle": "Silabus agama kelas 2 SD",
-        //         "icon":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_rpp_menu3.svg?alt=media&token=1ede090d-aa8c-46f3-9458-9cf181866b51",
-        //         "desc":
-        //             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
-        //         "linkPdf":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       },
-        //     ]
-        //   },
-        //   'kelas3': {
-        //     "title": "Kelas 3",
-        //     "subtitle": "Silabus Kurtilas Kelas 3 SD",
-        //     "icon":
-        //         "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_kelas3.svg?alt=media&token=7381ddcd-a898-4522-999a-0c086cbee854",
-        //     "mapel": [
-        //       {
-        //         "title": "Matematika",
-        //         "subtitle": "Silabus matematika kelas 3 SD",
-        //         "icon":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_rpp_menu1.svg?alt=media&token=76d47857-c65c-404e-b7d7-d895726b59a6",
-        //         "desc":
-        //             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
-        //         "linkPdf":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       },
-        //       {
-        //         "title": "Bahasa Indonesia",
-        //         "subtitle": "Silabus bahasa indonesia kelas 3 SD",
-        //         "icon":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_rpp_menu2.svg?alt=media&token=0b5c7012-11ee-4a37-b758-e7ed94db459a",
-        //         "desc":
-        //             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
-        //         "linkPdf":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       },
-        //       {
-        //         "title": "Agama",
-        //         "subtitle": "Silabus agama kelas 3 SD",
-        //         "icon":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/icon%2Ficon_silabus_rpp_menu3.svg?alt=media&token=1ede090d-aa8c-46f3-9458-9cf181866b51",
-        //         "desc":
-        //             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.",
-        //         "linkPdf":
-        //             "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2Fmodul.pdf?alt=media&token=9a2f6901-2c11-419d-bde9-a7f7b95b94e5",
-        //       },
-        //     ]
-        //   },
+        //   "data": [
+        //     {
+        //       "title": "A",
+        //       "linkSound":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/audio%2FA.wav?alt=media&token=2243ab61-a9fc-4584-8074-4fc6e65c889a",
+        //     },
+        //     {
+        //       "title": "B",
+        //       "linkSound":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/audio%2FA.wav?alt=media&token=2243ab61-a9fc-4584-8074-4fc6e65c889a",
+        //     },
+        //     {
+        //       "title": "C",
+        //       "linkSound":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/audio%2FA.wav?alt=media&token=2243ab61-a9fc-4584-8074-4fc6e65c889a",
+        //     },
+        //   ]
         // };
 
         // // Menyisipkan data ke Firestore
