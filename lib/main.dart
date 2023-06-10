@@ -1,5 +1,9 @@
+import 'dart:async';
+
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:provider/provider.dart';
 import 'package:udp_v2/core.dart';
 import 'package:udp_v2/db/database_informasi_helper.dart';
@@ -12,6 +16,60 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await FlutterDownloader.initialize(debug: true, ignoreSsl: true);
   await Firebase.initializeApp();
+
+  final fcmToken = await FirebaseMessaging.instance.getToken();
+  print("fcmToken");
+  print(fcmToken);
+  await FirebaseMessaging.instance.setAutoInitEnabled(true);
+
+  const AndroidNotificationChannel channel = AndroidNotificationChannel(
+    'high_importance_channel', // id
+    'High Importance Notifications', // title
+    importance: Importance.max,
+  );
+
+  FlutterLocalNotificationsPlugin notifications =
+      FlutterLocalNotificationsPlugin();
+
+  final StreamController<String?> selectNotificationStream =
+      StreamController<String?>.broadcast();
+
+  const AndroidInitializationSettings initializationSettingsAndroid =
+      AndroidInitializationSettings('app_icon');
+
+  const initializationSettings = InitializationSettings(
+    android: initializationSettingsAndroid,
+  );
+
+  await notifications.initialize(initializationSettings,
+      onDidReceiveNotificationResponse:
+          (NotificationResponse notificationResponse) {
+    selectNotificationStream.add(notificationResponse.payload);
+  });
+
+  AndroidNotificationDetails androidNotificationDetails =
+      const AndroidNotificationDetails('your channel id', 'your channel name',
+          channelDescription: "Desc",
+          importance: Importance.max,
+          priority: Priority.high,
+          ticker: 'ticker');
+
+  NotificationDetails notificationDetails =
+      NotificationDetails(android: androidNotificationDetails);
+
+  FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+    RemoteNotification? notification = message.notification;
+
+    notifications.show(
+        0, notification?.title, notification?.body, notificationDetails,
+        payload: "notif");
+
+    selectNotificationStream.stream.listen((String? payload) {
+      if (payload == "notif") {
+        Get.offAll(const MenuNavView());
+      }
+    });
+  });
 
   runApp(const MyApp());
 }
