@@ -47,10 +47,6 @@ class MenuNavView extends StatelessWidget {
                     controller.currentIndex = index;
                     controller.update();
                     break;
-                  case 3:
-                    controller.currentIndex = index;
-                    controller.update();
-                    break;
                 }
               },
               selectedLabelStyle: labelMedium.copyWith(color: blue600),
@@ -103,21 +99,6 @@ class MenuNavView extends StatelessWidget {
                     ),
                   ),
                   label: 'Favorit',
-                ),
-                BottomNavigationBarItem(
-                  icon: Padding(
-                    padding: const EdgeInsets.only(bottom: 2),
-                    child: SvgPicture.asset(
-                      "assets/images/notif_off.svg",
-                    ),
-                  ),
-                  activeIcon: Padding(
-                    padding: const EdgeInsets.only(bottom: 2),
-                    child: SvgPicture.asset(
-                      "assets/images/notif_on.svg",
-                    ),
-                  ),
-                  label: 'Notifikasi',
                 ),
               ],
             ),

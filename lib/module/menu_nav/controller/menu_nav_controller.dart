@@ -9,6 +9,5 @@ class MenuNavController extends GetxController {
     const BerandaView(),
     const SearchView(),
     const BookmarkView(),
-    const NotifikasiView(),
   ];
 }
