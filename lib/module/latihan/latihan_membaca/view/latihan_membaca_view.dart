@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
-import '../controller/latihan_membaca_controller.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
-import 'package:get/get.dart';
 
 class LatihanMembacaView extends StatelessWidget {
   const LatihanMembacaView({Key? key}) : super(key: key);
@@ -21,7 +19,26 @@ class LatihanMembacaView extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(10.0),
               child: Column(
-                children: const [],
+                children: [
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueGrey,
+                    ),
+                    onPressed: () {
+                      Get.to(const MembedakanHurufView());
+                    },
+                    child: const Text("Membedakan Huruf"),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueGrey,
+                    ),
+                    onPressed: () {
+                      Get.to(const MembedakanHurufView());
+                    },
+                    child: const Text("Membaca Suku Kata"),
+                  ),
+                ],
               ),
             ),
           ),
