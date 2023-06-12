@@ -34,7 +34,7 @@ class LatihanMembacaView extends StatelessWidget {
                       backgroundColor: Colors.blueGrey,
                     ),
                     onPressed: () {
-                      Get.to(const MembedakanHurufView());
+                      Get.to(const MembacaSukuKataView());
                     },
                     child: const Text("Membaca Suku Kata"),
                   ),

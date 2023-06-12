@@ -46,8 +46,14 @@ export 'package:udp_v2/module/latihan/latihan_berhitung/controller/latihan_berhi
 export 'package:udp_v2/module/latihan/latihan_berhitung/view/latihan_berhitung_view.dart';
 export 'package:udp_v2/module/latihan/latihan_huruf_page.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/controller/latihan_membaca_controller.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membaca_suku_kata/controller/membaca_suku_kata_controller.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membaca_suku_kata/view/membaca_suku_kata_view.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/controller/membedakan_huruf_controller.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/view/membedakan_huruf_view.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/content_latihan.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/finish_page.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/jawaban_benar.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/jawaban_salah.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/view/latihan_membaca_view.dart';
 export 'package:udp_v2/module/latihan/latihan_page.dart';
 export 'package:udp_v2/module/materi_pelajaran/bab_pelajaran/controller/bab_pelajaran_controller.dart';
