@@ -23,6 +23,7 @@
     "materi_pelajaran/detail_pelajaran",
     "informasi/list_informasi",
     "informasi/detail_informasi",
+    "informasi/detail_umum",
     "notifikasi"
   ]
 }

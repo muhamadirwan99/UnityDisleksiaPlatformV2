@@ -2,7 +2,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:udp_v2/core.dart';
 
 class ContainerInformasiLainnyaWidget extends StatefulWidget {
-  const ContainerInformasiLainnyaWidget({Key? key}) : super(key: key);
+  final BerandaController controller;
+  const ContainerInformasiLainnyaWidget({
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
 
   @override
   State<ContainerInformasiLainnyaWidget> createState() =>
@@ -46,7 +50,12 @@ class _ContainerInformasiLainnyaWidgetState
             title: "Informasi Umum",
             subtitle: "Informasi Umum Pendidikan di Indonesia",
             onTap: () {
-              Get.to(const ListInformasiView(kdInformasi: "1"));
+              Get.to(
+                ListInformasiView(
+                  kdInformasi: "1",
+                  data: widget.controller.data,
+                ),
+              );
             },
           ),
           RowKelasWidget(
