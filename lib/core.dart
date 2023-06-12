@@ -46,8 +46,12 @@ export 'package:udp_v2/module/latihan/latihan_berhitung/controller/latihan_berhi
 export 'package:udp_v2/module/latihan/latihan_berhitung/view/latihan_berhitung_view.dart';
 export 'package:udp_v2/module/latihan/latihan_huruf_page.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/controller/latihan_membaca_controller.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membaca_kata_benda/controller/membaca_kata_benda_controller.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membaca_kata_benda/view/membaca_kata_benda_view.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/membaca_suku_kata/controller/membaca_suku_kata_controller.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/membaca_suku_kata/view/membaca_suku_kata_view.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membaca_suku_kata/widget/content_membaca_suku_kata.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membaca_suku_kata/widget/voice_row_widget.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/controller/membedakan_huruf_controller.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/view/membedakan_huruf_view.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/content_latihan.dart';

@@ -38,6 +38,15 @@ class LatihanMembacaView extends StatelessWidget {
                     },
                     child: const Text("Membaca Suku Kata"),
                   ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueGrey,
+                    ),
+                    onPressed: () {
+                      Get.to(const MembacaKataBendaView());
+                    },
+                    child: const Text("Membaca Kata Benda"),
+                  ),
                 ],
               ),
             ),
