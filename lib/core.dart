@@ -27,7 +27,6 @@ export 'package:udp_v2/module/informasi/detail_informasi/controller/detail_infor
 export 'package:udp_v2/module/informasi/detail_informasi/view/detail_informasi_view.dart';
 export 'package:udp_v2/module/informasi/list_informasi/controller/list_informasi_controller.dart';
 export 'package:udp_v2/module/informasi/list_informasi/view/list_informasi_view.dart';
-export 'package:udp_v2/module/informasi/list_informasi/widget/card_informasi.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/detail_pdf/controller/detail_pdf_controller.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/detail_pdf/view/detail_pdf_view.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/detail_silabus/controller/detail_silabus_controller.dart';
@@ -48,6 +47,10 @@ export 'package:udp_v2/module/latihan/latihan_huruf_page.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/controller/latihan_membaca_controller.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/controller/membedakan_huruf_controller.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/view/membedakan_huruf_view.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/content_latihan.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/finish_page.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/jawaban_benar.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/jawaban_salah.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/view/latihan_membaca_view.dart';
 export 'package:udp_v2/module/latihan/latihan_page.dart';
 export 'package:udp_v2/module/materi_pelajaran/bab_pelajaran/controller/bab_pelajaran_controller.dart';

@@ -1,6 +1,6 @@
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/search/widget/tidak_ada_hasil_widget.dart';
+import 'package:udp_v2/utils/widget/card_informasi.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({Key? key}) : super(key: key);
@@ -12,10 +12,12 @@ class SearchView extends StatelessWidget {
       builder: (controller) {
         controller.view = this;
 
+        controller.getData();
+
         return Scaffold(
           resizeToAvoidBottomInset: true,
           appBar: AppBar(
-            backgroundColor: Color(0xffFFFFFF),
+            backgroundColor: const Color(0xffFFFFFF),
             elevation: 0,
             leading: BackButton(
               color: gray900,
@@ -36,7 +38,10 @@ class SearchView extends StatelessWidget {
                         width: 16,
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          controller.filterData();
+                          controller.update();
+                        },
                         child: const Icon(
                           Icons.search,
                           size: 24.0,
@@ -56,7 +61,9 @@ class SearchView extends StatelessWidget {
                             hoverColor: Colors.transparent,
                             hintText: "Search",
                           ),
-                          onFieldSubmitted: (value) {},
+                          onChanged: (value) {
+                            controller.query = value;
+                          },
                         ),
                       ),
                     ],
@@ -65,15 +72,48 @@ class SearchView extends StatelessWidget {
               )
             ],
           ),
-          body: SingleChildScrollView(
-            child: Container(
-                color: gray100,
-                padding: const EdgeInsets.all(10.0),
-                child: SizedBox(
-                    height: MediaQuery.of(context).size.height,
-                    width: MediaQuery.of(context).size.width,
-                    child: const TidakAdaHasilWidget())),
-          ),
+          body: controller.extractedDataList.isNotEmpty
+              ? controller.filteredList.isNotEmpty
+                  ? ListView.builder(
+                      itemCount: controller.filteredList.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        Informasi data =
+                            Informasi.fromJson(controller.filteredList[index]);
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 16),
+                            child: CardInformasi(
+                              title: data.title,
+                              date: data.date,
+                              image: data.image,
+                              onTap: () {
+                                Get.to(
+                                  DetailInformasiView(
+                                    title: "Informasi",
+                                    data: data,
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        );
+                      },
+                    )
+                  : Center(
+                      child: Container(
+                          color: gray100,
+                          padding: const EdgeInsets.all(10.0),
+                          child: const TidakAdaHasilWidget()),
+                    )
+              : Center(
+                  child: Container(
+                      color: gray100,
+                      padding: const EdgeInsets.all(10.0),
+                      child: const TidakAdaHasilWidget()),
+                ),
         );
       },
     );

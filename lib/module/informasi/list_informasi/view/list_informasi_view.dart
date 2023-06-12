@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
+import 'package:udp_v2/utils/widget/card_informasi.dart';
 
 class ListInformasiView extends StatelessWidget {
   final String kdInformasi;

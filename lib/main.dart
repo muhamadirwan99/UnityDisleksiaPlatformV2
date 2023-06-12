@@ -17,16 +17,7 @@ void main() async {
   await FlutterDownloader.initialize(debug: true, ignoreSsl: true);
   await Firebase.initializeApp();
 
-  final fcmToken = await FirebaseMessaging.instance.getToken();
-  print("fcmToken");
-  print(fcmToken);
   await FirebaseMessaging.instance.setAutoInitEnabled(true);
-
-  const AndroidNotificationChannel channel = AndroidNotificationChannel(
-    'high_importance_channel', // id
-    'High Importance Notifications', // title
-    importance: Importance.max,
-  );
 
   FlutterLocalNotificationsPlugin notifications =
       FlutterLocalNotificationsPlugin();
