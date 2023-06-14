@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:udp_v2/core.dart';
+import 'package:udp_v2/db/splashscreen_db.dart';
 
 class InitialPageController extends State<InitialPageView>
     implements MvcController {
@@ -10,7 +11,9 @@ class InitialPageController extends State<InitialPageView>
   void initState() {
     instance = this;
     Timer(const Duration(seconds: 3), () {
-      Get.offAll(const IntroductionView());
+      SplashDatabase.isSplash == "1"
+          ? Get.offAll(const MenuNavView())
+          : Get.offAll(const IntroductionView());
     });
     super.initState();
   }
