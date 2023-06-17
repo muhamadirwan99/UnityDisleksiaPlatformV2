@@ -2,13 +2,18 @@ import 'dart:async';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:udp_v2/core.dart';
 import 'package:udp_v2/db/database_informasi_helper.dart';
 import 'package:udp_v2/db/database_video_helper.dart';
+import 'package:udp_v2/db/splashscreen_db.dart';
 import 'package:udp_v2/provider/video_database_provider.dart';
+import 'package:udp_v2/services/db_service.dart';
 
 import 'provider/informasi_database_provider.dart';
 
@@ -17,16 +22,20 @@ void main() async {
   await FlutterDownloader.initialize(debug: true, ignoreSsl: true);
   await Firebase.initializeApp();
 
-  final fcmToken = await FirebaseMessaging.instance.getToken();
-  print("fcmToken");
-  print(fcmToken);
-  await FirebaseMessaging.instance.setAutoInitEnabled(true);
+  if (!kIsWeb) {
+    var path = await getTemporaryDirectory();
+    Hive.init(path.path);
+  }
 
-  const AndroidNotificationChannel channel = AndroidNotificationChannel(
-    'high_importance_channel', // id
-    'High Importance Notifications', // title
-    importance: Importance.max,
-  );
+  mainStorage = await Hive.openBox('mainStorage');
+
+  await SplashDatabase.load();
+
+  if (SplashDatabase.isSplash == null) {
+    SplashDatabase.save("");
+  }
+
+  await FirebaseMessaging.instance.setAutoInitEnabled(true);
 
   FlutterLocalNotificationsPlugin notifications =
       FlutterLocalNotificationsPlugin();

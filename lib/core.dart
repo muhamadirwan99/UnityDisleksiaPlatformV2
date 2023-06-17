@@ -5,6 +5,7 @@ it means you have to rename it to something more unique.
 */
 export 'package:udp_v2/model/informasi_model.dart';
 export 'package:udp_v2/model/kurikulum_model.dart';
+export 'package:udp_v2/model/news_model.dart';
 export 'package:udp_v2/model/video_model.dart';
 export 'package:udp_v2/module/beranda/controller/beranda_controller.dart';
 export 'package:udp_v2/module/beranda/view/beranda_view.dart';
@@ -25,9 +26,10 @@ export 'package:udp_v2/module/content_pembelajaran/controller/content_pembelajar
 export 'package:udp_v2/module/content_pembelajaran/view/content_pembelajaran_view.dart';
 export 'package:udp_v2/module/informasi/detail_informasi/controller/detail_informasi_controller.dart';
 export 'package:udp_v2/module/informasi/detail_informasi/view/detail_informasi_view.dart';
+export 'package:udp_v2/module/informasi/detail_umum/controller/detail_umum_controller.dart';
+export 'package:udp_v2/module/informasi/detail_umum/view/detail_umum_view.dart';
 export 'package:udp_v2/module/informasi/list_informasi/controller/list_informasi_controller.dart';
 export 'package:udp_v2/module/informasi/list_informasi/view/list_informasi_view.dart';
-export 'package:udp_v2/module/informasi/list_informasi/widget/card_informasi.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/detail_pdf/controller/detail_pdf_controller.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/detail_pdf/view/detail_pdf_view.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/detail_silabus/controller/detail_silabus_controller.dart';

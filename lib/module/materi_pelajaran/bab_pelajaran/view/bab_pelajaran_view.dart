@@ -46,7 +46,7 @@ class BabPelajaranView extends StatelessWidget {
                             height: 10.0,
                           ),
                           Text(
-                            "Bab Pelajaran",
+                            "Materi Pelajaran",
                             style: labelMedium.copyWith(color: neutralWhite),
                           ),
                         ],
@@ -74,7 +74,7 @@ class BabPelajaranView extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          "Pilih Bab",
+                          "Pilih Materi",
                           style: GoogleFonts.roboto(
                             fontSize: 20,
                             fontWeight: FontWeight.w500,
