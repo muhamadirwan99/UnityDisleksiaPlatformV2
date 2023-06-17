@@ -4,8 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core_package.dart';
 
 class TextFieldWidget extends StatefulWidget {
+  final double width;
   final String text;
-  const TextFieldWidget({Key? key, required this.text}) : super(key: key);
+  final Color color;
+  const TextFieldWidget(
+      {Key? key, required this.text, required this.width, required this.color})
+      : super(key: key);
 
   @override
   State<TextFieldWidget> createState() => _TextFieldWidgetState();
@@ -15,11 +19,10 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 66.0,
-      width: 48.0,
-      decoration: const BoxDecoration(
-        color: blue400,
-        borderRadius: BorderRadius.all(
+      width: widget.width,
+      decoration: BoxDecoration(
+        color: widget.color,
+        borderRadius: const BorderRadius.all(
           Radius.circular(
             4,
           ),

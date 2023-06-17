@@ -1,20 +1,21 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/latihan_membaca/membaca_kata_benda/widget/text_field_widget.dart';
 
 class ContentMembacaKataBenda extends StatefulWidget {
   final String imageAsset;
   final List<String> arrayQuestion;
   final List<String> arrayAnswerChoice;
   final List<String> arrayAnswer;
+  final MembacaKataBendaController controller;
 
-  const ContentMembacaKataBenda(
-      {Key? key,
-      required this.imageAsset,
-      required this.arrayQuestion,
-      required this.arrayAnswerChoice,
-      required this.arrayAnswer})
-      : super(key: key);
+  const ContentMembacaKataBenda({
+    Key? key,
+    required this.imageAsset,
+    required this.arrayQuestion,
+    required this.arrayAnswerChoice,
+    required this.arrayAnswer,
+    required this.controller,
+  }) : super(key: key);
 
   @override
   State<ContentMembacaKataBenda> createState() =>
@@ -24,13 +25,6 @@ class ContentMembacaKataBenda extends StatefulWidget {
 class Content_MembacaKataBendaState extends State<ContentMembacaKataBenda> {
   @override
   Widget build(BuildContext context) {
-    MembacaKataBendaController controller = MembacaKataBendaController.instance;
-    controller.tempArrayAnswer = widget.arrayAnswer;
-    controller.tempArrayAnswerChoice = widget.arrayAnswerChoice;
-    controller.tempArrayQuestion = widget.arrayQuestion;
-    controller.update();
-    print("MembacaKataBendaController.instance.tempArrayQuestion");
-    print(controller.tempArrayQuestion);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -69,7 +63,10 @@ class Content_MembacaKataBendaState extends State<ContentMembacaKataBenda> {
             itemBuilder: (BuildContext context, int index) {
               return Padding(
                 padding: const EdgeInsets.all(5),
-                child: TextFieldWidget(text: widget.arrayQuestion[index]),
+                child: TextFieldWidget(
+                    color: blue400,
+                    width: 48.0,
+                    text: widget.arrayQuestion[index]),
               );
             },
           ),
@@ -96,18 +93,21 @@ class Content_MembacaKataBendaState extends State<ContentMembacaKataBenda> {
           child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
-            itemCount: controller.tempArrayAnswerChoice.length,
+            itemCount: widget.controller.tempArrayAnswerChoice.length,
             itemBuilder: (BuildContext context, int index) {
+              print("widget.controller.tempArrayAnswerChoice.length");
+              print(widget.controller.tempArrayAnswerChoice.length);
               return InkWell(
                 onTap: () {
-                  controller.removeAnswerChoice(
-                      index, controller.tempArrayAnswerChoice[index]);
-                  controller.update();
+                  widget.controller.removeAnswerChoice(
+                      index, widget.controller.tempArrayAnswerChoice[index]);
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(5),
                   child: TextFieldWidget(
-                      text: controller.tempArrayAnswerChoice[index]),
+                      width: 48.0,
+                      color: blue400,
+                      text: widget.controller.tempArrayAnswerChoice[index]),
                 ),
               );
             },
