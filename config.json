@@ -1,5 +1,4 @@
 {
-    "openai_key": "",
     "modules": [
         "beranda",
         "menu_nav",
@@ -25,5 +24,8 @@
         "informasi/detail_informasi",
         "informasi/detail_umum",
         "notifikasi"
-    ]
+    ],
+    "module_directory_name": "module",
+    "experimental_mode": false,
+    "unfreezed": true
 }

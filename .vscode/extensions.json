@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "denyocr.flutter-hyper-extension"
+        "denyocr.flutter-hyper-extension",
+        "mrmlnc.vscode-duplicate"
     ]
 }
