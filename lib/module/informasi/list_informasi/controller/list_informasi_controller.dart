@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:intl/intl.dart';
 import '../view/list_informasi_view.dart';
 
 class ListInformasiController extends GetxController {
@@ -7,6 +9,12 @@ class ListInformasiController extends GetxController {
 
   String title = "";
   dynamic materi = dynamic;
+
+  String convertDateString(String dateString) {
+    DateTime date = DateTime.parse(dateString);
+    String formattedDate = DateFormat('dd MMMM yyyy', 'id_ID').format(date);
+    return formattedDate;
+  }
 
   doFilter(String kdInformasi) {
     switch (kdInformasi) {
@@ -47,5 +55,11 @@ class ListInformasiController extends GetxController {
         break;
       default:
     }
+  }
+
+  @override
+  void onInit() {
+    super.onInit();
+    initializeDateFormatting('id_ID', null);
   }
 }

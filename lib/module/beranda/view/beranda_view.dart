@@ -15,6 +15,7 @@ class _BerandaViewState extends State<BerandaView> {
     return GetBuilder<BerandaController>(
       init: BerandaController(),
       builder: (controller) {
+        controller.getData();
         return Scaffold(
           appBar: AppBar(
             backgroundColor: gray100,
@@ -48,37 +49,6 @@ class _BerandaViewState extends State<BerandaView> {
                 ],
               ),
             ),
-            // actions: [
-            //   Padding(
-            //     padding:
-            //         const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-            //     child: Row(
-            //       children: [
-            //         InkWell(
-            //           onTap: () {
-            //             Get.to(const SearchView());
-            //           },
-            //           child: const Icon(
-            //             Icons.search,
-            //             size: 24.0,
-            //           ),
-            //         ),
-            //         const SizedBox(
-            //           width: 16,
-            //         ),
-            //         InkWell(
-            //           onTap: () {
-            //             Get.to(const BookmarkView());
-            //           },
-            //           child: const Icon(
-            //             Icons.bookmark_add_outlined,
-            //             size: 24.0,
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            // ],
           ),
           backgroundColor: blue500,
           body: SingleChildScrollView(
@@ -141,7 +111,7 @@ class _BerandaViewState extends State<BerandaView> {
                   const SizedBox(
                     height: 16,
                   ),
-                  const ContainerInformasiLainnyaWidget(),
+                  ContainerInformasiLainnyaWidget(controller: controller),
                   const SizedBox(
                     height: 16,
                   ),
