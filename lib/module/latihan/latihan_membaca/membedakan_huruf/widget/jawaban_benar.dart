@@ -3,10 +3,12 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/finish_page.dart';
 
 class JawabanBenarMembedakanHuruf extends StatefulWidget {
-  const JawabanBenarMembedakanHuruf({Key? key}) : super(key: key);
+  final String kdKelas;
+
+  const JawabanBenarMembedakanHuruf({Key? key, required this.kdKelas})
+      : super(key: key);
 
   @override
   State<JawabanBenarMembedakanHuruf> createState() =>
@@ -48,7 +50,9 @@ class _JawabanBenarMembedakanHurufState
                 backgroundColor: blue300,
               ),
               onPressed: () {
-                Get.offAll(const FinishPageMembedakanHuruf());
+                Get.offAll(FinishPageMembedakanHuruf(
+                  kdKelas: widget.kdKelas,
+                ));
               },
               child: Text(
                 'Lanjut',

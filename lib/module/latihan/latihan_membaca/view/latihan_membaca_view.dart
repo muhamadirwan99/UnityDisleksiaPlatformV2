@@ -1,9 +1,15 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/latihan_membaca/menjodohkan_kata/view/menjodohkan_kata_view.dart';
 
 class LatihanMembacaView extends StatelessWidget {
-  const LatihanMembacaView({Key? key}) : super(key: key);
+  final String kdKelas;
+
+  const LatihanMembacaView({
+    Key? key,
+    required this.kdKelas,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,65 +18,82 @@ class LatihanMembacaView extends StatelessWidget {
       builder: (controller) {
         controller.view = this;
 
+        controller.switchContent(kdKelas);
+
         return Scaffold(
           appBar: AppBar(
-            title: const Text("LatihanMembaca"),
+            title: const Text("Latihan Membaca"),
           ),
+          backgroundColor: blue500,
           body: SingleChildScrollView(
-            child: Center(
-              child: Container(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueGrey,
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 24, right: 24, top: 24),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Hallo, Sahabat 👋", // Headline 2
+                              style: GoogleFonts.roboto(
+                                textStyle: const TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 0,
+                                    color: gray100),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 6,
+                            ),
+                            Text(
+                              "Ayo kita bermain sambil belajar ",
+                              style: GoogleFonts.roboto(
+                                textStyle: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 0.5,
+                                    color: gray100),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      onPressed: () {
-                        Get.to(const MembedakanHurufView());
-                      },
-                      child: const Text("Membedakan Huruf"),
-                    ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueGrey,
+                      Expanded(
+                        flex: 1,
+                        child: SvgPicture.asset(
+                          "assets/images/latihanhome.svg",
+                          width: 146,
+                          height: 134,
+                        ),
                       ),
-                      onPressed: () {
-                        Get.to(const MembacaSukuKataView());
-                      },
-                      child: const Text("Membaca Suku Kata"),
-                    ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueGrey,
-                      ),
-                      onPressed: () {
-                        Get.to(const MembacaKataBendaView());
-                      },
-                      child: const Text("Membaca Kata Benda"),
-                    ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueGrey,
-                      ),
-                      onPressed: () {
-                        Get.to(const MenjodohkanKataView());
-                      },
-                      child: const Text("Menjodohkan Kata"),
-                    ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueGrey,
-                      ),
-                      onPressed: () {
-                        Get.to(const MencariHurufVokalKonsonanView());
-                      },
-                      child: const Text("Mencari Huruf Vokal dan Konsonan"),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
+                const SizedBox(
+                  height: 32,
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height,
+                  decoration: const BoxDecoration(
+                    color: gray100,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(32),
+                      topRight: Radius.circular(32),
+                    ),
+                  ),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(top: 40, left: 24, right: 24),
+                    child: controller.content,
+                  ),
+                )
+              ],
             ),
           ),
         );

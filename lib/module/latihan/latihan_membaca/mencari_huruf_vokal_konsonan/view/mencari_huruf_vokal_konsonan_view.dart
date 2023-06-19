@@ -6,7 +6,12 @@ import 'package:udp_v2/utils/widget/action_button.dart';
 import 'package:udp_v2/core.dart';
 
 class MencariHurufVokalKonsonanView extends StatelessWidget {
-  const MencariHurufVokalKonsonanView({Key? key}) : super(key: key);
+  final String kdKelas;
+
+  const MencariHurufVokalKonsonanView({
+    Key? key,
+    required this.kdKelas,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +85,9 @@ class MencariHurufVokalKonsonanView extends StatelessWidget {
 
                             if (listEquals(controller.isVokalList,
                                 controller.isVokalListAwnser)) {
-                              Get.to(const FinalPageVokalKonsonanWidget());
+                              Get.to(FinalPageVokalKonsonanWidget(
+                                kdKelas: kdKelas,
+                              ));
                             }
                           },
                           child: Padding(

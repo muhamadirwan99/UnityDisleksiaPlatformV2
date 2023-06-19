@@ -7,7 +7,12 @@ import 'package:udp_v2/module/latihan/latihan_membaca/view/latihan_membaca_view.
 import 'package:udp_v2/state_util.dart';
 
 class FinishPageMembedakanHuruf extends StatefulWidget {
-  const FinishPageMembedakanHuruf({Key? key}) : super(key: key);
+  final String kdKelas;
+
+  const FinishPageMembedakanHuruf({
+    Key? key,
+    required this.kdKelas,
+  }) : super(key: key);
 
   @override
   State<FinishPageMembedakanHuruf> createState() =>
@@ -49,7 +54,9 @@ class _FinishPageMembedakanHurufState extends State<FinishPageMembedakanHuruf> {
                 backgroundColor: blue300,
               ),
               onPressed: () {
-                Get.offAll(const LatihanMembacaView());
+                Get.offAll(LatihanMembacaView(
+                  kdKelas: widget.kdKelas,
+                ));
               },
               child: Text(
                 'Kembali',

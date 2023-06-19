@@ -1,21 +1,106 @@
-import 'package:get/get.dart';
-import '../view/latihan_membaca_view.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:udp_v2/core.dart';
+import 'package:udp_v2/module/latihan/latihan_membaca/menjodohkan_kata/view/menjodohkan_kata_view.dart';
+import 'package:udp_v2/utils/widget/latihan_button.dart';
 
 class LatihanMembacaController extends GetxController {
   LatihanMembacaView? view;
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
+  Column content = Column();
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
+  switchContent(kdKelas) {
+    switch (kdKelas) {
+      case "1":
+        content = Column(
+          children: [
+            LatihanButton(
+              color: red600,
+              onPressed: () {
+                Get.to(MembedakanHurufView(
+                  kdKelas: kdKelas,
+                ));
+              },
+              icon: "assets/images/icon-huruf.svg",
+              title: "Bahasa Indonesia",
+              subtitle: "Membedakan Huruf yang Mirip",
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            LatihanButton(
+              color: const Color(0xffFFAA00),
+              onPressed: () {
+                Get.to(const MembacaSukuKataView());
+              },
+              icon: "assets/images/icon-huruf.svg",
+              title: "Bahasa Indonesia",
+              subtitle: "Membaca Suku Kata",
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            LatihanButton(
+              color: red600,
+              onPressed: () {
+                Get.to(const MembacaKataBendaView());
+              },
+              icon: "assets/images/icon-huruf.svg",
+              title: "Bahasa Indonesia",
+              subtitle: "Membaca Kata Benda",
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            LatihanButton(
+              color: const Color(0xffFFAA00),
+              onPressed: () {
+                Get.to(const MenjodohkanKataView());
+              },
+              icon: "assets/images/icon-huruf.svg",
+              title: "Bahasa Indonesia",
+              subtitle: "Menjodohkan kata",
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            LatihanButton(
+              color: red600,
+              onPressed: () {
+                Get.to(MencariHurufVokalKonsonanView(
+                  kdKelas: kdKelas,
+                ));
+              },
+              icon: "assets/images/icon-huruf.svg",
+              title: "Bahasa Indonesia",
+              subtitle: "Mencari Huruf Vokal dan Konsonan",
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            LatihanButton(
+              color: blue400,
+              onPressed: () {},
+              icon: "assets/images/icon-instruksi.svg",
+              title: "Instruksi",
+              subtitle: "Informasi cara bermain",
+            ),
+          ],
+        );
+        break;
 
-  @override
-  void onClose() {
-    super.onClose();
+      default:
+        content = Column(
+          children: [
+            SizedBox(
+              width: MediaQuery.of(globalContext).size.width,
+              child: Text(
+                "Tidak ada latihan membaca untuk kelas $kdKelas",
+                style: titleMedium,
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        );
+    }
   }
 }

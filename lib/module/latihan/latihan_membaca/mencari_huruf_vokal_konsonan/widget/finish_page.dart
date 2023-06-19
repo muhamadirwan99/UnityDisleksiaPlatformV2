@@ -5,7 +5,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
 
 class FinalPageVokalKonsonanWidget extends StatefulWidget {
-  const FinalPageVokalKonsonanWidget({Key? key}) : super(key: key);
+  final String kdKelas;
+  const FinalPageVokalKonsonanWidget({
+    Key? key,
+    required this.kdKelas,
+  }) : super(key: key);
 
   @override
   State<FinalPageVokalKonsonanWidget> createState() =>
@@ -48,7 +52,9 @@ class _FinalPageVokalKonsonanWidgetState
                 backgroundColor: blue300,
               ),
               onPressed: () {
-                Get.offAll(const LatihanMembacaView());
+                Get.offAll(LatihanMembacaView(
+                  kdKelas: widget.kdKelas,
+                ));
               },
               child: Text(
                 'Kembali',

@@ -2,11 +2,14 @@
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/jawaban_benar.dart';
-import 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/jawaban_salah.dart';
 
 class ContentLatihan extends StatefulWidget {
-  const ContentLatihan({Key? key}) : super(key: key);
+  final String kdKelas;
+
+  const ContentLatihan({
+    Key? key,
+    required this.kdKelas,
+  }) : super(key: key);
 
   @override
   State<ContentLatihan> createState() => _ContentLatihanState();
@@ -63,7 +66,9 @@ class _ContentLatihanState extends State<ContentLatihan> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Get.offAll(const JawabanBenarMembedakanHuruf());
+                      Get.offAll(JawabanBenarMembedakanHuruf(
+                        kdKelas: widget.kdKelas,
+                      ));
                     },
                     child: Container(
                       height: 90,

@@ -1,11 +1,15 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
 import 'package:get/get.dart';
-import 'package:udp_v2/module/latihan/latihan_membaca/membedakan_huruf/widget/content_latihan.dart';
 import 'package:udp_v2/utils/widget/action_button.dart';
 
 class MembedakanHurufView extends StatelessWidget {
-  const MembedakanHurufView({Key? key}) : super(key: key);
+  final String kdKelas;
+
+  const MembedakanHurufView({
+    Key? key,
+    required this.kdKelas,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +38,9 @@ class MembedakanHurufView extends StatelessWidget {
                 ActionButton(),
               ],
             ),
-            body: const ContentLatihan());
+            body: ContentLatihan(
+              kdKelas: kdKelas,
+            ));
       },
     );
   }

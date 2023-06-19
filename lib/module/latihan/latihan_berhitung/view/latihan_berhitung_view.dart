@@ -2,10 +2,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/utils/widget/latihan_button.dart';
 
 class LatihanBerhitungView extends StatelessWidget {
-  const LatihanBerhitungView({Key? key}) : super(key: key);
+  final String kdKelas;
+
+  const LatihanBerhitungView({
+    Key? key,
+    required this.kdKelas,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +18,11 @@ class LatihanBerhitungView extends StatelessWidget {
       builder: (controller) {
         controller.view = this;
 
+        controller.switchContent(kdKelas);
+
         return Scaffold(
           appBar: AppBar(
-            title: const Text("Latihan"),
+            title: const Text("Latihan Berhitung"),
           ),
           backgroundColor: blue500,
           body: SingleChildScrollView(
@@ -84,57 +90,7 @@ class LatihanBerhitungView extends StatelessWidget {
                   child: Padding(
                     padding:
                         const EdgeInsets.only(top: 40, left: 24, right: 24),
-                    child: Column(
-                      children: [
-                        LatihanButton(
-                          color: red600,
-                          onPressed: () {},
-                          icon: "assets/images/icon-huruf.svg",
-                          title: "Bahasa Indonesia",
-                          subtitle: "Membedakan Huruf yang Mirip",
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        LatihanButton(
-                          color: const Color(0xffFFAA00),
-                          onPressed: () {},
-                          icon: "assets/images/icon-huruf.svg",
-                          title: "Bahasa Indonesia",
-                          subtitle: "Membaca Suku Kata",
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        LatihanButton(
-                          color: red600,
-                          onPressed: () {},
-                          icon: "assets/images/icon-huruf.svg",
-                          title: "Bahasa Indonesia",
-                          subtitle: "Membaca Kata Benda",
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        LatihanButton(
-                          color: const Color(0xffFFAA00),
-                          onPressed: () {},
-                          icon: "assets/images/icon-huruf.svg",
-                          title: "Bahasa Indonesia",
-                          subtitle: "Membaca Kalimat",
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        LatihanButton(
-                          color: blue400,
-                          onPressed: () {},
-                          icon: "assets/images/icon-instruksi.svg",
-                          title: "Instruksi",
-                          subtitle: "Informasi cara bermain",
-                        ),
-                      ],
-                    ),
+                    child: controller.content,
                   ),
                 )
               ],

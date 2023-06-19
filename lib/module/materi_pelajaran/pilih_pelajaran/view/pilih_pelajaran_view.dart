@@ -129,7 +129,7 @@ class PilihPelajaranView extends StatelessWidget {
                         GreenButton(
                           value: "Latihan Berhitung",
                           onPressed: () {
-                            Get.to(const LatihanBerhitungView());
+                            Get.to(LatihanBerhitungView(kdKelas: kdKelas));
                           },
                         ),
                         const SizedBox(
@@ -138,7 +138,7 @@ class PilihPelajaranView extends StatelessWidget {
                         GreenButton(
                           value: "Latihan Membaca",
                           onPressed: () {
-                            Get.to(const LatihanMembacaView());
+                            Get.to(LatihanMembacaView(kdKelas: kdKelas));
                           },
                         ),
                       ],
