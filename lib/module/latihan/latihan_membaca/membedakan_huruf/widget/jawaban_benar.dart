@@ -50,7 +50,7 @@ class _JawabanBenarMembedakanHurufState
                 backgroundColor: blue300,
               ),
               onPressed: () {
-                Get.offAll(FinishPageMembedakanHuruf(
+                Get.to(FinishPageMembedakanHuruf(
                   kdKelas: widget.kdKelas,
                 ));
               },

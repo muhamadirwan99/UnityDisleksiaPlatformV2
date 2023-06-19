@@ -66,7 +66,7 @@ class _ContentLatihanState extends State<ContentLatihan> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Get.offAll(JawabanBenarMembedakanHuruf(
+                      Get.to(JawabanBenarMembedakanHuruf(
                         kdKelas: widget.kdKelas,
                       ));
                     },

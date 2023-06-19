@@ -54,7 +54,7 @@ class _FinishPageMembedakanHurufState extends State<FinishPageMembedakanHuruf> {
                 backgroundColor: blue300,
               ),
               onPressed: () {
-                Get.offAll(LatihanMembacaView(
+                Get.to(LatihanMembacaView(
                   kdKelas: widget.kdKelas,
                 ));
               },

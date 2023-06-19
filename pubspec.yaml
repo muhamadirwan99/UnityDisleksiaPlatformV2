@@ -58,6 +58,7 @@ dependencies:
   dio: ^5.2.1
   intl: ^0.18.1
   hive: ^2.2.3
+  audioplayers: ^4.1.0
 
 dev_dependencies:
   flutter_test:
