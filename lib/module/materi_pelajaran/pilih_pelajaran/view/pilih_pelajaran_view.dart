@@ -24,25 +24,25 @@ class PilihPelajaranView extends StatelessWidget {
         //     FirebaseFirestore.instance.collection('latihan');
 
         // // Mendapatkan referensi dokumen dengan ID khusus
-        // DocumentReference documentRef = usersCollection.doc('sukukata');
+        // DocumentReference documentRef = usersCollection.doc('vokalkonsonan');
 
         // // Data yang akan disisipkan
         // Map<String, dynamic> data = {
         //   "data": [
         //     {
-        //       "title": "A",
-        //       "linkSound":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/audio%2FA.wav?alt=media&token=2243ab61-a9fc-4584-8074-4fc6e65c889a",
+        //       "title": "keluarga",
+        //       "gambar":
+        //           "https://images.unsplash.com/flagged/photo-1559502867-c406bd78ff24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
         //     },
         //     {
-        //       "title": "B",
+        //       "title": "ayah",
         //       "linkSound":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/audio%2FA.wav?alt=media&token=2243ab61-a9fc-4584-8074-4fc6e65c889a",
+        //           "https://images.unsplash.com/flagged/photo-1559502867-c406bd78ff24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
         //     },
         //     {
-        //       "title": "C",
+        //       "title": "ibu",
         //       "linkSound":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/audio%2FA.wav?alt=media&token=2243ab61-a9fc-4584-8074-4fc6e65c889a",
+        //           "https://images.unsplash.com/flagged/photo-1559502867-c406bd78ff24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
         //     },
         //   ]
         // };
@@ -55,6 +55,12 @@ class PilihPelajaranView extends StatelessWidget {
 
         return Scaffold(
           appBar: AppBar(
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Get.to(const MenuNavView());
+              },
+            ),
             title: const Text("Materi Pelajaran"),
           ),
           backgroundColor: blue500,
