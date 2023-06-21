@@ -29,11 +29,7 @@ void main() async {
 
   mainStorage = await Hive.openBox('mainStorage');
 
-  await SplashDatabase.load();
-
-  if (SplashDatabase.isSplash == null) {
-    SplashDatabase.save("");
-  }
+  SplashDatabase.isSplash = mainStorage.get("isSplash") ?? "";
 
   await FirebaseMessaging.instance.setAutoInitEnabled(true);
 
