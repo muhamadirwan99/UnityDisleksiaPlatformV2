@@ -1,7 +1,5 @@
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/latihan_membaca/menjodohkan_kata/view/menjodohkan_kata_view.dart';
-import 'package:udp_v2/utils/widget/latihan_button.dart';
 
 class LatihanMembacaController extends GetxController {
   LatihanMembacaView? view;

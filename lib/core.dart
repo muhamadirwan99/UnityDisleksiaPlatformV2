@@ -3,6 +3,11 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
+export 'package:udp_v2/common/style.dart';
+export 'package:udp_v2/core_package.dart';
+export 'package:udp_v2/db/database_informasi_helper.dart';
+export 'package:udp_v2/db/database_video_helper.dart';
+export 'package:udp_v2/db/splashscreen_db.dart';
 export 'package:udp_v2/model/informasi_model.dart';
 export 'package:udp_v2/model/kurikulum_model.dart';
 export 'package:udp_v2/model/news_model.dart';
@@ -45,6 +50,10 @@ export 'package:udp_v2/module/latihan/huruf_page.dart';
 export 'package:udp_v2/module/latihan/instruksi_page.dart';
 export 'package:udp_v2/module/latihan/latihan_angka_page.dart';
 export 'package:udp_v2/module/latihan/latihan_berhitung/controller/latihan_berhitung_controller.dart';
+export 'package:udp_v2/module/latihan/latihan_berhitung/mencari_angka_hilang/controller/mencari_angka_hilang_controller.dart';
+export 'package:udp_v2/module/latihan/latihan_berhitung/mencari_angka_hilang/view/mencari_angka_hilang_view.dart';
+export 'package:udp_v2/module/latihan/latihan_berhitung/menghitung_jumlah_benda/controller/menghitung_jumlah_benda_controller.dart';
+export 'package:udp_v2/module/latihan/latihan_berhitung/menghitung_jumlah_benda/view/menghitung_jumlah_benda_view.dart';
 export 'package:udp_v2/module/latihan/latihan_berhitung/view/latihan_berhitung_view.dart';
 export 'package:udp_v2/module/latihan/latihan_huruf_page.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/controller/latihan_membaca_controller.dart';
@@ -66,6 +75,8 @@ export 'package:udp_v2/module/latihan/latihan_membaca/mencari_huruf_vokal_konson
 export 'package:udp_v2/module/latihan/latihan_membaca/mencari_huruf_vokal_konsonan/view/mencari_huruf_vokal_konsonan_view.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/mencari_huruf_vokal_konsonan/widget/finish_page.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/menjodohkan_kata/controller/menjodohkan_kata_controller.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/menjodohkan_kata/view/menjodohkan_kata_view.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/menjodohkan_kata/widget/dot_widget.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/view/latihan_membaca_view.dart';
 export 'package:udp_v2/module/latihan/latihan_page.dart';
 export 'package:udp_v2/module/materi_pelajaran/bab_pelajaran/controller/bab_pelajaran_controller.dart';
@@ -94,5 +105,18 @@ export 'package:udp_v2/module/splashscreen/initial_page/controller/initial_page_
 export 'package:udp_v2/module/splashscreen/initial_page/view/initial_page_view.dart';
 export 'package:udp_v2/module/splashscreen/introduction/controller/introduction_controller.dart';
 export 'package:udp_v2/module/splashscreen/introduction/view/introduction_view.dart';
+export 'package:udp_v2/provider/informasi_database_provider.dart';
+export 'package:udp_v2/provider/video_database_provider.dart';
+export 'package:udp_v2/services/db_service.dart';
+export 'package:udp_v2/state_util.dart';
+export 'package:udp_v2/utils/result_state.dart';
+export 'package:udp_v2/utils/show_info_dialog.dart';
+export 'package:udp_v2/utils/widget/action_button.dart';
+export 'package:udp_v2/utils/widget/angka_button.dart';
+export 'package:udp_v2/utils/widget/card_informasi.dart';
+export 'package:udp_v2/utils/widget/card_modul.dart';
+export 'package:udp_v2/utils/widget/container_content.dart';
+export 'package:udp_v2/utils/widget/green_button.dart';
+export 'package:udp_v2/utils/widget/huruf_button.dart';
+export 'package:udp_v2/utils/widget/latihan_button.dart';
 export 'core_package.dart';
-export 'state_util.dart';

@@ -1,6 +1,5 @@
-import 'package:get/get.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/utils/widget/latihan_button.dart';
 
 class LatihanBerhitungController extends GetxController {
   LatihanBerhitungView? view;
@@ -14,7 +13,9 @@ class LatihanBerhitungController extends GetxController {
           children: [
             LatihanButton(
               color: red600,
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const MencariAngkaHilangView());
+              },
               icon: "assets/images/icon-angka.svg",
               title: "Matematika",
               subtitle: "Mencari Angka yang Hilang",
@@ -24,7 +25,9 @@ class LatihanBerhitungController extends GetxController {
             ),
             LatihanButton(
               color: const Color(0xffFFAA00),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const MenghitungJumlahBendaView());
+              },
               icon: "assets/images/icon-huruf.svg",
               title: "Matematika",
               subtitle: "Menghitung Jumlah Benda/barang",
