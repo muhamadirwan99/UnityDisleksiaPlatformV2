@@ -23,38 +23,49 @@ class PilihPelajaranView extends StatelessWidget {
         //     FirebaseFirestore.instance.collection('latihan');
 
         // // Mendapatkan referensi dokumen dengan ID khusus
-        // DocumentReference documentRef = usersCollection.doc('membacakatabenda');
+        // DocumentReference documentRef = usersCollection.doc('membedakanhuruf');
 
         // // Data yang akan disisipkan
         // Map<String, dynamic> data = {
         //   "data": [
         //     {
-        //       "arrayAnswer": ['K', 'A', 'K', 'I'],
-        //       "arrayAnswerChoice": ['A', 'B', 'K', 'I'],
-        //       "question": ['K', '_', 'K', '_'],
-        //       "images":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fkaki.png?alt=media&token=8a00fd6d-795d-4be0-8a0a-b114497ef77b",
+        //       "soal": "Manakah huruf (er)?",
+        //       "answers": [
+        //         {
+        //           "answer": "R/r",
+        //           "value": true,
+        //         },
+        //         {
+        //           "answer": "F/f",
+        //           "value": false,
+        //         },
+        //       ],
         //     },
         //     {
-        //       "arrayAnswer": ['H', 'I', 'D', 'U', 'N', 'G'],
-        //       "arrayAnswerChoice": ['A', 'U', 'N', 'I'],
-        //       "question": ['H', '_', 'D', '_', '_', 'G'],
-        //       "images":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fhidung.png?alt=media&token=546f5ef6-f43d-4ac8-a49e-0fdbe5124be3",
+        //       "soal": "Manakah huruf (pe)?",
+        //       "answers": [
+        //         {
+        //           "answer": "P/p",
+        //           "value": true,
+        //         },
+        //         {
+        //           "answer": "Q/q",
+        //           "value": false,
+        //         },
+        //       ],
         //     },
         //     {
-        //       "arrayAnswer": ['T', 'E', 'L', 'I', 'N', 'G', 'A'],
-        //       "arrayAnswerChoice": ['E', 'U', 'N', 'I'],
-        //       "question": ['T', '_', '_', 'I', '_', 'G', 'A'],
-        //       "images":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Ftelinga.png?alt=media&token=dfe879ff-dbcd-439e-84a9-c3003e0e7740",
-        //     },
-        //     {
-        //       "arrayAnswer": ['L', 'U', 'T', 'U', 'T'],
-        //       "arrayAnswerChoice": ['I', 'U', 'N', 'T'],
-        //       "question": ['_', 'U', 'T', '_', '_'],
-        //       "images":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Flutut.png?alt=media&token=21a4ce37-bdfb-4fc8-bfec-d26f373a23f7",
+        //       "soal": "Manakah huruf (u)?",
+        //       "answers": [
+        //         {
+        //           "answer": "U/u",
+        //           "value": true,
+        //         },
+        //         {
+        //           "answer": "N/n",
+        //           "value": false,
+        //         },
+        //       ],
         //     },
         //   ]
         // };
