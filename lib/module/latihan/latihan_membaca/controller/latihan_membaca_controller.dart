@@ -40,7 +40,9 @@ class LatihanMembacaController extends GetxController {
             LatihanButton(
               color: red600,
               onPressed: () {
-                Get.to(const MembacaKataBendaView());
+                Get.to(MembacaKataBendaView(
+                  kdKelas: kdKelas,
+                ));
               },
               icon: "assets/images/icon-huruf.svg",
               title: "Bahasa Indonesia",
