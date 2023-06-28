@@ -49,6 +49,7 @@ class MencariAngkaHilangController extends GetxController {
       update();
     } else if (!tempArrayQuestion.contains('_')) {
       print("Belum Benar");
+      //Get.to(const JawabanSalahMencarianAngkaHilang());
     }
   }
 
