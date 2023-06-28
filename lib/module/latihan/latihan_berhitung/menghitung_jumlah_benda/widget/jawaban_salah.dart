@@ -4,19 +4,16 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
 
-class JawabanBenarMembedakanHuruf extends StatefulWidget {
-  final String kdKelas;
-
-  const JawabanBenarMembedakanHuruf({Key? key, required this.kdKelas})
-      : super(key: key);
+class JawabanSalahMenghitungAngka extends StatefulWidget {
+  const JawabanSalahMenghitungAngka({Key? key}) : super(key: key);
 
   @override
-  State<JawabanBenarMembedakanHuruf> createState() =>
-      _JawabanBenarMembedakanHurufState();
+  State<JawabanSalahMenghitungAngka> createState() =>
+      _JawabanSalahMenghitungAngkaState();
 }
 
-class _JawabanBenarMembedakanHurufState
-    extends State<JawabanBenarMembedakanHuruf> {
+class _JawabanSalahMenghitungAngkaState
+    extends State<JawabanSalahMenghitungAngka> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,13 +26,13 @@ class _JawabanBenarMembedakanHurufState
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SvgPicture.asset(
-                'assets/images/materi_membedakan_huruf_benar.svg',
+                'assets/images/materi_membedakan_huruf_salah.svg',
               ),
               const SizedBox(
                 height: 40,
               ),
               Text(
-                'Jawabanmu tepat!',
+                'Jawabanmu kurang tepat!',
                 style: GoogleFonts.roboto(
                   textStyle: const TextStyle(
                       fontSize: 24,
@@ -52,12 +49,10 @@ class _JawabanBenarMembedakanHurufState
                   backgroundColor: blue300,
                 ),
                 onPressed: () {
-                  Get.to(FinishPageMembedakanHuruf(
-                    kdKelas: widget.kdKelas,
-                  ));
+                  Get.back();
                 },
                 child: Text(
-                  'Lanjut',
+                  'Kembali',
                   style: GoogleFonts.roboto(
                     textStyle: const TextStyle(
                         fontSize: 20,

@@ -30,9 +30,12 @@ class _GreenButtonState extends State<GreenButton> {
         onPressed: widget.onPressed,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16),
-          child: Text(
-            widget.value,
-            style: titleMedium,
+          child: Center(
+            child: Text(
+              widget.value,
+              textAlign: TextAlign.center,
+              style: titleMedium,
+            ),
           ),
         ),
       ),

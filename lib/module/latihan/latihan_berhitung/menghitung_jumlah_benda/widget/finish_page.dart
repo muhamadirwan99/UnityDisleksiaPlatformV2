@@ -4,19 +4,20 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
 
-class JawabanBenarMembedakanHuruf extends StatefulWidget {
+class FinishPageMenghitungAngka extends StatefulWidget {
   final String kdKelas;
 
-  const JawabanBenarMembedakanHuruf({Key? key, required this.kdKelas})
-      : super(key: key);
+  const FinishPageMenghitungAngka({
+    Key? key,
+    required this.kdKelas,
+  }) : super(key: key);
 
   @override
-  State<JawabanBenarMembedakanHuruf> createState() =>
-      _JawabanBenarMembedakanHurufState();
+  State<FinishPageMenghitungAngka> createState() =>
+      _FinishPageMenghitungAngkaState();
 }
 
-class _JawabanBenarMembedakanHurufState
-    extends State<JawabanBenarMembedakanHuruf> {
+class _FinishPageMenghitungAngkaState extends State<FinishPageMenghitungAngka> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,16 +30,17 @@ class _JawabanBenarMembedakanHurufState
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SvgPicture.asset(
-                'assets/images/materi_membedakan_huruf_benar.svg',
+                'assets/images/materi_membedakan_huruf_finish_page.svg',
               ),
               const SizedBox(
                 height: 40,
               ),
               Text(
-                'Jawabanmu tepat!',
+                'Yeay! Kamu sudah latihan hari ini.\nTetap semangat!',
+                textAlign: TextAlign.center,
                 style: GoogleFonts.roboto(
                   textStyle: const TextStyle(
-                      fontSize: 24,
+                      fontSize: 16,
                       fontWeight: FontWeight.w400,
                       letterSpacing: 0.2,
                       color: neutralBlack),
@@ -52,12 +54,12 @@ class _JawabanBenarMembedakanHurufState
                   backgroundColor: blue300,
                 ),
                 onPressed: () {
-                  Get.to(FinishPageMembedakanHuruf(
+                  Get.offAll(LatihanBerhitungView(
                     kdKelas: widget.kdKelas,
                   ));
                 },
                 child: Text(
-                  'Lanjut',
+                  'Kembali',
                   style: GoogleFonts.roboto(
                     textStyle: const TextStyle(
                         fontSize: 20,
