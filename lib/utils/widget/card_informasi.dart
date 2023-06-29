@@ -50,6 +50,8 @@ class _CardInformasiState extends State<CardInformasi> {
                   children: [
                     Text(
                       widget.title,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                       style: titleMedium.copyWith(color: neutralWhite),
                     ),
                     const SizedBox(

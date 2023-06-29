@@ -1,10 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get_rx/get_rx.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:udp_v2/utils/show_info_dialog.dart';
-import 'package:udp_v2/utils/widget/action_button.dart';
 import 'package:udp_v2/core.dart';
 
 class MencariHurufVokalKonsonanView extends StatelessWidget {
@@ -80,11 +79,11 @@ class MencariHurufVokalKonsonanView extends StatelessWidget {
                         const SizedBox(
                           height: 40,
                         ),
-                        Image.network(
-                          controller.gambar,
+                        FancyShimmerImage(
+                          imageUrl: controller.gambar,
                           width: 300.0,
                           height: 300.0,
-                          fit: BoxFit.cover,
+                          boxFit: BoxFit.fitHeight,
                         ),
                         const SizedBox(
                           height: 40,

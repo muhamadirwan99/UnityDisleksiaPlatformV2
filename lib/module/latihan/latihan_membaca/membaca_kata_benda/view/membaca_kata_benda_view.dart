@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
@@ -76,10 +77,10 @@ class MembacaKataBendaView extends StatelessWidget {
                       const SizedBox(
                         height: 40,
                       ),
-                      Image.network(
-                        controller.image,
-                        height: 160,
-                        fit: BoxFit.cover,
+                      FancyShimmerImage(
+                        imageUrl: controller.image,
+                        height: 179,
+                        boxFit: BoxFit.fitHeight,
                       ),
                       const SizedBox(
                         height: 40,

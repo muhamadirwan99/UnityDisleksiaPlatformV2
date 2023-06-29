@@ -1,6 +1,5 @@
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/utils/widget/card_informasi.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({Key? key}) : super(key: key);
@@ -74,33 +73,48 @@ class SearchView extends StatelessWidget {
           ),
           body: controller.extractedDataList.isNotEmpty
               ? controller.filteredList.isNotEmpty
-                  ? ListView.builder(
-                      itemCount: controller.filteredList.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        Informasi data =
-                            Informasi.fromJson(controller.filteredList[index]);
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 16,
+                  ? SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 16.0,
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 16),
-                            child: CardInformasi(
-                              title: data.title,
-                              date: data.date,
-                              image: data.image,
-                              onTap: () {
-                                Get.to(
-                                  DetailInformasiView(
-                                    title: "Informasi",
-                                    data: data,
+                          ListView.builder(
+                            itemCount: controller.filteredList.length,
+                            shrinkWrap: true,
+                            physics: const ScrollPhysics(),
+                            itemBuilder: (BuildContext context, int index) {
+                              Informasi data = Informasi.fromJson(
+                                  controller.filteredList[index]);
+                              return Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 16,
+                                    ),
+                                    child: CardInformasi(
+                                      title: data.title,
+                                      date: data.date,
+                                      image: data.image,
+                                      onTap: () {
+                                        Get.to(
+                                          DetailInformasiView(
+                                            title: "Informasi",
+                                            data: data,
+                                          ),
+                                        );
+                                      },
+                                    ),
                                   ),
-                                );
-                              },
-                            ),
+                                  const SizedBox(
+                                    height: 16.0,
+                                  ),
+                                ],
+                              );
+                            },
                           ),
-                        );
-                      },
+                        ],
+                      ),
                     )
                   : Center(
                       child: Container(
