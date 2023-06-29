@@ -80,59 +80,69 @@ class _ContentLatihanState extends State<ContentLatihan> {
                       height: 40,
                     ),
                     Expanded(
-                      child: ListView.builder(
-                        itemCount: dataList![0][widget.controller.lengthLatihan]
-                                ["answers"]
-                            .length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (BuildContext context, int index) {
-                          return InkWell(
-                            onTap: () {
-                              if (dataList[0][widget.controller.lengthLatihan]
-                                  ["answers"][index]["value"]) {
-                                widget.controller.lengthLatihan++;
+                      child: Center(
+                        child: ListView.builder(
+                          itemCount: dataList![0]
+                                  [widget.controller.lengthLatihan]["answers"]
+                              .length,
+                          scrollDirection: Axis.horizontal,
+                          shrinkWrap: true,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: InkWell(
+                                onTap: () {
+                                  if (dataList[0]
+                                          [widget.controller.lengthLatihan]
+                                      ["answers"][index]["value"]) {
+                                    widget.controller.lengthLatihan++;
 
-                                if (widget.controller.lengthLatihan <
-                                    dataList[0].length) {
-                                  widget.controller.soal = dataList[0]
-                                      [widget.controller.lengthLatihan]["soal"];
-                                  widget.controller.update();
-                                } else {
-                                  Get.to(FinalPageVokalKonsonanWidget(
-                                    kdKelas: widget.kdKelas,
-                                  ));
-                                }
-                              } else {
-                                Get.to(const JawabanSalahMembedakanHuruf());
-                              }
-                            },
-                            child: Container(
-                              height: 90,
-                              width: 90,
-                              decoration: const BoxDecoration(
-                                color: blue300,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(
-                                    8,
+                                    if (widget.controller.lengthLatihan <
+                                        dataList[0].length) {
+                                      widget.controller.soal = dataList[0]
+                                              [widget.controller.lengthLatihan]
+                                          ["soal"];
+                                      widget.controller.update();
+                                    } else {
+                                      Get.to(FinalPageVokalKonsonanWidget(
+                                        kdKelas: widget.kdKelas,
+                                      ));
+                                    }
+                                  } else {
+                                    Get.to(const JawabanSalahMembedakanHuruf());
+                                  }
+                                },
+                                child: Container(
+                                  height: 90,
+                                  width: 90,
+                                  decoration: const BoxDecoration(
+                                    color: blue300,
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(
+                                        8,
+                                      ),
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      dataList[0]
+                                              [widget.controller.lengthLatihan]
+                                          ["answers"][index]["answer"],
+                                      style: GoogleFonts.roboto(
+                                        textStyle: const TextStyle(
+                                            fontSize: 45,
+                                            fontWeight: FontWeight.w400,
+                                            letterSpacing: 0.2,
+                                            color: neutralBlack),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
-                              child: Center(
-                                child: Text(
-                                  dataList[0][widget.controller.lengthLatihan]
-                                      ["answers"][index]["answer"],
-                                  style: GoogleFonts.roboto(
-                                    textStyle: const TextStyle(
-                                        fontSize: 45,
-                                        fontWeight: FontWeight.w400,
-                                        letterSpacing: 0.2,
-                                        color: neutralBlack),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          );
-                        },
+                            );
+                          },
+                        ),
                       ),
                     ),
                     const Spacer(),

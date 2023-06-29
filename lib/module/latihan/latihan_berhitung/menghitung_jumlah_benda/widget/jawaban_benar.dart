@@ -4,19 +4,19 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
 
-class JawabanBenarMembedakanHuruf extends StatefulWidget {
+class JawabanBenarMenghitungJumlahBenda extends StatefulWidget {
   final String kdKelas;
 
-  const JawabanBenarMembedakanHuruf({Key? key, required this.kdKelas})
+  const JawabanBenarMenghitungJumlahBenda({Key? key, required this.kdKelas})
       : super(key: key);
 
   @override
-  State<JawabanBenarMembedakanHuruf> createState() =>
-      _JawabanBenarMembedakanHurufState();
+  State<JawabanBenarMenghitungJumlahBenda> createState() =>
+      _JawabanBenarMenghitungJumlahBendaState();
 }
 
-class _JawabanBenarMembedakanHurufState
-    extends State<JawabanBenarMembedakanHuruf> {
+class _JawabanBenarMenghitungJumlahBendaState
+    extends State<JawabanBenarMenghitungJumlahBenda> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

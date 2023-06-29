@@ -65,19 +65,6 @@ class _ContainerMateriPembelajaranWidgetState
               ));
             },
           ),
-          RowKelasWidget(
-            circleIcon: CircleAvatar(
-              backgroundColor: red100,
-              child: SvgPicture.asset("assets/images/materi_3.svg"),
-            ),
-            title: "Kelas 3",
-            subtitle: "Materi pelajaran kelas 3 SD",
-            onTap: () {
-              Get.to(const PilihPelajaranView(
-                kdKelas: "3",
-              ));
-            },
-          )
         ],
       ),
     );
