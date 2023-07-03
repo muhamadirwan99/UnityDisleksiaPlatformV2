@@ -37,7 +37,7 @@ class MencariAngkaHilangView extends StatelessWidget {
             body: StreamBuilder(
                 stream: FirebaseFirestore.instance
                     .collection("latihan")
-                    .doc("membacakatabenda")
+                    .doc("membacaangka")
                     .snapshots(),
                 builder: (BuildContext context, AsyncSnapshot snapshot) {
                   if (!snapshot.hasData) {
@@ -49,11 +49,6 @@ class MencariAngkaHilangView extends StatelessWidget {
 
                   List<dynamic>? dataList =
                       data != null ? data.values.toList() : null;
-
-                  if (controller.lengthLatihan < dataList![0].length) {
-                    controller.image =
-                        dataList[0][controller.lengthLatihan]["images"];
-                  }
 
                   return SingleChildScrollView(
                     child: Center(
@@ -219,7 +214,7 @@ class MencariAngkaHilangView extends StatelessWidget {
                                     controller.lengthLatihan++;
 
                                     if (controller.lengthLatihan <
-                                        dataList[0].length) {
+                                        dataList![0].length) {
                                       controller.answerBool = false;
 
                                       List<String> tempListQuestion =
@@ -248,10 +243,12 @@ class MencariAngkaHilangView extends StatelessWidget {
                                           List.from(
                                               controller.arrayAnswerChoice);
                                       controller.update();
+                                    } else {
                                       Get.offAll(
-                                          const FinishPageMencariAngkaYangHilang(
-                                              kdKelas: "1"));
-                                    } else {}
+                                        const FinishPageMencariAngkaYangHilang(
+                                            kdKelas: "1"),
+                                      );
+                                    }
                                   },
                                   child: Text(
                                     'Lanjut',

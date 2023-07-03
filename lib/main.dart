@@ -9,13 +9,6 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/db/database_informasi_helper.dart';
-import 'package:udp_v2/db/database_video_helper.dart';
-import 'package:udp_v2/db/splashscreen_db.dart';
-import 'package:udp_v2/provider/video_database_provider.dart';
-import 'package:udp_v2/services/db_service.dart';
-
-import 'provider/informasi_database_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,6 +25,9 @@ void main() async {
   SplashDatabase.isSplash = mainStorage.get("isSplash") ?? "";
 
   await FirebaseMessaging.instance.setAutoInitEnabled(true);
+  // var token = await FirebaseMessaging.instance.getToken();
+  // print("token");
+  // print(token);
 
   FlutterLocalNotificationsPlugin notifications =
       FlutterLocalNotificationsPlugin();

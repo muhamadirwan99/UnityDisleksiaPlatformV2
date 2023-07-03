@@ -23,49 +23,35 @@ class PilihPelajaranView extends StatelessWidget {
         //     FirebaseFirestore.instance.collection('latihan');
 
         // // Mendapatkan referensi dokumen dengan ID khusus
-        // DocumentReference documentRef = usersCollection.doc('membedakanhuruf');
+        // DocumentReference documentRef = usersCollection.doc('membacaangka');
 
         // // Data yang akan disisipkan
         // Map<String, dynamic> data = {
         //   "data": [
         //     {
-        //       "soal": "Manakah huruf (er)?",
-        //       "answers": [
-        //         {
-        //           "answer": "R/r",
-        //           "value": true,
-        //         },
-        //         {
-        //           "answer": "F/f",
-        //           "value": false,
-        //         },
-        //       ],
+        //       "arrayAnswer": ['1', '2', '3', '4'],
+        //       "arrayAnswerChoice": ['4', '3', '9'],
+        //       "question": ['1', '2', '_', '4']
         //     },
         //     {
-        //       "soal": "Manakah huruf (pe)?",
-        //       "answers": [
-        //         {
-        //           "answer": "P/p",
-        //           "value": true,
-        //         },
-        //         {
-        //           "answer": "Q/q",
-        //           "value": false,
-        //         },
-        //       ],
+        //       "arrayAnswer": ['10', '11', '12', '13', '14'],
+        //       "arrayAnswerChoice": ['41', '14', '16'],
+        //       "question": ['10', '11', '12', '13', '_']
         //     },
         //     {
-        //       "soal": "Manakah huruf (u)?",
-        //       "answers": [
-        //         {
-        //           "answer": "U/u",
-        //           "value": true,
-        //         },
-        //         {
-        //           "answer": "N/n",
-        //           "value": false,
-        //         },
-        //       ],
+        //       "arrayAnswer": ['7', '6', '5', '4', '3'],
+        //       "arrayAnswerChoice": ['1', '4', '2'],
+        //       "question": ['7', '6', '5', '_', '3']
+        //     },
+        //     {
+        //       "arrayAnswer": ['9', '8', '7', '6', '5'],
+        //       "arrayAnswerChoice": ['9', '0', '4'],
+        //       "question": ['_', '8', '7', '6', '5']
+        //     },
+        //     {
+        //       "arrayAnswer": ['4', '5', '6', '7', '8'],
+        //       "arrayAnswerChoice": ['10', '11', '4'],
+        //       "question": ['_', '5', '6', '7', '8']
         //     },
         //   ]
         // };

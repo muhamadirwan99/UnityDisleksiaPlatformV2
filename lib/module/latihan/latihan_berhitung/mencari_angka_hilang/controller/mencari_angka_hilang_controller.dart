@@ -1,5 +1,6 @@
-import 'package:get/get.dart';
-import '../view/mencari_angka_hilang_view.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:udp_v2/core.dart';
+import 'package:udp_v2/module/latihan/latihan_berhitung/mencari_angka_hilang/widget/jawaban_salah.dart';
 
 class MencariAngkaHilangController extends GetxController {
   MencariAngkaHilangView? view;
@@ -17,26 +18,18 @@ class MencariAngkaHilangController extends GetxController {
     '3',
     '4',
     '5',
-    '6',
   ];
   List<String> arrayAnswerChoice = [
-    '11',
-    '12',
+    '4',
     '3',
-    '7',
     '9',
-    '10',
-    '1',
-    '2',
-    '5'
   ];
-  List<String> question = ['1', '_', '3', '4', '_', '6'];
+  List<String> question = ['1', '2', '_', '4', '5'];
 
   // List<String> arrayAnswer = []; // Value received from backend
   // List<String> arrayAnswerChoice = []; // Value received from backend
   // List<String> question = []; // Value received from backend
-  String image =
-      "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fkaki.png?alt=media&token=8a00fd6d-795d-4be0-8a0a-b114497ef77b";
+
   bool answerBool = false;
 
   List<List<String>> questionHistory = [];
@@ -48,8 +41,7 @@ class MencariAngkaHilangController extends GetxController {
       answerBool = true; // Set all elements to true
       update();
     } else if (!tempArrayQuestion.contains('_')) {
-      print("Belum Benar");
-      //Get.to(const JawabanSalahMencarianAngkaHilang());
+      Get.to(const JawabanSalahMencarianAngkaHilang());
     }
   }
 
