@@ -37,7 +37,7 @@ class MencariAngkaHilangView extends StatelessWidget {
             body: StreamBuilder(
                 stream: FirebaseFirestore.instance
                     .collection("latihan")
-                    .doc("membacaangka")
+                    .doc("mencariangka")
                     .snapshots(),
                 builder: (BuildContext context, AsyncSnapshot snapshot) {
                   if (!snapshot.hasData) {

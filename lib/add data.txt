@@ -121,3 +121,47 @@ membedakan huruf
             },
           ]
         };
+
+
+         // Mendapatkan referensi dokumen dengan ID khusus
+        DocumentReference documentRef = usersCollection.doc('membacaangka');
+
+        // Data yang akan disisipkan
+        Map<String, dynamic> data = {
+          "data": [
+            {
+              "title": "Hitunglah jumlah apel di bawah ini!",
+              "image":
+                  "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fapel.png?alt=media&token=9e200c1f-e614-4b2b-b14b-90c4a2212382",
+              "arrayAnswer": ['20', '21', '22'],
+              "realAnswer": "21"
+            },
+            {
+              "title": "Hitunglah jumlah apel di bawah ini!",
+              "soal":
+                  "Andi memiliki 9 buah jeruk kemudian di berikan kepada temannya. Tono 7 buah, berapakah buah jeruk yang dimiliki Andi sekarang?",
+              "image":
+                  "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fjeruk.png?alt=media&token=480be6f1-a913-4a17-b057-ad3a797ab89d",
+              "arrayAnswer": ['1', '2', '3'],
+              "realAnswer": "2"
+            },
+            {
+              "title": "Hitunglah jumlah buah di bawah ini!",
+              "soal":
+                  "Sore hari Ibu dan Arsen pergi kepasar untuk membeli buah, ibu membeli 12 buah apel dan Arsen membeli 4 buah semangka, berapakah jumlah buah yang dibeli oleh mereka?",
+              "image":
+                  "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fbuah.png?alt=media&token=4c1ab445-4e85-4c43-aacc-60ba131f0c2b",
+              "arrayAnswer": ['17', '15', '16'],
+              "realAnswer": "16"
+            },
+            {
+              "title": "Hitunglah jumlah buah di bawah ini!",
+              "soal":
+                  "Dalam suatu kelas siswa sedang melakukan kebersihan lingkungan sekolah, berapakah jumlah siswa yang melakukan kebersihan pada gambar dibawah?",
+              "image":
+                  "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fsiswa.png?alt=media&token=70ba2a4b-6803-4bfd-8d8a-956c162e96e5",
+              "arrayAnswer": ['5.0', '5.1', '5.2'],
+              "realAnswer": "5.0"
+            },
+          ]
+        };

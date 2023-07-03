@@ -23,7 +23,7 @@ class PilihPelajaranView extends StatelessWidget {
         //     FirebaseFirestore.instance.collection('latihan');
 
         // // Mendapatkan referensi dokumen dengan ID khusus
-        // DocumentReference documentRef = usersCollection.doc('membacaangka');
+        // DocumentReference documentRef = usersCollection.doc('mencariangka');
 
         // // Data yang akan disisipkan
         // Map<String, dynamic> data = {
