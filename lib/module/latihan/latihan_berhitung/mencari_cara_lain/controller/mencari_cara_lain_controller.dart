@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import '../view/content_pembelajaran_view.dart';
+import '../view/mencari_cara_lain_view.dart';
 
-class ContentPembelajaranController extends GetxController {
-  ContentPembelajaranView? view;
+class MencariCaraLainController extends GetxController {
+  MencariCaraLainView? view;
 
   @override
   void onInit() {
