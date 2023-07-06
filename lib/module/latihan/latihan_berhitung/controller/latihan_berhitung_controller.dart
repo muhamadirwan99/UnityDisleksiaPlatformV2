@@ -37,7 +37,9 @@ class LatihanBerhitungController extends GetxController {
             ),
             LatihanButton(
               color: blue400,
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const InstruksiPage());
+              },
               icon: "assets/images/icon-instruksi.svg",
               title: "Instruksi",
               subtitle: "Informasi cara bermain",
@@ -60,7 +62,9 @@ class LatihanBerhitungController extends GetxController {
             ),
             LatihanButton(
               color: blue400,
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const InstruksiPage());
+              },
               icon: "assets/images/icon-instruksi.svg",
               title: "Instruksi",
               subtitle: "Informasi cara bermain",

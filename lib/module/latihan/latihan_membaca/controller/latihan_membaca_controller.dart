@@ -79,7 +79,9 @@ class LatihanMembacaController extends GetxController {
             ),
             LatihanButton(
               color: blue400,
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const InstruksiPage());
+              },
               icon: "assets/images/icon-instruksi.svg",
               title: "Instruksi",
               subtitle: "Informasi cara bermain",
@@ -92,16 +94,6 @@ class LatihanMembacaController extends GetxController {
         content = Column(
           children: [
             LatihanButton(
-              color: blue400,
-              onPressed: () {},
-              icon: "assets/images/icon-instruksi.svg",
-              title: "Instruksi",
-              subtitle: "Informasi cara bermain",
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            LatihanButton(
               color: red600,
               onPressed: () {
                 Get.to(const SoalCeritaView(
@@ -111,6 +103,18 @@ class LatihanMembacaController extends GetxController {
               icon: "assets/images/icon-huruf.svg",
               title: "Bahasa Indonesia",
               subtitle: "Belajar Menjawab Soal-Soal Cerita",
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            LatihanButton(
+              color: blue400,
+              onPressed: () {
+                Get.to(const InstruksiPage());
+              },
+              icon: "assets/images/icon-instruksi.svg",
+              title: "Instruksi",
+              subtitle: "Informasi cara bermain",
             ),
           ],
         );
