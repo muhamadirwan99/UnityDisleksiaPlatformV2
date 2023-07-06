@@ -1,6 +1,6 @@
 import 'dart:io';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
-import 'package:get/get.dart';
 
 class BookmarkView extends StatefulWidget {
   const BookmarkView({Key? key}) : super(key: key);
@@ -39,6 +39,17 @@ class _BookmarkViewState extends State<BookmarkView>
                         title: Text(
                           "Bookmark",
                           style: titleMedium,
+                        ),
+                        leading: InkWell(
+                          onTap: () {
+                            Get.to(const BerandaView());
+                          },
+                          child: const Center(
+                            child: Icon(
+                              Icons.arrow_back,
+                              size: 24.0,
+                            ),
+                          ),
                         ),
                         elevation: 0.0,
                         floating: true,
