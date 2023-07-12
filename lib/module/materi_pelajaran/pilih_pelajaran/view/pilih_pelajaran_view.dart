@@ -135,7 +135,9 @@ class PilihPelajaranView extends StatelessWidget {
                         GreenButton(
                           value: "Latihan Menulis",
                           onPressed: () {
-                            Get.to(const LatihanPage());
+                            Get.to(LatihanPage(
+                              kdKelas: kdKelas,
+                            ));
                           },
                         ),
                         const SizedBox(

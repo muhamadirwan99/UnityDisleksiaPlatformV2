@@ -1,13 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/angka_page.dart';
-import 'package:udp_v2/module/latihan/huruf_page.dart';
-import 'package:udp_v2/module/latihan/instruksi_page.dart';
 
 class LatihanPage extends StatelessWidget {
-  const LatihanPage({Key? key}) : super(key: key);
+  String kdKelas;
+  LatihanPage({Key? key, required this.kdKelas}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +18,17 @@ class LatihanPage extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 letterSpacing: 0.2,
                 color: gray100),
+          ),
+        ),
+        leading: InkWell(
+          onTap: () {
+            Get.to(PilihPelajaranView(
+              kdKelas: kdKelas,
+            ));
+          },
+          child: const Icon(
+            Icons.arrow_back,
+            size: 24.0,
           ),
         ),
         titleTextStyle: const TextStyle(color: gray900),
@@ -94,120 +102,192 @@ class LatihanPage extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 40, left: 24, right: 24),
                 child: Column(
                   children: [
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: red600,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16.0),
-                        ),
-                      ),
-                      onPressed: () {
-                        Get.to(const AngkaPage());
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(16),
-                        child: Row(
-                          children: [
-                            SvgPicture.asset(
-                              "assets/images/icon-angka.svg",
-                              color: gray100,
-                              height: 60,
-                              width: 60,
+                    kdKelas.contains("1")
+                        ? ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: red600,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16.0),
+                              ),
                             ),
-                            const SizedBox(
-                              width: 16,
-                            ),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                            onPressed: () {
+                              Get.to(const AngkaPage());
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(16),
+                              child: Row(
                                 children: [
-                                  Text(
-                                    "Materi Angka",
-                                    style: GoogleFonts.roboto(
-                                      textStyle: const TextStyle(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 0,
-                                          color: gray100),
-                                    ),
+                                  SvgPicture.asset(
+                                    "assets/images/icon-angka.svg",
+                                    color: gray100,
+                                    height: 60,
+                                    width: 60,
                                   ),
-                                  Text(
-                                    "Belajar Mengenal dan Menulis Angka",
-                                    style: GoogleFonts.roboto(
-                                      textStyle: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
-                                          letterSpacing: 0.25,
-                                          color: gray100),
-                                    ),
+                                  const SizedBox(
+                                    width: 16,
                                   ),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Materi Angka",
+                                          style: GoogleFonts.roboto(
+                                            textStyle: const TextStyle(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w500,
+                                                letterSpacing: 0,
+                                                color: gray100),
+                                          ),
+                                        ),
+                                        Text(
+                                          "Belajar Mengenal dan Menulis Angka",
+                                          style: GoogleFonts.roboto(
+                                            textStyle: const TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                letterSpacing: 0.25,
+                                                color: gray100),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  )
                                 ],
                               ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 32,
-                    ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xffFFAA00),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16.0),
-                        ),
-                      ),
-                      onPressed: () {
-                        Get.to(const HurufPage());
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(16),
-                        child: Row(
-                          children: [
-                            SvgPicture.asset(
-                              "assets/images/icon-huruf.svg",
-                              color: gray100,
-                              height: 60,
-                              width: 60,
                             ),
-                            const SizedBox(
-                              width: 16,
+                          )
+                        : Container(),
+                    kdKelas.contains("1")
+                        ? const SizedBox(
+                            height: 32,
+                          )
+                        : Container(),
+                    kdKelas.contains("1")
+                        ? ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xffFFAA00),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16.0),
+                              ),
                             ),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                            onPressed: () {
+                              Get.to(const HurufPage());
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(16),
+                              child: Row(
                                 children: [
-                                  Text(
-                                    "Materi Huruf",
-                                    style: GoogleFonts.roboto(
-                                      textStyle: const TextStyle(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 0,
-                                          color: gray100),
-                                    ),
+                                  SvgPicture.asset(
+                                    "assets/images/icon-huruf.svg",
+                                    color: gray100,
+                                    height: 60,
+                                    width: 60,
                                   ),
-                                  Text(
-                                    "Belajar Mengenal dan Menulis Huruf",
-                                    style: GoogleFonts.roboto(
-                                      textStyle: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
-                                          letterSpacing: 0.25,
-                                          color: gray100),
-                                    ),
+                                  const SizedBox(
+                                    width: 16,
                                   ),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Materi Huruf",
+                                          style: GoogleFonts.roboto(
+                                            textStyle: const TextStyle(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w500,
+                                                letterSpacing: 0,
+                                                color: gray100),
+                                          ),
+                                        ),
+                                        Text(
+                                          "Belajar Mengenal dan Menulis Huruf",
+                                          style: GoogleFonts.roboto(
+                                            textStyle: const TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                letterSpacing: 0.25,
+                                                color: gray100),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  )
                                 ],
                               ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 32,
-                    ),
+                            ),
+                          )
+                        : Container(),
+                    kdKelas.contains("1")
+                        ? const SizedBox(
+                            height: 32,
+                          )
+                        : Container(),
+                    kdKelas.contains("2")
+                        ? ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: red600,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16.0),
+                              ),
+                            ),
+                            onPressed: () {
+                              Get.to(const MenulisKalimatView());
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(16),
+                              child: Row(
+                                children: [
+                                  SvgPicture.asset(
+                                    "assets/images/icon-huruf.svg",
+                                    color: gray100,
+                                    height: 60,
+                                    width: 60,
+                                  ),
+                                  const SizedBox(
+                                    width: 16,
+                                  ),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Bahasa Indonesia",
+                                          style: GoogleFonts.roboto(
+                                            textStyle: const TextStyle(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w500,
+                                                letterSpacing: 0,
+                                                color: gray100),
+                                          ),
+                                        ),
+                                        Text(
+                                          "Belajar Menulis Kalimat dari Gambar ",
+                                          style: GoogleFonts.roboto(
+                                            textStyle: const TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                letterSpacing: 0.25,
+                                                color: gray100),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          )
+                        : Container(),
+                    kdKelas.contains("2")
+                        ? const SizedBox(
+                            height: 32,
+                          )
+                        : Container(),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: blue400,
