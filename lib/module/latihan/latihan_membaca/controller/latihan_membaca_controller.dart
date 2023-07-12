@@ -79,7 +79,9 @@ class LatihanMembacaController extends GetxController {
             ),
             LatihanButton(
               color: blue400,
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const InstruksiPage());
+              },
               icon: "assets/images/icon-instruksi.svg",
               title: "Instruksi",
               subtitle: "Informasi cara bermain",
@@ -107,7 +109,9 @@ class LatihanMembacaController extends GetxController {
             ),
             LatihanButton(
               color: blue400,
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const InstruksiPage());
+              },
               icon: "assets/images/icon-instruksi.svg",
               title: "Instruksi",
               subtitle: "Informasi cara bermain",

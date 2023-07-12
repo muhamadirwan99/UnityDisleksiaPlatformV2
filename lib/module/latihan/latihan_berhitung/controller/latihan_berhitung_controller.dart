@@ -37,7 +37,9 @@ class LatihanBerhitungController extends GetxController {
             ),
             LatihanButton(
               color: blue400,
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const InstruksiPage());
+              },
               icon: "assets/images/icon-instruksi.svg",
               title: "Instruksi",
               subtitle: "Informasi cara bermain",
@@ -50,7 +52,11 @@ class LatihanBerhitungController extends GetxController {
           children: [
             LatihanButton(
               color: red600,
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const MencariCaraLainView(
+                  kdKelas: "2",
+                ));
+              },
               icon: "assets/images/icon-huruf.svg",
               title: "Matematika",
               subtitle: "Berlatih Menghitung dengan Berbagai Soal",
@@ -60,7 +66,9 @@ class LatihanBerhitungController extends GetxController {
             ),
             LatihanButton(
               color: blue400,
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const InstruksiPage());
+              },
               icon: "assets/images/icon-instruksi.svg",
               title: "Instruksi",
               subtitle: "Informasi cara bermain",

@@ -86,8 +86,14 @@ export 'package:udp_v2/module/latihan/latihan_membaca/menjodohkan_kata/view/menj
 export 'package:udp_v2/module/latihan/latihan_membaca/menjodohkan_kata/widget/dot_widget.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/soal_cerita/controller/soal_cerita_controller.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/soal_cerita/view/soal_cerita_view.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/soal_cerita/widget/finish_page.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/soal_cerita/widget/green_button_widget.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/soal_cerita/widget/jawaban_benar.dart';
+export 'package:udp_v2/module/latihan/latihan_membaca/soal_cerita/widget/jawaban_salah.dart';
 export 'package:udp_v2/module/latihan/latihan_membaca/view/latihan_membaca_view.dart';
 export 'package:udp_v2/module/latihan/latihan_page.dart';
+export 'package:udp_v2/module/latihan/menulis_kalimat/controller/menulis_kalimat_controller.dart';
+export 'package:udp_v2/module/latihan/menulis_kalimat/view/menulis_kalimat_view.dart';
 export 'package:udp_v2/module/materi_pelajaran/bab_pelajaran/controller/bab_pelajaran_controller.dart';
 export 'package:udp_v2/module/materi_pelajaran/bab_pelajaran/view/bab_pelajaran_view.dart';
 export 'package:udp_v2/module/materi_pelajaran/detail_pelajaran/controller/detail_pelajaran_controller.dart';
