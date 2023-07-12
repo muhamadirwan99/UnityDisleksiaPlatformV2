@@ -96,8 +96,8 @@ class LatihanMembacaController extends GetxController {
             LatihanButton(
               color: red600,
               onPressed: () {
-                Get.to(const SoalCeritaView(
-                  question: "apa aja deh yang penting lu seneng",
+                Get.to(SoalCeritaView(
+                  kdKelas: kdKelas,
                 ));
               },
               icon: "assets/images/icon-huruf.svg",

@@ -1,11 +1,17 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:get/get.dart';
 import 'package:udp_v2/module/latihan/latihan_membaca/soal_cerita/widget/green_button_widget.dart';
+import 'package:udp_v2/module/latihan/latihan_membaca/soal_cerita/widget/jawaban_salah.dart';
 
 class SoalCeritaView extends StatelessWidget {
-  final String question;
-  const SoalCeritaView({Key? key, required this.question}) : super(key: key);
+  final String kdKelas;
+  const SoalCeritaView({
+    Key? key,
+    required this.kdKelas,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,71 +39,113 @@ class SoalCeritaView extends StatelessWidget {
               ActionButton(),
             ],
           ),
-          body: SingleChildScrollView(
-            child: Container(
-              padding: const EdgeInsets.all(10.0),
-              child: Center(
-                child: Column(
-                  children: [
-                    const SizedBox(
-                      height: 50,
-                    ),
-                    Text(
-                      'Jawablah dengan saksama!',
-                      style: GoogleFonts.roboto(
-                        textStyle: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700,
-                            letterSpacing: 0.2,
-                            color: neutralBlack),
+          body: StreamBuilder(
+              stream: FirebaseFirestore.instance
+                  .collection("latihan")
+                  .doc("soalcerita")
+                  .snapshots(),
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                if (!snapshot.hasData) {
+                  return Container();
+                }
+                DocumentSnapshot<Map<String, dynamic>> documentSnapshot =
+                    snapshot.data!;
+                Map<String, dynamic>? data = documentSnapshot.data();
+
+                List<dynamic>? dataList =
+                    data != null ? data.values.toList() : null;
+
+                if (controller.lengthLatihan < dataList![0].length) {
+                  controller.imageLink1 =
+                      dataList[0][controller.lengthLatihan]["image"];
+                  controller.question1 =
+                      dataList[0][controller.lengthLatihan]["question"] ?? "";
+                }
+                return SingleChildScrollView(
+                  child: Container(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Center(
+                      child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 50,
+                          ),
+                          Text(
+                            'Jawablah dengan saksama!',
+                            style: GoogleFonts.roboto(
+                              textStyle: const TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w700,
+                                  letterSpacing: 0.2,
+                                  color: neutralBlack),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          FancyShimmerImage(
+                            imageUrl: controller.imageLink1,
+                            height: 300.0,
+                            boxFit: BoxFit.fitWidth,
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            controller.question1,
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.roboto(
+                              textStyle: const TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 0.2,
+                                  color: neutralBlack),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          ListView.builder(
+                            itemCount: controller.answerChoice1.length,
+                            shrinkWrap: true,
+                            physics: const ScrollPhysics(),
+                            itemBuilder: (BuildContext context, int index) {
+                              return GreenButtonWidget(
+                                  title: controller.answerChoice1[index],
+                                  callback: () {
+                                    controller.answer1 =
+                                        controller.answerChoice1[index];
+                                    controller.update();
+                                    if (controller.answer1
+                                        .contains(controller.realAnswer1)) {
+                                      controller.lengthLatihan++;
+                                      if (controller.lengthLatihan <
+                                          dataList[0].length) {
+                                        controller.answerChoice1 = dataList[0]
+                                                [controller.lengthLatihan]
+                                            ["arrayAnswer"];
+                                        controller.realAnswer1 = dataList[0]
+                                                [controller.lengthLatihan]
+                                            ["answer"];
+                                        controller.update();
+                                      } else {
+                                        controller.lengthLatihan = 0;
+                                        Get.to(FinishPageMembedakanHuruf(
+                                            kdKelas: kdKelas));
+                                      }
+                                    } else {
+                                      Get.to(
+                                          const JawabanSalahMenjawabSoalCerita());
+                                    }
+                                  });
+                            },
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Image.network(
-                      controller.imageLink1,
-                      width: MediaQuery.of(context).size.width - 29,
-                      height: 200,
-                      fit: BoxFit.cover,
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      controller.question1,
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.roboto(
-                        textStyle: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            letterSpacing: 0.2,
-                            color: neutralBlack),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    ListView.builder(
-                      itemCount: 3,
-                      shrinkWrap: true,
-                      physics: const ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return GreenButtonWidget(
-                            title: controller.answerChoice1[index],
-                            callback: () {
-                              controller.answer1 =
-                                  controller.answerChoice1[index];
-                              controller.update();
-                              controller.checkAnswer();
-                            });
-                      },
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
+                  ),
+                );
+              }),
         );
       },
     );
