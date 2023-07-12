@@ -2,6 +2,8 @@ import 'package:flutter/services.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
+import 'package:udp_v2/module/latihan/latihan_berhitung/mencari_cara_lain/widget/jawaban_benar.dart';
+import 'package:udp_v2/module/latihan/latihan_berhitung/mencari_cara_lain/widget/jawaban_salah.dart';
 
 class MencariCaraLainView extends StatelessWidget {
   final String kdKelas;
@@ -154,7 +156,7 @@ class MencariCaraLainView extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       physics: const ScrollPhysics(),
                       itemBuilder: (BuildContext context, int index) {
-                        if (controller.answerList.length <=
+                        if (controller.answerList.length <
                             controller.answerPlaceHolder.length) {
                           controller.answerList
                               .add(controller.answerPlaceHolder[index]);
@@ -244,10 +246,18 @@ class MencariCaraLainView extends StatelessWidget {
                                               .digitsOnly,
                                         ],
                                         onChanged: (value) {
+                                          controller.answerList[index] = value;
                                           controller.update();
-                                          print("value");
-                                          print(value);
-                                          print(controller.answerList);
+                                          if (controller.isNotEmpty(
+                                              controller.answerList)) {
+                                            controller.periksaJawabanBool =
+                                                true;
+                                            controller.update();
+                                          } else {
+                                            controller.periksaJawabanBool =
+                                                false;
+                                            controller.update();
+                                          }
                                         },
                                       ),
                                     ),
@@ -257,6 +267,45 @@ class MencariCaraLainView extends StatelessWidget {
                       },
                     ),
                   ),
+                  controller.periksaJawabanBool
+                      ? const SizedBox(
+                          height: 20,
+                        )
+                      : Container(),
+                  controller.periksaJawabanBool
+                      ? SizedBox(
+                          width: 200,
+                          height: 40,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: blue400,
+                            ),
+                            onPressed: () {
+                              double calculatedResult = controller
+                                  .calculateMath(controller.answerList);
+                              if (controller.answer ==
+                                  double.parse(controller.answerList.last)) {
+                                Get.to(JawabanBenarMencariCaraLain(
+                                  kdKelas: kdKelas,
+                                  controller: controller,
+                                ));
+                              } else {
+                                Get.to(const JawabanSalahMencariCaraLain());
+                              }
+                            },
+                            child: Text(
+                              'Periksa Jawaban',
+                              style: GoogleFonts.roboto(
+                                textStyle: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    letterSpacing: 0.2,
+                                    color: neutralBlack),
+                              ),
+                            ),
+                          ),
+                        )
+                      : Container(),
                 ],
               ),
             ),
