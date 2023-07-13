@@ -199,3 +199,102 @@ membedakan huruf
             },
           ]
         };
+
+         // // Mendapatkan referensi dokumen dengan ID khusus
+        // DocumentReference documentRef = usersCollection.doc('soalcerita');
+
+        // // Data yang akan disisipkan
+        // Map<String, dynamic> data = {
+        //   "data": [
+        //     {
+        //       "question": "“Kutu buku” artinya adalah...",
+        //       "image":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fkutu_buku.png?alt=media&token=74aaea66-5413-4455-96b5-0c5e98455c45",
+        //       "arrayAnswer": [
+        //         'A. Suka Membaca',
+        //         'B. Suka Memasak',
+        //         'C. Suka Menjual'
+        //       ],
+        //       "answer": "A. Suka Membaca"
+        //     },
+        //     {
+        //       "question":
+        //           "Bina mendapatkan juara 1 di kelasnya, sehingga teman-temanya menjulukinya sebagai...",
+        //       "image":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fjuara.png?alt=media&token=5b1b4941-dbfc-45f0-adf2-3fd5039d10ec",
+        //       "arrayAnswer": [
+        //         'A. Bintang gemilang',
+        //         'B. Bintang kelas',
+        //         'C. Bintang tamu'
+        //       ],
+        //       "answer": "B. Bintang kelas"
+        //     },
+        //     {
+        //       "question":
+        //           "Dari percakapan diatas, apakah Udin menerima ajakan dari Made?",
+        //       "image":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fpercakapan.png?alt=media&token=14fdec29-54e1-47f4-a1ec-984cf15434ed",
+        //       "arrayAnswer": ['A. Ya', 'B. Tidak'],
+        //       "answer": "B. Tidak"
+        //     },
+        //     {
+        //       "question":
+        //           "Kalimat ajakan yang sesuai untuk mengisi titik-titik diatas adalah…",
+        //       "image":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fbola.png?alt=media&token=310f185c-237c-4837-812b-dc2b47bc7f7e",
+        //       "arrayAnswer": ['A. Ayo', 'B. Cepat', 'C. Sana'],
+        //       "answer": "A. Ayo"
+        //     },
+        //     {
+        //       "question":
+        //           "Pada percapakan diatas, ibu guru meminta tolong kepada beni untuk membawa kertas. Hal ini merupakan sebuah kalimat…",
+        //       "image":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fpercapan2.png?alt=media&token=faa56441-efcb-4d2d-8408-8d84bd20e0ca",
+        //       "arrayAnswer": ['A. Perintah', 'B. Ajakan', 'C. Ucapan'],
+        //       "answer": "A. Perintah"
+        //     },
+        //   ]
+        // };
+
+         // // Mendapatkan referensi dokumen dengan ID khusus
+        // DocumentReference documentRef =
+        //     usersCollection.doc('menghitungberbagaisoal');
+
+        // // Data yang akan disisipkan
+        // Map<String, dynamic> data = {
+        //   "data": [
+        //     {
+        //       "title": "Hitunglah jumlah burung di bawah ini!",
+        //       "image":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fburung.png?alt=media&token=bab8b74b-6a9b-473e-8aa4-05f1d05e2e4a",
+        //       "question": [
+        //         "3",
+        //         "+",
+        //         "3",
+        //         "+",
+        //         "3",
+        //         "=",
+        //         "9",
+        //       ],
+        //       "answerPlaceHolder": ["_", "x", "_", "=", "_"],
+        //       "answer": 6,
+        //     },
+        //     {
+        //       "title": "Hitunglah jumlah bunga di bawah ini!",
+        //       "image":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fbunga.png?alt=media&token=6e487110-c135-4e0c-98f4-1df99f827298",
+        //       "question": [
+        //         "2",
+        //         "+",
+        //         "2",
+        //         "+",
+        //         "2",
+        //         "+",
+        //         "2",
+        //         "=",
+        //       ],
+        //       "answerPlaceHolder": ["_", "x", "_", "=", "_"],
+        //       "answer": 8,
+        //     },
+        //   ]
+        // };

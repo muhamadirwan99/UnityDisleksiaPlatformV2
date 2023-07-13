@@ -55,7 +55,7 @@ class _JawabanBenarMencariCaraLainState
                   backgroundColor: blue300,
                 ),
                 onPressed: () {
-                  widget.controller.answerList = [];
+                  // widget.controller.answerList = [];
                   widget.controller.periksaJawabanBool = false;
                   widget.controller.update();
                   print("widget.controller.answerList");

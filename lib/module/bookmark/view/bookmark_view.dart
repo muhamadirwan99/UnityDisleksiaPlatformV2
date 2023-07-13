@@ -40,17 +40,6 @@ class _BookmarkViewState extends State<BookmarkView>
                           "Bookmark",
                           style: titleMedium,
                         ),
-                        leading: InkWell(
-                          onTap: () {
-                            Get.to(const BerandaView());
-                          },
-                          child: const Center(
-                            child: Icon(
-                              Icons.arrow_back,
-                              size: 24.0,
-                            ),
-                          ),
-                        ),
                         elevation: 0.0,
                         floating: true,
                         pinned: true,

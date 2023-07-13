@@ -1,25 +1,28 @@
 import 'dart:math';
 
 import 'package:get/get.dart';
-import '../view/mencari_cara_lain_view.dart';
+import 'package:udp_v2/core.dart';
 
 class MencariCaraLainController extends GetxController {
   MencariCaraLainView? view;
 
-  String title = "Hitunglah jumlah bunga di bawah ini!";
-  List<String> question = [
+  List<dynamic> listTextEditingController = [];
+  List<dynamic> listFocusNode = [];
+  String title = "Hitunglah jumlah burung di bawah ini!";
+  String image =
+      "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fburung.png?alt=media&token=bab8b74b-6a9b-473e-8aa4-05f1d05e2e4a";
+  List<dynamic> question = [
     "3",
-    "+",
-    "3",
-    "+",
-    "3",
+    "x",
+    "2",
     "=",
-    "9",
   ];
+  int lengthLatihan = 0;
 
-  List<String> answerPlaceHolder = ["_", "x", "_", "=", "_"];
+  RxList<dynamic> answerPlaceHolder =
+      <dynamic>["_", "+", "_", "+", "_", "=", "_"].obs;
   double answer = 6;
-  List<String> answerList = [];
+  RxList<dynamic> answerList = <dynamic>[].obs;
 
   bool periksaJawabanBool = false;
 
