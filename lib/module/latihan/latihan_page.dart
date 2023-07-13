@@ -283,11 +283,66 @@ class LatihanPage extends StatelessWidget {
                             ),
                           )
                         : Container(),
-                    kdKelas.contains("2")
-                        ? const SizedBox(
-                            height: 32,
+                    kdKelas.contains("1")
+                        ? ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: red600,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16.0),
+                              ),
+                            ),
+                            onPressed: () {
+                              Get.to(const MenulisBendaView());
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(16),
+                              child: Row(
+                                children: [
+                                  SvgPicture.asset(
+                                    "assets/images/buku.svg",
+                                    color: gray100,
+                                    height: 60,
+                                    width: 60,
+                                  ),
+                                  const SizedBox(
+                                    width: 16,
+                                  ),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Menulis Benda",
+                                          style: GoogleFonts.roboto(
+                                            textStyle: const TextStyle(
+                                                fontSize: 24,
+                                                fontWeight: FontWeight.w500,
+                                                letterSpacing: 0,
+                                                color: gray100),
+                                          ),
+                                        ),
+                                        Text(
+                                          "Belajar menulis berbagai kata benda",
+                                          style: GoogleFonts.roboto(
+                                            textStyle: const TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                letterSpacing: 0.25,
+                                                color: gray100),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
                           )
                         : Container(),
+                    const SizedBox(
+                      height: 32,
+                    ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: blue400,

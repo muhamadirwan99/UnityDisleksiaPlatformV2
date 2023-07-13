@@ -20,31 +20,14 @@ class PanduanAplikasiView extends StatelessWidget {
           ),
           body: SingleChildScrollView(
             child: Container(
-              width: MediaQuery.of(context).size.width,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(32)),
-                color: gray100,
-              ),
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 40),
-              child: Column(
-                children: [
-                  const PanduanParagrafPertamaWidget(),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  const PanduanParagrafKeduaWidget(),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  const PanduanParagrafKetigaWidget(),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  const PanduanParagrafKeempatWidget()
-                ],
-              ),
-            ),
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(32)),
+                  color: gray100,
+                ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 40),
+                child: const PanduanParagrafWidget()),
           ),
         );
       },
