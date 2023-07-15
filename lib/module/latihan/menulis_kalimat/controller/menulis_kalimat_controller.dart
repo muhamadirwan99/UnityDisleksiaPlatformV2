@@ -3,9 +3,13 @@ import 'package:udp_v2/core.dart';
 
 class MenulisKalimatController extends GetxController {
   MenulisKalimatView? view;
-  String hint = "buah tangan";
+
+  TextEditingController textEditingController = TextEditingController();
+
+  int lengthLatihan = 0;
+  String question = "Tulislah kata dari “buah tangan” pada kolom dibawah …";
   String imageLink =
-      "https://images.unsplash.com/photo-1484517586036-ed3db9e3749e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
+      "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fbuah_tangan.png?alt=media&token=83db5646-fb6f-43fc-b947-71de57e9a2f6";
   String narasi =
       "Sandi bulan lalu pergi ke jogja, sehingga membawakan bakpia sebagai “buah tangan” yaitu oleh-oleh.";
   String realAnswer = "buah tangan";

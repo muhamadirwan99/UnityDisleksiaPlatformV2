@@ -23,57 +23,50 @@ class PilihPelajaranView extends StatelessWidget {
         //     FirebaseFirestore.instance.collection('latihan');
 
         // // Mendapatkan referensi dokumen dengan ID khusus
-        // DocumentReference documentRef = usersCollection.doc('soalcerita');
+        // DocumentReference documentRef = usersCollection.doc('menuliskalimat');
 
         // // Data yang akan disisipkan
         // Map<String, dynamic> data = {
         //   "data": [
         //     {
-        //       "question": "“Kutu buku” artinya adalah...",
-        //       "image":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fkutu_buku.png?alt=media&token=74aaea66-5413-4455-96b5-0c5e98455c45",
-        //       "arrayAnswer": [
-        //         'A. Suka Membaca',
-        //         'B. Suka Memasak',
-        //         'C. Suka Menjual'
-        //       ],
-        //       "answer": "A. Suka Membaca"
+        //       "question":
+        //           "Tulislah kata dari “buah tangan” pada kolom dibawah …",
+        //       "imageLink":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fbuah_tangan.png?alt=media&token=83db5646-fb6f-43fc-b947-71de57e9a2f6",
+        //       "narasi":
+        //           "Sandi bulan lalu pergi ke jogja, sehingga membawakan bakpia sebagai “buah tangan” yaitu oleh-oleh.",
+        //       "realAnswer": "buah tangan",
+        //     },
+        //     {
+        //       "question": "Tuliskan kalimat diatas pada kolom di bawah…",
+        //       "imageLink":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Frudi.png?alt=media&token=91f4ef96-b8ae-46b8-935f-3eaa70a78e64",
+        //       "narasi":
+        //           "“Semalam Rudi mendapatkan bunga tidur bertemu dengan artis idolanya”",
+        //       "realAnswer":
+        //           "Semalam Rudi mendapatkan bunga tidur bertemu dengan artis idolanya",
+        //     },
+        //     {
+        //       "question": "Tuliskan kalimat diatas pada kolom di bawah…",
+        //       "imageLink":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fmembaca.png?alt=media&token=bd7b5a39-24e5-445b-ac46-5fb4d7b061a9",
+        //       "narasi": "“Ayo membaca buku karena dapat menambah ilmu”",
+        //       "realAnswer": "Ayo membaca buku karena dapat menambah ilmu",
+        //     },
+        //     {
+        //       "question": "Tuliskan kalimat diatas pada kolom di bawah…",
+        //       "imageLink":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fadik.png?alt=media&token=01c27d4f-ec6c-4aa1-a857-bd154de173c5",
+        //       "narasi": "“Adik, tolong antarkan kue ini kepada ibu”",
+        //       "realAnswer": "Adik, tolong antarkan kue ini kepada ibu",
         //     },
         //     {
         //       "question":
-        //           "Bina mendapatkan juara 1 di kelasnya, sehingga teman-temanya menjulukinya sebagai...",
-        //       "image":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fjuara.png?alt=media&token=5b1b4941-dbfc-45f0-adf2-3fd5039d10ec",
-        //       "arrayAnswer": [
-        //         'A. Bintang gemilang',
-        //         'B. Bintang kelas',
-        //         'C. Bintang tamu'
-        //       ],
-        //       "answer": "B. Bintang kelas"
-        //     },
-        //     {
-        //       "question":
-        //           "Dari percakapan diatas, apakah Udin menerima ajakan dari Made?",
-        //       "image":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fpercakapan.png?alt=media&token=14fdec29-54e1-47f4-a1ec-984cf15434ed",
-        //       "arrayAnswer": ['A. Ya', 'B. Tidak'],
-        //       "answer": "B. Tidak"
-        //     },
-        //     {
-        //       "question":
-        //           "Kalimat ajakan yang sesuai untuk mengisi titik-titik diatas adalah…",
-        //       "image":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fbola.png?alt=media&token=310f185c-237c-4837-812b-dc2b47bc7f7e",
-        //       "arrayAnswer": ['A. Ayo', 'B. Cepat', 'C. Sana'],
-        //       "answer": "A. Ayo"
-        //     },
-        //     {
-        //       "question":
-        //           "Pada percapakan diatas, ibu guru meminta tolong kepada beni untuk membawa kertas. Hal ini merupakan sebuah kalimat…",
-        //       "image":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fpercapan2.png?alt=media&token=faa56441-efcb-4d2d-8408-8d84bd20e0ca",
-        //       "arrayAnswer": ['A. Perintah', 'B. Ajakan', 'C. Ucapan'],
-        //       "answer": "A. Perintah"
+        //           "Kalimat yang sesuai untuk mengisi kolom diatas adalah…",
+        //       "imageLink":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fedo.png?alt=media&token=e1df0513-3b30-4a75-9824-05d8a49fe696",
+        //       "narasi": "Udin ingin meminta “tolong” kepada Edo.",
+        //       "realAnswer": "tolong",
         //     },
         //   ]
         // };
