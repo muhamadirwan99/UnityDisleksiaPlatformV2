@@ -1,17 +1,23 @@
 import 'package:get/get.dart';
-import '../view/menulis_benda_view.dart';
+import 'package:udp_v2/core.dart';
 
 class MenulisBendaController extends GetxController {
   MenulisBendaView? view;
-  String hint = "buah tangan";
+
+  TextEditingController textEditingController = TextEditingController();
+
+  int lengthLatihan = 0;
+  String hint = "“Iffah Fadhilah”";
   String imageLink =
-      "https://images.unsplash.com/photo-1484517586036-ed3db9e3749e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
-  String narasi =
-      "Sandi bulan lalu pergi ke jogja, sehingga membawakan bakpia sebagai “buah tangan” yaitu oleh-oleh.";
-  String realAnswer = "buah tangan";
+      "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fiffah.png?alt=media&token=a5f3eca0-77e6-43ea-8b8b-833241c910f2";
+  String realAnswer = "iffah fadhilah";
   bool isTrue = false;
 
   checkAsnwer(String answer) {
+    print("answer");
+    print(answer);
+    print("realAnswer");
+    print(realAnswer);
     if (answer.toLowerCase().trim().contains(realAnswer)) {
       isTrue = true;
       update();

@@ -23,50 +23,52 @@ class PilihPelajaranView extends StatelessWidget {
         //     FirebaseFirestore.instance.collection('latihan');
 
         // // Mendapatkan referensi dokumen dengan ID khusus
-        // DocumentReference documentRef = usersCollection.doc('menuliskalimat');
+        // DocumentReference documentRef = usersCollection.doc('menulisbenda');
 
         // // Data yang akan disisipkan
         // Map<String, dynamic> data = {
         //   "data": [
         //     {
-        //       "question":
-        //           "Tulislah kata dari “buah tangan” pada kolom dibawah …",
+        //       "hint": "“Iffah Fadhilah”",
         //       "imageLink":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fbuah_tangan.png?alt=media&token=83db5646-fb6f-43fc-b947-71de57e9a2f6",
-        //       "narasi":
-        //           "Sandi bulan lalu pergi ke jogja, sehingga membawakan bakpia sebagai “buah tangan” yaitu oleh-oleh.",
-        //       "realAnswer": "buah tangan",
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fiffah.png?alt=media&token=a5f3eca0-77e6-43ea-8b8b-833241c910f2",
+        //       "realAnswer": "iffah fadhilah”",
         //     },
         //     {
-        //       "question": "Tuliskan kalimat diatas pada kolom di bawah…",
+        //       "hint": "“Nur Melini Ani”",
         //       "imageLink":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Frudi.png?alt=media&token=91f4ef96-b8ae-46b8-935f-3eaa70a78e64",
-        //       "narasi":
-        //           "“Semalam Rudi mendapatkan bunga tidur bertemu dengan artis idolanya”",
-        //       "realAnswer":
-        //           "Semalam Rudi mendapatkan bunga tidur bertemu dengan artis idolanya",
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fmeli.png?alt=media&token=423e4c04-66a4-4fc1-8610-beb30ae5d942",
+        //       "realAnswer": "nur melini ani”",
         //     },
         //     {
-        //       "question": "Tuliskan kalimat diatas pada kolom di bawah…",
+        //       "hint": "“Arsenius Purbandono”",
         //       "imageLink":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fmembaca.png?alt=media&token=bd7b5a39-24e5-445b-ac46-5fb4d7b061a9",
-        //       "narasi": "“Ayo membaca buku karena dapat menambah ilmu”",
-        //       "realAnswer": "Ayo membaca buku karena dapat menambah ilmu",
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Farsen.png?alt=media&token=24f8d266-ec36-4c65-8fbd-ccf55bb35d87",
+        //       "realAnswer": "arsenius purbandono",
         //     },
         //     {
-        //       "question": "Tuliskan kalimat diatas pada kolom di bawah…",
+        //       "hint": "“Kucing”",
         //       "imageLink":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fadik.png?alt=media&token=01c27d4f-ec6c-4aa1-a857-bd154de173c5",
-        //       "narasi": "“Adik, tolong antarkan kue ini kepada ibu”",
-        //       "realAnswer": "Adik, tolong antarkan kue ini kepada ibu",
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fkucing.png?alt=media&token=018bfe34-c7a9-48b8-b751-2ab2b1295e99",
+        //       "realAnswer": "kucing",
         //     },
         //     {
-        //       "question":
-        //           "Kalimat yang sesuai untuk mengisi kolom diatas adalah…",
+        //       "hint": "“Jerapah”",
         //       "imageLink":
-        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fedo.png?alt=media&token=e1df0513-3b30-4a75-9824-05d8a49fe696",
-        //       "narasi": "Udin ingin meminta “tolong” kepada Edo.",
-        //       "realAnswer": "tolong",
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fjerapah.png?alt=media&token=1f060947-c478-46ca-b586-d3fc43ab64c1",
+        //       "realAnswer": "jerapah",
+        //     },
+        //     {
+        //       "hint": "“Ular”",
+        //       "imageLink":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fular.png?alt=media&token=9cd6e125-62df-443e-8f0e-576a503fe09d",
+        //       "realAnswer": "ular",
+        //     },
+        //     {
+        //       "hint": "“Kuda”",
+        //       "imageLink":
+        //           "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/images%2Flatihan%2Fkuda.png?alt=media&token=620e0227-18b1-4693-9a4a-83a1556b754a",
+        //       "realAnswer": "kuda",
         //     },
         //   ]
         // };
