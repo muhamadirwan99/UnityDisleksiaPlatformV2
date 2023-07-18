@@ -14,14 +14,9 @@ class MenulisBendaController extends GetxController {
   bool isTrue = false;
 
   checkAsnwer(String answer) {
-    print("answer");
-    print(answer);
-    print("realAnswer");
-    print(realAnswer);
     if (answer.toLowerCase().trim().contains(realAnswer)) {
       isTrue = true;
       update();
     }
-    print("Jawaban Mu Belum Benar!");
   }
 }

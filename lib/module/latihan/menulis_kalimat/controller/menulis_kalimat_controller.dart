@@ -20,6 +20,5 @@ class MenulisKalimatController extends GetxController {
       isTrue = true;
       update();
     }
-    print("Jawaban Mu Belum Benar!");
   }
 }
