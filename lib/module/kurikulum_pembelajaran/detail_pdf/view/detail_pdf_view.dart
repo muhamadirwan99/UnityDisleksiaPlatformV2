@@ -20,7 +20,6 @@ class DetailPdfView extends StatelessWidget {
   Widget build(BuildContext context) {
     final Completer<PDFViewController> controllerPdf =
         Completer<PDFViewController>();
-    int? pagesPdf = 0;
     int? currentPage = 0;
     bool isReady = false;
     String errorMessage = '';
@@ -62,31 +61,22 @@ class DetailPdfView extends StatelessWidget {
                 preventLinkNavigation:
                     false, // if set to true the link is handled in flutter
                 onRender: (pagess) {
-                  pagesPdf = pagess;
                   isReady = true;
                   controller.update();
                 },
                 onError: (error) {
                   errorMessage = error.toString();
                   controller.update();
-
-                  print(error.toString());
                 },
                 onPageError: (page, error) {
                   errorMessage = '$page: ${error.toString()}';
                   controller.update();
-
-                  print('$page: ${error.toString()}');
                 },
                 onViewCreated: (PDFViewController pdfViewController) {
                   controllerPdf.complete(pdfViewController);
                 },
-                onLinkHandler: (String? uri) {
-                  print('goto uri: $uri');
-                },
+                onLinkHandler: (String? uri) {},
                 onPageChanged: (int? page, int? total) {
-                  print('page change: $page/$total');
-
                   currentPage = page;
                   controller.update();
                 },

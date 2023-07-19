@@ -1,6 +1,5 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/latihan_angka_page.dart';
 
 class AngkaButton extends StatelessWidget {
   final String value;

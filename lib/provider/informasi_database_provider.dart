@@ -1,6 +1,4 @@
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/db/database_informasi_helper.dart';
-import 'package:udp_v2/utils/result_state.dart';
 
 class InformasiDatabaseProvider extends ChangeNotifier {
   final DatabaseInformasiHelper databaseHelper;

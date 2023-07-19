@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_import
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
 import 'package:udp_v2/module/latihan/latihan_huruf_page.dart';

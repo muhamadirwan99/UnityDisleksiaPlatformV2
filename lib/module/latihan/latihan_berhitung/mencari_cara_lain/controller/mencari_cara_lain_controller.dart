@@ -58,7 +58,6 @@ class MencariCaraLainController extends GetxController {
     };
 
     double result;
-    String operator;
     List<double> numbers = [];
     List<String> operators = [];
 

@@ -1,11 +1,11 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:udp_v2/core.dart';
 import 'package:get/get.dart';
-import 'package:udp_v2/provider/informasi_database_provider.dart';
-import 'package:udp_v2/utils/widget/action_button.dart';
 
 class DetailInformasiView extends StatelessWidget {
   final String title;

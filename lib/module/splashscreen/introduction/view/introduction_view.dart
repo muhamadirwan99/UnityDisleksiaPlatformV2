@@ -1,7 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/db/splashscreen_db.dart';
 
 class IntroductionView extends StatefulWidget {
   const IntroductionView({Key? key}) : super(key: key);

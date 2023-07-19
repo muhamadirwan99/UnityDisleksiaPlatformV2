@@ -2,7 +2,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/utils/widget/action_button.dart';
 
 class MenjodohkanKataView extends StatelessWidget {
   const MenjodohkanKataView({Key? key}) : super(key: key);

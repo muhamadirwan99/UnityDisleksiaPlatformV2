@@ -1,11 +1,10 @@
+// ignore_for_file: prefer_null_aware_operators
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-
-import '../../mencari_angka_hilang/widget/finish_page.dart';
-import '../widget/jawaban_salah.dart';
 
 class MenghitungJumlahBendaView extends StatelessWidget {
   const MenghitungJumlahBendaView({Key? key}) : super(key: key);

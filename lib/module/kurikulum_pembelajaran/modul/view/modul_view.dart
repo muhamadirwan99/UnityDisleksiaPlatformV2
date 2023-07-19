@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_null_aware_operators
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
@@ -33,8 +35,6 @@ class ModulView extends StatelessWidget {
                 List<dynamic>? dataList =
                     data != null ? data.values.toList() : null;
 
-                print("dataList");
-                print(dataList);
                 return SingleChildScrollView(
                   child: Container(
                     padding: const EdgeInsets.all(26.0),

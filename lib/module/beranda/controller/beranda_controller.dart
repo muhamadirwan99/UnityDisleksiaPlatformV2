@@ -1,8 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/model/news_model.dart';
-import 'package:udp_v2/utils/show_info_dialog.dart';
 
 class BerandaController extends GetxController {
   BerandaView? view;

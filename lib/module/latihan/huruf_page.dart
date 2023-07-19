@@ -1,8 +1,6 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/utils/widget/action_button.dart';
-import 'package:udp_v2/utils/widget/huruf_button.dart';
 
 class HurufPage extends StatelessWidget {
   const HurufPage({Key? key}) : super(key: key);

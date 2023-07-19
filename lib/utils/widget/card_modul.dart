@@ -41,9 +41,6 @@ class _CardModulState extends State<CardModul> {
     IsolateNameServer.registerPortWithName(
         _port.sendPort, 'downloader_send_port');
     _port.listen((dynamic data) {
-      String id = data[0];
-      DownloadTaskStatus status = DownloadTaskStatus(data[1]);
-      int progress = data[2];
       setState(() {});
     });
 

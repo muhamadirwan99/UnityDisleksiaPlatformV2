@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_null_aware_operators
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/services.dart';
@@ -5,7 +7,6 @@ import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/latihan_berhitung/mencari_cara_lain/widget/jawaban_salah.dart';
 
 class MencariCaraLainView extends StatelessWidget {
   final String kdKelas;
@@ -325,10 +326,6 @@ class MencariCaraLainView extends StatelessWidget {
                                     backgroundColor: blue400,
                                   ),
                                   onPressed: () {
-                                    double calculatedResult = controller
-                                        .calculateMath(controller.answerList
-                                            .cast<String>()
-                                            .toList());
                                     if (controller.answer ==
                                         double.parse(
                                             controller.answerList.last)) {

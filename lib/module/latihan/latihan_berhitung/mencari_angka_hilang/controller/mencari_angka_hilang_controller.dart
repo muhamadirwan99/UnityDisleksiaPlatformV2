@@ -1,6 +1,5 @@
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/latihan_berhitung/mencari_angka_hilang/widget/jawaban_salah.dart';
 
 class MencariAngkaHilangController extends GetxController {
   MencariAngkaHilangView? view;

@@ -1,7 +1,5 @@
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/latihan_berhitung/menghitung_jumlah_benda/widget/jawaban_benar.dart';
-import 'package:udp_v2/module/latihan/latihan_berhitung/menghitung_jumlah_benda/widget/jawaban_salah.dart';
 
 class MenghitungJumlahBendaController extends GetxController {
   MenghitungJumlahBendaView? view;

@@ -135,4 +135,3 @@ export 'package:udp_v2/utils/widget/container_content.dart';
 export 'package:udp_v2/utils/widget/green_button.dart';
 export 'package:udp_v2/utils/widget/huruf_button.dart';
 export 'package:udp_v2/utils/widget/latihan_button.dart';
-export 'core_package.dart';

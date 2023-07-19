@@ -1,7 +1,6 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
 import 'package:get/get.dart';
-import 'package:udp_v2/utils/widget/action_button.dart';
 
 class MembacaSukuKataView extends StatelessWidget {
   const MembacaSukuKataView({Key? key}) : super(key: key);

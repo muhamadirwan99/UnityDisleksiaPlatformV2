@@ -13,10 +13,6 @@ class _BookmarkViewState extends State<BookmarkView>
     with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    TabController tabController = TabController(
-      length: 2,
-      vsync: this,
-    );
     final List<String> tabs = <String>["Pelajaran", "Informasi"];
     return GetBuilder<BookmarkController>(
       init: BookmarkController(),

@@ -1,9 +1,9 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/provider/video_database_provider.dart';
-import 'package:udp_v2/utils/widget/card_modul.dart';
 
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 

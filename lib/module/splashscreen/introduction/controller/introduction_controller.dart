@@ -37,12 +37,10 @@ class IntroductionController extends State<IntroductionView>
       pageController.animateToPage((index.toInt() + 1),
           duration: const Duration(milliseconds: 350), curve: Curves.easeIn);
     });
-    print(index);
   }
 
   previousSlide() {
     setState(() {
-      print(index);
       pageController.animateToPage((index.toInt() - 1),
           duration: const Duration(milliseconds: 350), curve: Curves.easeIn);
     });

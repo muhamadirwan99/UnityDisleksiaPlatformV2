@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
 
@@ -95,8 +97,6 @@ class Content_MembacaKataBendaState extends State<ContentMembacaKataBenda> {
             scrollDirection: Axis.horizontal,
             itemCount: widget.controller.tempArrayAnswerChoice.length,
             itemBuilder: (BuildContext context, int index) {
-              print("widget.controller.tempArrayAnswerChoice.length");
-              print(widget.controller.tempArrayAnswerChoice.length);
               return InkWell(
                 onTap: () {
                   widget.controller.removeAnswerChoice(

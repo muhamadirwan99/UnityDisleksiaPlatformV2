@@ -20,7 +20,7 @@ class _TidakAdaHasilWidgetState extends State<TidakAdaHasilWidget> {
           height: 120,
           width: 120,
         ),
-        SizedBox(
+        const SizedBox(
           height: 24,
         ),
         Text(

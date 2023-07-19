@@ -82,7 +82,6 @@ class CustomImageSlideShowState extends State<CustomImageSlideShow> {
 
   @override
   void initState() {
-    print("initstate");
     _scrollBehavior = widget.disableUserScrolling
         ? const ScrollBehavior().copyWith(
             scrollbars: false,
@@ -101,7 +100,6 @@ class CustomImageSlideShowState extends State<CustomImageSlideShow> {
     _currentPageNotifier = ValueNotifier(widget.initialPage);
     if (widget.autoPlayInterval != null && widget.autoPlayInterval != 0) {
       _autoPlayTimerStart();
-      print("autoplay true");
     }
     super.initState();
   }

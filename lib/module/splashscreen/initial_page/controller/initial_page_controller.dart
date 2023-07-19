@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/db/splashscreen_db.dart';
 
 class InitialPageController extends State<InitialPageView>
     implements MvcController {

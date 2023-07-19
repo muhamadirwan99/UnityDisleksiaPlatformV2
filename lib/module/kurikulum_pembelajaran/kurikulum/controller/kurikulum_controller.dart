@@ -13,7 +13,6 @@ class KurikulumController extends GetxController {
 
   Future<File> createFileOfPdfUrl(String link) async {
     Completer<File> completer = Completer();
-    print("Start download file from internet!");
     if (remotePDFpath.isEmpty) {
       try {
         var url = link;
@@ -22,8 +21,6 @@ class KurikulumController extends GetxController {
         var response = await request.close();
         var bytes = await consolidateHttpClientResponseBytes(response);
         var dir = await getApplicationDocumentsDirectory();
-        print("Download files");
-        print("${dir.path}/$filename");
         File file = File("${dir.path}/$filename");
 
         await file.writeAsBytes(bytes, flush: true);

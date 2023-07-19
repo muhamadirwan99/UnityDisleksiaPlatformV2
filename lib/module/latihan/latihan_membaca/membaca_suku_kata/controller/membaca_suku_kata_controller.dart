@@ -11,7 +11,6 @@ class MembacaSukuKataController extends GetxController {
 
   void playAudio(String audioUrl) async {
     try {
-      print('object');
       // Source audioSource = UrlSource(audioUrl);
       // audioPlayer.play(audioSource);
       final player = AudioPlayer();

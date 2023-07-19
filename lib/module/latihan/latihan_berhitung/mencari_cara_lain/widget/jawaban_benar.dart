@@ -3,7 +3,6 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/latihan_berhitung/mencari_cara_lain/widget/finish_page.dart';
 
 class JawabanBenarMencariCaraLain extends StatefulWidget {
   final String kdKelas;
@@ -58,9 +57,6 @@ class _JawabanBenarMencariCaraLainState
                   // widget.controller.answerList = [];
                   widget.controller.periksaJawabanBool = false;
                   widget.controller.update();
-                  print("widget.controller.answerList");
-                  print(widget.controller.answerList);
-                  print(widget.controller.periksaJawabanBool);
                   Get.to(FinishPageMencariCaraLain(
                     kdKelas: widget.kdKelas,
                   ));

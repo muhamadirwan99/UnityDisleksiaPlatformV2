@@ -33,9 +33,6 @@ class DetailPdfController extends GetxController {
     IsolateNameServer.registerPortWithName(
         port.sendPort, 'downloader_send_port');
     port.listen((dynamic data) {
-      String id = data[0];
-      DownloadTaskStatus status = DownloadTaskStatus(data[1]);
-      int progress = data[2];
       update();
     });
 

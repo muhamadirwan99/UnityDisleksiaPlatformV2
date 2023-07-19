@@ -1,8 +1,6 @@
 // ignore_for_file: camel_case_types
 import 'package:provider/provider.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/provider/video_database_provider.dart';
-import 'package:udp_v2/utils/result_state.dart';
 
 class TabPelajaran extends StatefulWidget {
   final BookmarkController controller;

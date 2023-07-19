@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:udp_v2/core.dart';
 import 'package:get/get.dart';

@@ -17,7 +17,6 @@ class DetailPdfModulController extends GetxController {
 
   Future<File> createFileOfPdfUrl(String link) async {
     Completer<File> completer = Completer();
-    print("Start download file from internet!");
     if (remotePDFpath.isEmpty) {
       try {
         var url = link;
@@ -26,8 +25,6 @@ class DetailPdfModulController extends GetxController {
         var response = await request.close();
         var bytes = await consolidateHttpClientResponseBytes(response);
         var dir = await getApplicationDocumentsDirectory();
-        print("Download files");
-        print("${dir.path}/$filename");
         File file = File("${dir.path}/$filename");
 
         await file.writeAsBytes(bytes, flush: true);
@@ -71,9 +68,6 @@ class DetailPdfModulController extends GetxController {
     IsolateNameServer.registerPortWithName(
         port.sendPort, 'downloader_send_port');
     port.listen((dynamic data) {
-      String id = data[0];
-      DownloadTaskStatus status = DownloadTaskStatus(data[1]);
-      int progress = data[2];
       update();
     });
 

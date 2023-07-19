@@ -1,8 +1,9 @@
+// ignore_for_file: prefer_null_aware_operators
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:udp_v2/core.dart';
-import 'package:udp_v2/module/latihan/latihan_berhitung/mencari_angka_hilang/widget/finish_page.dart';
 
 class MencariAngkaHilangView extends StatelessWidget {
   const MencariAngkaHilangView({Key? key}) : super(key: key);
