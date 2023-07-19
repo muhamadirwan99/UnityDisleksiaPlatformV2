@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:udp_v2/model/kurikulum_model.dart';
 import 'package:udp_v2/core.dart';
 
 class DetailSilabusView extends StatelessWidget {
@@ -35,11 +34,11 @@ class DetailSilabusView extends StatelessWidget {
           ),
           floatingActionButton: InkWell(
             onTap: () {
-              Get.to(DetailPdfView(
-                path: controller.remotePDFpath,
-                title: title,
-                dataKurikulum: dataKurikulum,
-              ));
+              // Get.to(DetailPdfView(
+              //   path: controller.remotePDFpath,
+              //   title: title,
+              //   dataKurikulum: dataKurikulum,
+              // ));
             },
             child: Padding(
               padding:

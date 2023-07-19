@@ -3,18 +3,17 @@ import 'dart:async';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:udp_v2/core.dart';
 import 'package:get/get.dart';
-import 'package:udp_v2/model/kurikulum_model.dart';
 
 class DetailPdfView extends StatelessWidget {
   final String path;
-  final Kurikulum dataKurikulum;
   final String title;
+  final String linkPdf;
 
   const DetailPdfView({
     Key? key,
     required this.path,
-    required this.dataKurikulum,
     required this.title,
+    required this.linkPdf,
   }) : super(key: key);
 
   @override
@@ -33,11 +32,11 @@ class DetailPdfView extends StatelessWidget {
 
         return Scaffold(
           appBar: AppBar(
-            title: Text("$title ${dataKurikulum.title}"),
+            title: Text(title),
             actions: [
               InkWell(
                 onTap: () {
-                  controller.download(dataKurikulum.linkPdf);
+                  controller.download(linkPdf);
                 },
                 child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
