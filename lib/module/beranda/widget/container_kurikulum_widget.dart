@@ -52,24 +52,10 @@ class _ContainerKurikulumWidgetState extends State<ContainerKurikulumWidget> {
             circleIcon: CircleAvatar(
                 backgroundColor: red100,
                 child: SvgPicture.asset("assets/images/books2.svg")),
-            title: "Silabus",
-            subtitle: "Silabus pembelajaran dari kurikulum",
+            title: "Modul Pembelajaran",
+            subtitle: "Bahan ajar untuk guru",
             onTap: () {
-              Get.to(const PilihKelasView(
-                kdKurikulum: "1",
-              ));
-            },
-          ),
-          RowKelasWidget(
-            circleIcon: CircleAvatar(
-                backgroundColor: red100,
-                child: SvgPicture.asset("assets/images/books3.svg")),
-            title: "RPP",
-            subtitle: "Rencana pembelajaran guru di kelas",
-            onTap: () {
-              Get.to(const PilihKelasView(
-                kdKurikulum: "2",
-              ));
+              Get.to(const ModulView());
             },
           ),
         ],

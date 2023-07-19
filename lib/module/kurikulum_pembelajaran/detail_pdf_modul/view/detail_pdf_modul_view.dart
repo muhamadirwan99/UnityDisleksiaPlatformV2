@@ -1,26 +1,23 @@
+import 'package:udp_v2/core.dart';
+import 'package:get/get.dart';
 import 'dart:async';
 
 import 'package:flutter_pdfview/flutter_pdfview.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:udp_v2/core.dart';
 
-class DetailSilabusView extends StatelessWidget {
-  final Kurikulum dataKurikulum;
-  final String title;
-  const DetailSilabusView({
+class DetailPdfModulView extends StatelessWidget {
+  final String linkPdf;
+  const DetailPdfModulView({
     Key? key,
-    required this.dataKurikulum,
-    required this.title,
+    required this.linkPdf,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<DetailSilabusController>(
-      init: DetailSilabusController(),
+    return GetBuilder<DetailPdfModulController>(
+      init: DetailPdfModulController(),
       builder: (controller) {
         controller.view = this;
-        controller.loadPDFs(dataKurikulum.linkPdf);
+        controller.loadPDFs(linkPdf);
         final Completer<PDFViewController> controllerPdf =
             Completer<PDFViewController>();
         int? pagesPdf = 0;
@@ -30,69 +27,28 @@ class DetailSilabusView extends StatelessWidget {
 
         return Scaffold(
           appBar: AppBar(
-            title: Text(title),
-          ),
-          floatingActionButton: InkWell(
-            onTap: () {
-              // Get.to(DetailPdfView(
-              //   path: controller.remotePDFpath,
-              //   title: title,
-              //   dataKurikulum: dataKurikulum,
-              // ));
-            },
-            child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
-              child: Container(
-                height: 58,
-                decoration: const BoxDecoration(
-                  color: blue500,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(
-                      5.0,
-                    ),
-                  ),
-                ),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
-                  child: Row(
-                    children: [
-                      SvgPicture.asset("assets/images/icon_silabus.svg"),
-                      const SizedBox(
-                        width: 12,
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "File $title",
-                            style: labelLarge.copyWith(color: neutralWhite),
-                          ),
-                          const SizedBox(
-                            height: 1.0,
-                          ),
-                          Text(
-                            "Detail dari $title ${dataKurikulum.title}",
-                            style: bodySmall.copyWith(color: neutralWhite),
-                          ),
-                        ],
-                      ),
-                    ],
+            title: const Text("File Modul"),
+            actions: [
+              InkWell(
+                onTap: () {
+                  controller.download(linkPdf);
+                },
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Icon(
+                    Icons.file_download_sharp,
+                    size: 24.0,
                   ),
                 ),
               ),
-            ),
+            ],
           ),
-          floatingActionButtonLocation:
-              FloatingActionButtonLocation.centerFloat,
           body: Stack(
             children: [
               controller.remotePDFpath.isNotEmpty
                   ? PDFView(
                       filePath: controller.remotePDFpath,
-                      enableSwipe: false,
+                      enableSwipe: true,
                       swipeHorizontal: false,
                       autoSpacing: true,
                       pageFling: true,

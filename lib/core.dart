@@ -37,14 +37,12 @@ export 'package:udp_v2/module/informasi/list_informasi/controller/list_informasi
 export 'package:udp_v2/module/informasi/list_informasi/view/list_informasi_view.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/detail_pdf/controller/detail_pdf_controller.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/detail_pdf/view/detail_pdf_view.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/detail_silabus/controller/detail_silabus_controller.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/detail_silabus/view/detail_silabus_view.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/detail_pdf_modul/controller/detail_pdf_modul_controller.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/detail_pdf_modul/view/detail_pdf_modul_view.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/kurikulum/controller/kurikulum_controller.dart';
 export 'package:udp_v2/module/kurikulum_pembelajaran/kurikulum/view/kurikulum_view.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/pilih_kelas/controller/pilih_kelas_controller.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/pilih_kelas/view/pilih_kelas_view.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/pilih_silabus/controller/pilih_silabus_controller.dart';
-export 'package:udp_v2/module/kurikulum_pembelajaran/pilih_silabus/view/pilih_silabus_view.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/modul/controller/modul_controller.dart';
+export 'package:udp_v2/module/kurikulum_pembelajaran/modul/view/modul_view.dart';
 export 'package:udp_v2/module/latihan/angka_page.dart';
 export 'package:udp_v2/module/latihan/huruf_page.dart';
 export 'package:udp_v2/module/latihan/instruksi_page.dart';
@@ -97,6 +95,7 @@ export 'package:udp_v2/module/latihan/latihan_membaca/view/latihan_membaca_view.
 export 'package:udp_v2/module/latihan/latihan_page.dart';
 export 'package:udp_v2/module/latihan/menulis_benda/controller/menulis_benda_controller.dart';
 export 'package:udp_v2/module/latihan/menulis_benda/view/menulis_benda_view.dart';
+export 'package:udp_v2/module/latihan/menulis_benda/widget/finish_page.dart';
 export 'package:udp_v2/module/latihan/menulis_kalimat/controller/menulis_kalimat_controller.dart';
 export 'package:udp_v2/module/latihan/menulis_kalimat/view/menulis_kalimat_view.dart';
 export 'package:udp_v2/module/latihan/menulis_kalimat/widget/finish_page.dart';
@@ -111,8 +110,6 @@ export 'package:udp_v2/module/materi_pelajaran/pilih_pelajaran/controller/pilih_
 export 'package:udp_v2/module/materi_pelajaran/pilih_pelajaran/view/pilih_pelajaran_view.dart';
 export 'package:udp_v2/module/menu_nav/controller/menu_nav_controller.dart';
 export 'package:udp_v2/module/menu_nav/view/menu_nav_view.dart';
-export 'package:udp_v2/module/notifikasi/controller/notifikasi_controller.dart';
-export 'package:udp_v2/module/notifikasi/view/notifikasi_view.dart';
 export 'package:udp_v2/module/panduan_aplikasi/controller/panduan_aplikasi_controller.dart';
 export 'package:udp_v2/module/panduan_aplikasi/view/panduan_aplikasi_view.dart';
 export 'package:udp_v2/module/panduan_aplikasi/widget/panduan_paragraf_widget.dart';

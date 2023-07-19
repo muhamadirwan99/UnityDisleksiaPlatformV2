@@ -8,10 +8,9 @@
         "splashscreen/introduction",
         "panduan_aplikasi",
         "kurikulum_pembelajaran/kurikulum",
-        "kurikulum_pembelajaran/pilih_kelas",
-        "kurikulum_pembelajaran/pilih_silabus",
-        "kurikulum_pembelajaran/detail_silabus",
+        "kurikulum_pembelajaran/modul",
         "kurikulum_pembelajaran/detail_pdf",
+        "kurikulum_pembelajaran/detail_pdf_modul",
         "content_pembelajaran",
         "latihan/latihan_berhitung",
         "latihan/latihan_berhitung/mencari_angka_hilang",
@@ -32,8 +31,7 @@
         "materi_pelajaran/detail_pelajaran",
         "informasi/list_informasi",
         "informasi/detail_informasi",
-        "informasi/detail_umum",
-        "notifikasi"
+        "informasi/detail_umum"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
