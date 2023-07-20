@@ -13,7 +13,7 @@ class KurikulumView extends StatelessWidget {
         controller.view = this;
 
         controller.loadPDFs(
-            "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf");
+            "https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2FKurikulum%20Merdeka%20-%20Kepmendikbudristek%20No.56%20ttg%20Pedoman%20Penerapan%20Kurikulum.pdf?alt=media&token=5e933a9a-73cf-4b00-bb03-b019ec150ee0");
 
         return Scaffold(
           backgroundColor: neutralWhite,
@@ -26,7 +26,7 @@ class KurikulumView extends StatelessWidget {
                 path: controller.remotePDFpath,
                 title: "File Kurikulum",
                 linkPdf:
-                    'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+                    'https://firebasestorage.googleapis.com/v0/b/udp-new.appspot.com/o/modul%2FKurikulum%20Merdeka%20-%20Kepmendikbudristek%20No.56%20ttg%20Pedoman%20Penerapan%20Kurikulum.pdf?alt=media&token=5e933a9a-73cf-4b00-bb03-b019ec150ee0',
               ));
             },
             child: Padding(

@@ -163,7 +163,7 @@ class LatihanPage extends StatelessWidget {
                         : Container(),
                     kdKelas.contains("1")
                         ? const SizedBox(
-                            height: 32,
+                            height: 16,
                           )
                         : Container(),
                     kdKelas.contains("1")
@@ -225,7 +225,7 @@ class LatihanPage extends StatelessWidget {
                         : Container(),
                     kdKelas.contains("1")
                         ? const SizedBox(
-                            height: 32,
+                            height: 16,
                           )
                         : Container(),
                     kdKelas.contains("2")
@@ -343,7 +343,7 @@ class LatihanPage extends StatelessWidget {
                           )
                         : Container(),
                     const SizedBox(
-                      height: 32,
+                      height: 16,
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
