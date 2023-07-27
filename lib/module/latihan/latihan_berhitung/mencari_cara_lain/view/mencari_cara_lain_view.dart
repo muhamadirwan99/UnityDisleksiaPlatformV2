@@ -327,13 +327,13 @@ class MencariCaraLainView extends StatelessWidget {
                                   ),
                                   onPressed: () {
                                     if (controller.answer ==
-                                        double.parse(
-                                            controller.answerList.last)) {
+                                        controller.calculateMath(
+                                            controller.answerList)) {
                                       controller.listFocusNode = [];
                                       controller.lengthLatihan++;
                                       if (controller.lengthLatihan <
                                           dataList[0].length) {
-                                        controller.answerList = <dynamic>[].obs;
+                                        controller.answerList = <String>[].obs;
                                         controller.periksaJawabanBool = false;
                                         controller.question = dataList[0]
                                                 [controller.lengthLatihan]

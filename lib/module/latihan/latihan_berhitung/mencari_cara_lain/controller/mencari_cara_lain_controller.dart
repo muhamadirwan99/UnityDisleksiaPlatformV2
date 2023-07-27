@@ -49,7 +49,7 @@ class MencariCaraLainController extends GetxController {
     return false;
   }
 
-  double calculateMath(List<String> answer) {
+  double calculateMath(List<dynamic> answer) {
     final Map<String, int> precedence = {
       '+': 1,
       '-': 1,
