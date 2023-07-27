@@ -22,12 +22,6 @@ class LatihanMembacaView extends StatelessWidget {
 
         return Scaffold(
           appBar: AppBar(
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () {
-                Get.to(PilihPelajaranView(kdKelas: kdKelas));
-              },
-            ),
             title: const Text("Latihan Membaca"),
           ),
           backgroundColor: blue500,

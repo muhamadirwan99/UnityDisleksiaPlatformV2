@@ -22,17 +22,6 @@ class LatihanPage extends StatelessWidget {
                 color: gray100),
           ),
         ),
-        leading: InkWell(
-          onTap: () {
-            Get.to(PilihPelajaranView(
-              kdKelas: kdKelas,
-            ));
-          },
-          child: const Icon(
-            Icons.arrow_back,
-            size: 24.0,
-          ),
-        ),
         titleTextStyle: const TextStyle(color: gray900),
         elevation: 0,
         backgroundColor: blue500,

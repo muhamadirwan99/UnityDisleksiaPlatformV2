@@ -23,17 +23,6 @@ class LatihanBerhitungView extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             title: const Text("Latihan Berhitung"),
-            leading: InkWell(
-              onTap: () {
-                Get.to(PilihPelajaranView(
-                  kdKelas: kdKelas,
-                ));
-              },
-              child: const Icon(
-                Icons.arrow_back,
-                size: 24.0,
-              ),
-            ),
           ),
           backgroundColor: blue500,
           body: SingleChildScrollView(
