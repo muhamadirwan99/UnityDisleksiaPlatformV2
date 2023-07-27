@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:udp_v2/core.dart';
 import 'package:get/get.dart';
+import 'package:udp_v2/utils/show_info_dialog%20copy.dart';
 
 class DetailPdfView extends StatelessWidget {
   final String path;
@@ -65,11 +66,13 @@ class DetailPdfView extends StatelessWidget {
                   controller.update();
                 },
                 onError: (error) {
-                  errorMessage = error.toString();
+                  showErrorDialog(
+                      "Terjadi Masalah Pada Koneksi Anda!!!\nSilahkan Muat Ulang !!!");
                   controller.update();
                 },
                 onPageError: (page, error) {
-                  errorMessage = '$page: ${error.toString()}';
+                  showErrorDialog(
+                      "Terjadi Masalah Pada Koneksi Anda!!!\nSilahkan Muat Ulang !!!");
                   controller.update();
                 },
                 onViewCreated: (PDFViewController pdfViewController) {
