@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 import 'package:udp_v2/core.dart';
+import 'package:udp_v2/utils/show_info_dialog%20copy.dart';
 
 class BerandaController extends GetxController {
   BerandaView? view;
@@ -27,9 +28,11 @@ class BerandaController extends GetxController {
         data = NewsResult.fromJson(response.data);
         return;
       }
-      showInfoDialog(response.data["message"].toString());
+      showErrorDialog(
+          "Terjadi Masalah Pada Koneksi Anda!!!\nSilahkan Muat Ulang !!!");
     } catch (e) {
-      showInfoDialog(e.toString());
+      showErrorDialog(
+          "Terjadi Masalah Pada Koneksi Anda!!!\nSilahkan Muat Ulang !!!");
     }
   }
 }

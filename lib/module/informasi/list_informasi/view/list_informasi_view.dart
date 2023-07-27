@@ -34,26 +34,39 @@ class ListInformasiView extends StatelessWidget {
                   padding: const EdgeInsets.all(24),
                   itemBuilder: (BuildContext context, int index) {
                     Posts? dataPost = data?.data?.posts?[index];
-
-                    return Column(
-                      children: [
-                        CardInformasi(
-                          title: dataPost!.title.toString(),
-                          date: controller
-                              .convertDateString(dataPost.pubDate.toString()),
-                          image: dataPost.thumbnail.toString(),
-                          onTap: () {
-                            Get.to(
-                              DetailUmumView(
-                                  title: controller.title, data: dataPost),
-                            );
-                          },
+                    try {
+                      return Column(
+                        children: [
+                          CardInformasi(
+                            title: dataPost!.title.toString(),
+                            date: controller
+                                .convertDateString(dataPost.pubDate.toString()),
+                            image: dataPost.thumbnail.toString(),
+                            onTap: () {
+                              Get.to(
+                                DetailUmumView(
+                                    title: controller.title, data: dataPost),
+                              );
+                            },
+                          ),
+                          const SizedBox(
+                            height: 16.0,
+                          ),
+                        ],
+                      );
+                    } catch (e) {
+                      return Container(
+                        height: 100.0,
+                        decoration: const BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              16.0,
+                            ),
+                          ),
                         ),
-                        const SizedBox(
-                          height: 16.0,
-                        ),
-                      ],
-                    );
+                      );
+                    }
                   },
                 )
               : StreamBuilder(
