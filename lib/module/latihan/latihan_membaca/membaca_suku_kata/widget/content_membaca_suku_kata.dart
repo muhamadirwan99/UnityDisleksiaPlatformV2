@@ -54,7 +54,7 @@ class _ContentMembacaSukuKataState extends State<ContentMembacaSukuKata> {
                   height: 32,
                 ),
                 SizedBox(
-                  height: height * 0.7,
+                  height: height * 0.8,
                   width: 250,
                   child: ListView.builder(
                     itemCount: dataList![0].length,
@@ -74,24 +74,6 @@ class _ContentMembacaSukuKataState extends State<ContentMembacaSukuKata> {
                 ),
                 const SizedBox(
                   height: 16,
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: blue300,
-                  ),
-                  onPressed: () {
-                    Get.back();
-                  },
-                  child: Text(
-                    'Kembali',
-                    style: GoogleFonts.roboto(
-                      textStyle: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          letterSpacing: 0.2,
-                          color: neutralBlack),
-                    ),
-                  ),
                 ),
               ],
             ),
