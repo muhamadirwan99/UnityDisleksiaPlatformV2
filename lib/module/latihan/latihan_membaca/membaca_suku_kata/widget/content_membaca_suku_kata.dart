@@ -55,7 +55,7 @@ class _ContentMembacaSukuKataState extends State<ContentMembacaSukuKata> {
                 ),
                 SizedBox(
                   height: height * 0.7,
-                  width: 200,
+                  width: 250,
                   child: ListView.builder(
                     itemCount: dataList![0].length,
                     physics: const ScrollPhysics(),
@@ -65,6 +65,8 @@ class _ContentMembacaSukuKataState extends State<ContentMembacaSukuKata> {
                       return VoiceRowWidget(
                         titleVoice: dataSuku["title"],
                         audio: dataSuku["linkSound"],
+                        imageLink: dataSuku["imageLink"],
+                        namaBenda: dataSuku["namaBenda"],
                         callback: () {},
                       );
                     },
