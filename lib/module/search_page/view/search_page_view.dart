@@ -1,13 +1,13 @@
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:udp_v2/core.dart';
 
-class SearchView extends StatelessWidget {
-  const SearchView({Key? key}) : super(key: key);
+class SearchPageView extends StatelessWidget {
+  const SearchPageView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<SearchController>(
-      init: SearchController(),
+    return GetBuilder<SearchPageController>(
+      init: SearchPageController(),
       builder: (controller) {
         controller.view = this;
 

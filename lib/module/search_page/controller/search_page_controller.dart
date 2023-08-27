@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import '../view/search_view.dart';
+import '../view/search_page_view.dart';
 
-class SearchController extends GetxController {
-  SearchView? view;
+class SearchPageController extends GetxController {
+  SearchPageView? view;
 
   String query = "";
   Map<String, dynamic> data = {};

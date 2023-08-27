@@ -7,7 +7,7 @@ class MenuNavController extends GetxController {
   int currentIndex = 0;
   List<Widget> screens = [
     const BerandaView(),
-    const SearchView(),
+    const SearchPageView(),
     const BookmarkView(),
   ];
 }

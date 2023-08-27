@@ -3,7 +3,7 @@
         "beranda",
         "menu_nav",
         "bookmark",
-        "search",
+        "search_page",
         "splashscreen/initial_page",
         "splashscreen/introduction",
         "panduan_aplikasi",
@@ -35,5 +35,7 @@
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
-    "unfreezed": true
+    "learning_mode": false,
+    "unfreezed": true,
+    "use_cubit": false
 }

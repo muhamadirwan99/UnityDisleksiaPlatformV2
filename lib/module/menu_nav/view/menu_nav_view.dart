@@ -42,7 +42,7 @@ class MenuNavView extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const SearchView()),
+                          builder: (context) => const SearchPageView()),
                     );
                     break;
                   case 2:
